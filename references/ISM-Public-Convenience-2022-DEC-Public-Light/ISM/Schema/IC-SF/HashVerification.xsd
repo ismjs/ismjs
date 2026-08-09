@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../../BuildDependencies/ISM/Schematron/ISM/ISM_XML.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><!--UNCLASSIFIED--><xs:schema xmlns="urn:us:gov:ic:sf:hashverification" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ism="urn:us:gov:ic:ism" xmlns:xhtml="http://www.w3.org/1999/xhtml-StopBrowserRendering" elementFormDefault="qualified" xml:lang="en" ism:compliesWith="USGov USIC" ism:ownerProducer="USA" ism:classification="U" ism:DESVersion="202111" ism:ISMCATCESVersion="202205" ism:resourceElement="true" ism:createDate="2020-11-19" targetNamespace="urn:us:gov:ic:sf:hashverification" version="202111">
+    <xs:annotation>
+        <xs:documentation>
+            This is a manually created schema fragment for hash verification.
+        </xs:documentation>
+    </xs:annotation>
+    
+    <!-- ******** -->
+    <!-- elements -->
+    <!-- ******** -->
+    
+    <!-- Top level element -->
+    <xs:element name="ContentEncodedHashVerification" type="HashVerificationType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">
+                    Represents the hash of the payload in its encrypted state. 
+                    Hash value is not meant to be taken over the Base64-encoded 
+                    state of the payload when used with a Base64Binary payload.
+                    
+                    Used to represent the payload as stored and transmitted: Encrypted and split into chunks as needed.
+                    Used by tools that need to verify that a payload corresponds to the XML document, 
+                    but which have no reason to further process the payload and may not have access to 
+                    the necessary keys. 
+                </xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Top level element -->
+    <xs:element name="ContentDecodedHashVerification" type="HashVerificationType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">
+                    Represents the payload in plaintext state. 
+                    Hash value is not meant to be taken over the Base64-encoded
+                    state of the payload when used with a Base64Binary payload.
+                    
+                    Allows for verification that the payload has been correctly decrypted.
+                </xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Top level element -->
+    <xs:element name="HashVerification" type="HashVerificationType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the
+                    hash verification of the referenced material. It may be a single hash over the 
+                    entire payload, or a structure representing an ordered set of payload blocks.
+                    See the HashVerificationType documentation for details.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Top level element -->
+    <xs:element name="UnblockedHashVerification" type="UnblockedHashVerificationType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the
+                    hash verification of the referenced material that is restricted to only a single hash
+                    over the entire payload and where payload blocks are not allowed. 
+                    See the UnblockedHashVerificationType documentation for details.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="BlockHash" type="BlockHashType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the 
+                    hash of one block of the referenced material.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="PayloadHash" type="HashValueType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the
+                    hash of the referenced material.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <xs:element name="TotalHash" type="TotalHashType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the 
+                    hash of the concatenation of block hashes. </xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- ********** -->
+    <!-- attributes -->
+    <!-- ********** -->
+    <xs:attribute name="block" type="BlockType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">The hash block.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="blockSize" type="BlockSizeType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">The block size of a
+                    hash.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="hashType" type="HashTypeType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">The type of a
+                    hash.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="totalBlocks" type="TotalBlocksType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">The total blocks of a
+                    hash.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+    <!-- ****** -->
+    <!-- groups -->
+    <!-- ****** -->
+    <xs:group name="BlockedHashGroup">
+        <xs:annotation>
+            <xs:documentation>
+                <xhtml:p ism:classification="U" ism:ownerProducer="USA">
+                    <xhtml:strong>Tailoring:</xhtml:strong> Not all systems will be willing or able
+                    to support unbounded lists of blocks. When tailoring maxOccurs here to reflect
+                    limitations imposed by a CDS or other implementation, that change should also be
+                    reflected in the definition of a BlockedHashGroup.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element ref="TotalHash" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="BlockHash" minOccurs="2" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+    
+    <!-- ************ -->
+    <!-- complexTypes -->
+    <!-- ************ -->
+    <xs:complexType name="BlockHashType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the 
+                    hash of one block of the referenced material.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="HashValueType">
+                <xs:attribute ref="block" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="HashVerificationType">
+        <xs:annotation>
+            <xs:documentation>
+                <xhtml:p ism:classification="U" ism:ownerProducer="USA"> Hash values to verify
+                    contents of a payload. </xhtml:p>
+                <xhtml:p ism:classification="U" ism:ownerProducer="USA"> For payload types that
+                    embed the payload in the document, or which otherwise consist of a single
+                    object, a single hash value must be provided in a PayloadHash child element. If
+                    the payload is broken into a set of blocks, the PayloadHash element is optional.</xhtml:p>
+                <xhtml:p ism:classification="U" ism:ownerProducer="USA"> When referring to a
+                    ReferenceValuePayload element which uses chunking, the TotalHash child element 
+                    must be a hash of the ordered concatenation of block hashes, using the same
+                    standard base64 encoding found in the HashBlock elements. That element is
+                    followed by a sequence of BlockHash elements, each of which must have a block
+                    attribute indicating which block of the ReferenceValuePayload it matches. These
+                    hashes must be of the same type as the parent HashVerification element.
+                </xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:choice>
+            <xs:sequence>
+                <xs:element ref="PayloadHash" minOccurs="1" maxOccurs="1"/>
+                <xs:group ref="BlockedHashGroup" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:sequence>
+                <xs:group ref="BlockedHashGroup" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:choice>
+        <xs:attribute ref="hashType" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="TotalHashType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the 
+                    hash of the concatenation of block hashes. </xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="HashValueType">
+                <xs:attribute ref="blockSize" use="required"/>
+                <xs:attribute ref="totalBlocks" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:complexType name="UnblockedHashVerificationType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the
+                    hash verification of the referenced material that is restricted to only a single hash
+                    over the entire payload and where payload blocks are not allowed. 
+                    See the UnblockedHashVerificationType documentation for details.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:restriction base="HashVerificationType">
+                <xs:choice>
+                    <xs:element ref="PayloadHash" minOccurs="1" maxOccurs="1"/>
+                </xs:choice>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <!-- *********** -->
+    <!-- simpleTypes -->
+    <!-- *********** -->
+    <xs:simpleType name="BlockSizeType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:classification="U" ism:ownerProducer="USA">
+                    <xhtml:strong>Tailoring:</xhtml:strong> Implementations that do not support all
+                    listed block sizes may wish to tailor this list to remove values larger than
+                    those supported by the service. To preserve compatibility with other
+                    implementations, new values should not be added. </xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="134217728"/>
+            <xs:maxInclusive value="2147483648"/>
+            <xs:enumeration value="134217728"/>
+            <xs:enumeration value="268435456"/>
+            <xs:enumeration value="536870912"/>
+            <xs:enumeration value="1073741824"/>
+            <xs:enumeration value="2147483648"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="BlockType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">The hash block.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="4096"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="HashTypeType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">
+                    The algorithm used to calculate the associated hash value, also known as a message digest. 
+                    Valid values identify approved secure hash algorithms defined in FIPS 180-4 and FIPS 202. 
+                    Current information on these algorithms, including specifications and guidance as to algorithm choice, 
+                    can be found at the NIST hash function project page, https://csrc.nist.gov/projects/hash-functions. 
+                    NIST special publications 800-57 “Recommendation for Key Management” also provides guidance on algorithm choice.
+                    SHA-1 is approved only for legacy processing and SHA-224, SHA-512/224, and SHA3-224 are only approved through 2030.
+                </xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SHA-1"/>
+            <xs:enumeration value="SHA-224"/>
+            <xs:enumeration value="SHA-256"/>
+            <xs:enumeration value="SHA-384"/>
+            <xs:enumeration value="SHA-512"/>
+            <xs:enumeration value="SHA-512/224"/>
+            <xs:enumeration value="SHA-512/256"/>
+            <xs:enumeration value="SHA3-224"/>
+            <xs:enumeration value="SHA3-256"/>
+            <xs:enumeration value="SHA3-384"/>
+            <xs:enumeration value="SHA3-512"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="HashValueType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U"> This element represents the
+                    hash of the referenced material.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:hexBinary">
+            <xs:minLength value="16"/>
+            <xs:maxLength value="128"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="TotalBlocksType">
+        <xs:annotation>
+            <xs:documentation xml:lang="en">
+                <xhtml:p ism:ownerProducer="USA" ism:classification="U">The total blocks of a
+                    hash.</xhtml:p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:minInclusive value="2"/>
+            <xs:maxInclusive value="4096"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

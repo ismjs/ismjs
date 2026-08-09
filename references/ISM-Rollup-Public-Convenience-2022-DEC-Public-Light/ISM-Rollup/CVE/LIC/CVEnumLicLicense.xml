@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Notices - Distribution Notice: 
+           This document has been approved for Public Release and is available for use without restriction.
+       -->
+<cve:CVE xmlns:cve="urn:us:gov:ic:cve" xmlns:ism="urn:us:gov:ic:ism"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ism:compliesWith="USGov USIC" ism:ownerProducer="USA"
+   ism:classification="U" ism:DESVersion="202111" ism:ISMCATCESVersion="202205" ism:resourceElement="true"
+   CVEVersion="2.1" specVersion="201508" ism:createDate="2011-09-01"
+   xsi:schemaLocation="urn:us:gov:ic:cve ../CveSchema/CVEXml.xsd">
+
+   <cve:IRM>
+      <cve:URN>urn:us:gov:ic:cvenum:lic:license</cve:URN>
+      <cve:Title ism:ownerProducer="USA" ism:classification="U">CVEnumLicLicense</cve:Title>
+      <cve:Description ism:ownerProducer="USA" ism:classification="U">URNs for Data Sphere
+         license agreements.</cve:Description>
+
+      <cve:Created>2010-05-30T16:52:00-04:00</cve:Created>
+
+      <cve:Source ism:classification="U" ism:ownerProducer="USA">IC License Agreements.</cve:Source>
+
+      <cve:PointOfContact ism:classification="U" ism:ownerProducer="USA">
+         <cve:Name>Office of the IC CIO</cve:Name>
+         <cve:Email>ic-standards-support@odni.gov</cve:Email>
+      </cve:PointOfContact>
+   </cve:IRM>
+
+   <cve:Enumeration multivalue="true" ism:ownerProducer="USA" ism:classification="U">
+      <Term xmlns="urn:us:gov:ic:cve" ism:classification="U" ism:ownerProducer="USA">
+         <Value ism:classification="U" ism:ownerProducer="USA">osc1</Value>
+         <Description ism:classification="U" ism:ownerProducer="USA">OSC-CommercialOpenSource1</Description>
+      </Term>
+   </cve:Enumeration>
+
+</cve:CVE>

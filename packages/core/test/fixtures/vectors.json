@@ -1,0 +1,3138 @@
+[
+  {
+    "label": "CUI-ONLY-LEI-cuiBasic",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI-ONLY",
+      "cuiControlledBy": "John Smith",
+      "cuiControlledByOffice": "Office XX",
+      "cuiPOC": "John Smith",
+      "DESVersion": "202111.202211",
+      "cuiDecontrolDate": "2034-12-31",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "LEI",
+      "classification": "U",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "banner": "CUI//LEI",
+      "portion": "(CUI//LEI) "
+    }
+  },
+  {
+    "label": "CUI-ONLY-CMPRS JURY-cuiBasic",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI-ONLY",
+      "cuiControlledBy": "John Smith",
+      "cuiControlledByOffice": "CIO",
+      "cuiPOC": "John Smith",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "classification": "U",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY",
+      "portion": "(CUI//CMPRS/JURY) "
+    }
+  },
+  {
+    "label": "CUI-ONLY-CONTRACT SUB-cuiSpecified",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI-ONLY",
+      "cuiControlledBy": "John Smith",
+      "cuiPOC": "John Smith",
+      "cuiDecontrolDate": "2044-12-31",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "CONTRACT SUB",
+      "classification": "U",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "banner": "CUI//SP-CONTRACT/SP-SUB",
+      "portion": "(CUI//SP-CONTRACT/SP-SUB) "
+    }
+  },
+  {
+    "label": "CUI-ONLY-DL_ONLY",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI-ONLY",
+      "cuiControlledBy": "John Smith",
+      "cuiControlledByOffice": "HR",
+      "cuiPOC": "John Smith",
+      "disseminationControls": "DL_ONLY NF",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "classification": "U",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/NF) "
+    }
+  },
+  {
+    "label": "CUI-ONLY-DL_ONLY-FEDCON-NF",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI-ONLY",
+      "cuiControlledBy": "John Smith",
+      "disseminationControls": "DL_ONLY FEDCON NF",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "classification": "U",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/FEDCON/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/FEDCON/NF) "
+    }
+  },
+  {
+    "label": "CUI-ONLY-DL_ONLY-decontrolDate",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI-ONLY",
+      "cuiControlledBy": "John Smith",
+      "cuiDecontrolDate": "2034-12-31",
+      "disseminationControls": "DL_ONLY NF",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "classification": "U",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/NF) "
+    }
+  },
+  {
+    "label": "CUI-ONLY-DL_ONLY-decontrolEvent",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI-ONLY",
+      "cuiControlledBy": "John Smith",
+      "cuiDecontrolEvent": "The end of this conflict",
+      "disseminationControls": "DL_ONLY NF",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "classification": "U",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/NF) "
+    }
+  },
+  {
+    "label": "CUI-ONLY-DL_ONLY-decontrolDateEvent",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI-ONLY",
+      "cuiControlledBy": "John Smith",
+      "cuiDecontrolDate": "2034-12-31",
+      "cuiDecontrolEvent": "The end of this conflict",
+      "disseminationControls": "DL_ONLY NF",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "classification": "U",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/NF) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FISA-dissem",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "cuiDecontrolDate": "2029-12-31",
+      "classification": "U",
+      "disseminationControls": "NF FISA",
+      "ownerProducer": "USA",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//SP-AIV//NOFORN/FISA",
+      "portion": "(U//CUI//SP-AIV//NF/FISA) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-S-FISA-dissem-classified",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "cuiDecontrolDate": "2029-12-31",
+      "classification": "S",
+      "disseminationControls": "NF FISA",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV"
+    },
+    "expected": {
+      "banner": "SECRET//CUI//SP-AIV//NOFORN/FISA",
+      "portion": "(S//CUI//SP-AIV//NF/FISA) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FISA-cuiSpecified",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "cuiDecontrolDate": "2025-12-31",
+      "classification": "U",
+      "disseminationControls": "NF",
+      "ownerProducer": "USA",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV FISA"
+    },
+    "expected": {
+      "banner": "CUI//SP-AIV/SP-FISA//NOFORN",
+      "portion": "(CUI//SP-AIV/SP-FISA//NF) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-S-PROPIN-cuiBasic",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI USDOD",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "S",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "derivativelyClassifiedBy": "John Doe",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF PR",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "SECRET//CUI//PROPIN//NOFORN/PROPIN",
+      "portion": "(S//CUI//PROPIN//NF/PR) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-PROPIN-cuiBasic-and-dissem",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI USDOD",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF PR",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//PROPIN//NOFORN/PROPIN",
+      "portion": "(U//CUI//PROPIN//NF/PR) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-PROPIN-cuiBasic",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI USDOD",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "CUI//PROPIN//NOFORN",
+      "portion": "(CUI//PROPIN//NF) "
+    }
+  },
+  {
+    "label": "Commingled-U-DL_ONLY",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "disseminationControls": "NF DL_ONLY",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/NF) "
+    }
+  },
+  {
+    "label": "Commingled-U-NF-DL_ONLY-FEDCON",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "disseminationControls": "NF DL_ONLY FEDCON",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/FEDCON/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/FEDCON/NF) "
+    }
+  },
+  {
+    "label": "Commingled-TS-All-Types",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "SCIcontrols": "HCS HCS-P SI SI-G TK",
+      "atomicEnergyMarkings": "RD FRD",
+      "FGIsourceOpen": "GBR",
+      "disseminationControls": "OC REL DL_ONLY FEDCON",
+      "nonICmarkings": "DS",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "TOP SECRET//HCS-P/SI-G/TK//RD/FRD//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//ORCON/REL TO USA, GBR/DL_ONLY/FEDCON//LIMDIS",
+      "portion": "(TS//HCS-P/SI-G/TK//RD/FRD//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//OC/REL TO USA, GBR/DL_ONLY/FEDCON//DS) "
+    }
+  },
+  {
+    "label": "Commingled-TS-SCI",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "SCIcontrols": "HCS HCS-P SI SI-G TK",
+      "disseminationControls": "OC REL DL_ONLY FEDCON",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "TOP SECRET//HCS-P/SI-G/TK//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//ORCON/REL TO USA, GBR/DL_ONLY/FEDCON",
+      "portion": "(TS//HCS-P/SI-G/TK//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//OC/REL TO USA, GBR/DL_ONLY/FEDCON) "
+    }
+  },
+  {
+    "label": "Commingled-Unclassified-All-Types",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "atomicEnergyMarkings": "UCNI",
+      "FGIsourceOpen": "GBR",
+      "disseminationControls": "REL DL_ONLY FEDCON",
+      "nonICmarkings": "DS",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//DOE UCNI//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR/DL_ONLY/FEDCON//LIMDIS",
+      "portion": "(U//UCNI//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR/DL_ONLY/FEDCON//DS) "
+    }
+  },
+  {
+    "label": "Commingled-Unclassified-FGI",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "FGIsourceOpen": "GBR",
+      "disseminationControls": "REL DL_ONLY FEDCON",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR/DL_ONLY/FEDCON",
+      "portion": "(U//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR/DL_ONLY/FEDCON) "
+    }
+  },
+  {
+    "label": "Commingled-Unclassified-FGI-simple",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov USDOD",
+      "cuiControlledBy": "John Smith",
+      "FGIsourceOpen": "GBR",
+      "disseminationControls": "REL",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR",
+      "portion": "(U//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-DSEN-cuiBasic",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI USDOD",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF DSEN",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//LEI//NOFORN/DEA SENSITIVE",
+      "portion": "(U//CUI//LEI//NF/DSEN) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-RELIDO-cuiBasic",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI USDOD",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "RELIDO",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "CUI//LEI//RELIDO",
+      "portion": "(CUI//LEI//RELIDO) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FOUO-cuiBasic",
+    "source": "ISM/CUITests/CUI-DOD-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI USDOD",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "FOUO",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//LEI//FOUO",
+      "portion": "(U//CUI//LEI//FOUO) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FISA-dissem",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "classification": "U",
+      "disseminationControls": "NF FISA",
+      "ownerProducer": "USA",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV",
+      "cuiDecontrolDate": "2029-12-31"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//SP-AIV//NOFORN/FISA",
+      "portion": "(U//CUI//SP-AIV//NF/FISA) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-S-FISA-dissem-classified",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "classification": "S",
+      "disseminationControls": "NF FISA",
+      "ownerProducer": "USA",
+      "cuiDecontrolDate": "2029-12-31",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV"
+    },
+    "expected": {
+      "banner": "SECRET//CUI//SP-AIV//NOFORN/FISA",
+      "portion": "(S//CUI//SP-AIV//NF/FISA) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FISA-cuiSpecified",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "classification": "U",
+      "disseminationControls": "NF",
+      "ownerProducer": "USA",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV FISA",
+      "cuiDecontrolDate": "2025-12-31"
+    },
+    "expected": {
+      "banner": "CUI//SP-AIV/SP-FISA//NOFORN",
+      "portion": "(CUI//SP-AIV/SP-FISA//NF) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-S-PROPIN-cuiBasic",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "S",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "derivativelyClassifiedBy": "John Doe",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF PR",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "SECRET//CUI//PROPIN//NOFORN/PROPIN",
+      "portion": "(S//CUI//PROPIN//NF/PR) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-PROPIN-cuiBasic-and-dissem",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF PR",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//PROPIN//NOFORN/PROPIN",
+      "portion": "(U//CUI//PROPIN//NF/PR) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-PROPIN-cuiBasic",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "CUI//PROPIN//NOFORN",
+      "portion": "(CUI//PROPIN//NF) "
+    }
+  },
+  {
+    "label": "Commingled-U-DL_ONLY",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "disseminationControls": "NF DL_ONLY",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/NF) "
+    }
+  },
+  {
+    "label": "Commingled-U-NF-DL_ONLY-FEDCON",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "disseminationControls": "NF DL_ONLY FEDCON",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/FEDCON/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/FEDCON/NF) "
+    }
+  },
+  {
+    "label": "Commingled-TS-All-Types",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "SCIcontrols": "HCS HCS-P SI SI-G TK",
+      "atomicEnergyMarkings": "RD FRD",
+      "FGIsourceOpen": "GBR",
+      "disseminationControls": "OC REL DL_ONLY FEDCON",
+      "nonICmarkings": "DS",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "TOP SECRET//HCS-P/SI-G/TK//RD/FRD//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//ORCON/REL TO USA, GBR/DL_ONLY/FEDCON//LIMDIS",
+      "portion": "(TS//HCS-P/SI-G/TK//RD/FRD//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//OC/REL TO USA, GBR/DL_ONLY/FEDCON//DS) "
+    }
+  },
+  {
+    "label": "Commingled-TS-SCI",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "SCIcontrols": "HCS HCS-P SI SI-G TK",
+      "disseminationControls": "OC REL DL_ONLY FEDCON",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "TOP SECRET//HCS-P/SI-G/TK//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//ORCON/REL TO USA, GBR/DL_ONLY/FEDCON",
+      "portion": "(TS//HCS-P/SI-G/TK//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//OC/REL TO USA, GBR/DL_ONLY/FEDCON) "
+    }
+  },
+  {
+    "label": "Commingled-Unclassified-All-Types",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "atomicEnergyMarkings": "UCNI",
+      "FGIsourceOpen": "GBR",
+      "disseminationControls": "REL DL_ONLY FEDCON",
+      "nonICmarkings": "DS",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//DOE UCNI//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR/DL_ONLY/FEDCON//LIMDIS",
+      "portion": "(U//UCNI//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR/DL_ONLY/FEDCON//DS) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-DSEN-cuiBasic",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF DSEN",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//LEI//NOFORN/DEA SENSITIVE",
+      "portion": "(U//CUI//LEI//NF/DSEN) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-RELIDO-cuiBasic",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "RELIDO",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "CUI//LEI//RELIDO",
+      "portion": "(CUI//LEI//RELIDO) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FOUO-cuiBasic",
+    "source": "ISM/CUITests/CUI-ISOO-Style.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "FOUO",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//LEI//FOUO",
+      "portion": "(U//CUI//LEI//FOUO) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FISA-dissem",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "classification": "U",
+      "disseminationControls": "NF FISA",
+      "ownerProducer": "USA",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//SP-AIV//NOFORN/FISA",
+      "portion": "(U//CUI//SP-AIV//NF/FISA) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-S-FISA-dissem-classified",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "classification": "S",
+      "disseminationControls": "NF FISA",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV"
+    },
+    "expected": {
+      "banner": "SECRET//CUI//SP-AIV//NOFORN/FISA",
+      "portion": "(S//CUI//SP-AIV//NF/FISA) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FISA-cuiSpecified",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "classification": "U",
+      "disseminationControls": "NF",
+      "ownerProducer": "USA",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiSpecified": "AIV FISA"
+    },
+    "expected": {
+      "banner": "CUI//SP-AIV/SP-FISA//NOFORN",
+      "portion": "(CUI//SP-AIV/SP-FISA//NF) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-S-PROPIN-cuiBasic",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "S",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "derivativelyClassifiedBy": "John Doe",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF PR",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "SECRET//CUI//PROPIN//NOFORN/PROPIN",
+      "portion": "(S//CUI//PROPIN//NF/PR) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-PROPIN-cuiBasic-and-dissem",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF PR",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//PROPIN//NOFORN/PROPIN",
+      "portion": "(U//CUI//PROPIN//NF/PR) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-PROPIN-cuiBasic",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF",
+      "cuiBasic": "PROPIN"
+    },
+    "expected": {
+      "banner": "CUI//PROPIN//NOFORN",
+      "portion": "(CUI//PROPIN//NF) "
+    }
+  },
+  {
+    "label": "Commingled-U-DL_ONLY",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "disseminationControls": "NF DL_ONLY",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/NF) "
+    }
+  },
+  {
+    "label": "Commingled-U-NF-DL_ONLY-FEDCON",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "disseminationControls": "NF DL_ONLY FEDCON",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY"
+    },
+    "expected": {
+      "banner": "CUI//CMPRS/JURY//DL_ONLY/FEDCON/NOFORN",
+      "portion": "(CUI//CMPRS/JURY//DL_ONLY/FEDCON/NF) "
+    }
+  },
+  {
+    "label": "Commingled-TS-All-Types",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "SCIcontrols": "HCS HCS-P SI SI-G TK",
+      "atomicEnergyMarkings": "RD FRD",
+      "FGIsourceOpen": "GBR",
+      "disseminationControls": "OC REL DL_ONLY FEDCON",
+      "nonICmarkings": "DS",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "TOP SECRET//HCS-P/SI-G/TK//RD/FRD//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//ORCON/REL TO USA, GBR/DL_ONLY/FEDCON//LIMDIS",
+      "portion": "(TS//HCS-P/SI-G/TK//RD/FRD//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//OC/REL TO USA, GBR/DL_ONLY/FEDCON//DS) "
+    }
+  },
+  {
+    "label": "Commingled-TS-SCI",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "SCIcontrols": "HCS HCS-P SI SI-G TK",
+      "disseminationControls": "OC REL DL_ONLY FEDCON",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "TOP SECRET//HCS-P/SI-G/TK//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//ORCON/REL TO USA, GBR/DL_ONLY/FEDCON",
+      "portion": "(TS//HCS-P/SI-G/TK//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//OC/REL TO USA, GBR/DL_ONLY/FEDCON) "
+    }
+  },
+  {
+    "label": "Commingled-Unclassified-All-Types",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "compliesWith": "USA-CUI USGov",
+      "cuiControlledBy": "John Smith",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2024-12-31",
+      "atomicEnergyMarkings": "UCNI",
+      "FGIsourceOpen": "GBR",
+      "disseminationControls": "REL DL_ONLY FEDCON",
+      "nonICmarkings": "DS",
+      "releasableTo": "USA GBR",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "cuiBasic": "CMPRS JURY",
+      "cuiSpecified": "AIV PRIIG"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//DOE UCNI//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR/DL_ONLY/FEDCON//LIMDIS",
+      "portion": "(U//UCNI//FGI GBR//CUI//SP-AIV/SP-PRIIG/CMPRS/JURY//REL TO USA, GBR/DL_ONLY/FEDCON//DS) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-DSEN-cuiBasic",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF DSEN",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//LEI//NOFORN/DEA SENSITIVE",
+      "portion": "(U//CUI//LEI//NF/DSEN) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-RELIDO-cuiBasic",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "NF RELIDO",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "CUI//LEI//NOFORN/RELIDO",
+      "portion": "(CUI//LEI//NF/RELIDO) "
+    }
+  },
+  {
+    "label": "CUI-Commingled-U-FOUO-cuiBasic",
+    "source": "ISM/CUITests/Commingled.xspec",
+    "attributes": {
+      "compliesWith": "USGov USA-CUI",
+      "DESVersion": "202111.202211",
+      "ownerProducer": "USA",
+      "classification": "U",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2008-10-01",
+      "cuiControlledBy": "John Doe",
+      "cuiDecontrolDate": "2020-02-02",
+      "disseminationControls": "FOUO",
+      "cuiBasic": "LEI"
+    },
+    "expected": {
+      "banner": "UNCLASSIFIED//CUI//LEI//FOUO",
+      "portion": "(U//CUI//LEI//FOUO) "
+    }
+  },
+  {
+    "label": "SAR-DOD-THREE-SARs",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:C:JUNIOR_PROM SAR-DOD:S:SOPHOMORE_DANCE SAR-DOD:S:DEMOSAP3"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMOSAP3/SAR-JUNIOR PROM/SAR-SOPHOMORE DANCE) ",
+      "banner": "SECRET//SAR-MULTIPLE PROGRAMS"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-FOUR-SARs",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:C:JUNIOR_PROM SAR-DOD:S:SOPHOMORE_DANCE-A1 SAR-DOD:S:DEMOSAP3"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMOSAP3/SAR-JUNIOR PROM/SAR-SOPHOMORE DANCE-A1) ",
+      "banner": "SECRET//SAR-MULTIPLE PROGRAMS"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-ONE-SAR-with-dash",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:S:SOPHOMORE_DANCE-A1"
+    },
+    "expected": {
+      "portion": "(S//SAR-SOPHOMORE DANCE-A1) ",
+      "banner": "SECRET//SAR-SOPHOMORE DANCE-A1"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-TWO-SARs",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:S:BUTTER__POPCORN SAR-DOD:S:DEMOSAP3",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(S//SAR-BUTTER_POPCORN/SAR-DEMOSAP3//NF) ",
+      "banner": "SECRET//SAR-BUTTER_POPCORN/SAR-DEMOSAP3//NOFORN"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-TWO-SARs-with-WAIVED",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:S:BUTTER__POPCORN SAR-DOD:S:DEMOSAP3",
+      "disseminationControls": "NF WAIVED"
+    },
+    "expected": {
+      "portion": "(S//SAR-BUTTER_POPCORN/SAR-DEMOSAP3//NF/WAIVED) ",
+      "banner": "SECRET//SAR-BUTTER_POPCORN/SAR-DEMOSAP3//NOFORN/WAIVED"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-SARwithDash",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:DEMO-SAP99"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO-SAP99) ",
+      "banner": "SECRET//SAR-DEMO-SAP99"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-SARwithTwoDashes",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:DEMO-SAP99-ABCD"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO-SAP99-ABCD) ",
+      "banner": "SECRET//SAR-DEMO-SAP99-ABCD"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-SARwithunderscore1",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:DEMO_SAP200 SAR-DOD:DEMOO_SAP300"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMOO SAP300/SAR-DEMO SAP200) ",
+      "banner": "SECRET//SAR-DEMOO SAP300/SAR-DEMO SAP200"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-SARwithunderscore2",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:TS:DEMO__SAP100"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO_SAP100) ",
+      "banner": "SECRET//SAR-DEMO_SAP100"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-SARwithunderscore3",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:DEMO_SAP200 SAR-DOD:DEMO__SAP100"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO SAP200/SAR-DEMO_SAP100) ",
+      "banner": "SECRET//SAR-DEMO SAP200/SAR-DEMO_SAP100"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DOD-DUPES",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:C:DEMOSAP3 SAR-DOD:S:DEMOSAP3"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMOSAP3) ",
+      "banner": "SECRET//SAR-DEMOSAP3"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-ABC-DEF",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "DOD:S:ABC DOD:S:DEF"
+    },
+    "expected": {
+      "portion": "(S//SAR-ABC/SAR-DEF) ",
+      "banner": "SECRET//SAR-ABC/SAR-DEF"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-ABC",
+    "source": "ISM/DOD-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DOD:C:ABC"
+    },
+    "expected": {
+      "portion": "(S//SAR-ABC) ",
+      "banner": "SECRET//SAR-ABC"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DNI-SARwithTwoDashes",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:DEMO SAR-DNI:DEMO-SAP99 SAR-DNI:DEMO-SAP99-ABCD"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO-SAP99 ABCD) ",
+      "banner": "SECRET//SAR-DEMO-SAP99 ABCD"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DNI-THREE-SARs",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:JUNIOR_PROM SAR-DNI:SOPHOMORE_DANCE SAR-DNI:DEMOSAP11"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMOSAP11/JUNIOR PROM/SOPHOMORE DANCE) ",
+      "banner": "SECRET//SAR-DEMOSAP11/JUNIOR PROM/SOPHOMORE DANCE"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DNI-FOUR-SARs",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:JUNIOR_PROM SAR-DNI:SOPHOMORE_DANCE SAR-DNI:SOPHOMORE_DANCE-A1 SAR-DNI:DEMOSAP11"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMOSAP11/JUNIOR PROM/SOPHOMORE DANCE-A1) ",
+      "banner": "SECRET//SAR-DEMOSAP11/JUNIOR PROM/SOPHOMORE DANCE-A1"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DNI-TWO-SARs",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:DEMOSAP22 SAR-DNI:DEMOSAP11"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMOSAP11/DEMOSAP22) ",
+      "banner": "SECRET//SAR-DEMOSAP11/DEMOSAP22"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DNI-SARwithDash",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:DEMO SAR-DNI:DEMO-SAP99"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO-SAP99) ",
+      "banner": "SECRET//SAR-DEMO-SAP99"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DNI-SARwithunderscore1",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:DEMO_SAP200"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO SAP200) ",
+      "banner": "SECRET//SAR-DEMO SAP200"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DNI-SARwithunderscore2",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:DEMO__SAP100"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO_SAP100) ",
+      "banner": "SECRET//SAR-DEMO_SAP100"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-DNI-SARwithunderscore3",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:DEMO_SAP200 SAR-DNI:DEMO__SAP100"
+    },
+    "expected": {
+      "portion": "(S//SAR-DEMO SAP200/DEMO_SAP100) ",
+      "banner": "SECRET//SAR-DEMO SAP200/DEMO_SAP100"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-ABC-DEF",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:S:ABC SAR-DNI:S:DEF"
+    },
+    "expected": {
+      "portion": "(S//SAR-ABC/DEF) ",
+      "banner": "SECRET//SAR-ABC/DEF"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-ProgramID-Compartment1 SubComp1 SubComp2/ProgramID2-P2Comp1 P2SComp1 try2",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:ProgramID SAR-DNI:ProgramID-Compartment1 SAR-DNI:ProgramID-Compartment1-SubComp1 SAR-DNI:ProgramID-Compartment1-SubComp2 SAR-DNI:ProgramID2 SAR-DNI:ProgramID2-P2Comp1 SAR-DNI:ProgramID2-P2Comp1-P2SComp1"
+    },
+    "expected": {
+      "portion": "(S//SAR-ProgramID-Compartment1 SubComp1 SubComp2/ProgramID2-P2Comp1 P2SComp1) ",
+      "banner": "SECRET//SAR-ProgramID-Compartment1 SubComp1 SubComp2/ProgramID2-P2Comp1 P2SComp1"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-JP_SD-A1",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:JUNIOR_PROM SAR-DNI:SOPHOMORE_DANCE SAR-DNI:SOPHOMORE_DANCE-A1"
+    },
+    "expected": {
+      "portion": "(S//SAR-JUNIOR PROM/SOPHOMORE DANCE-A1) ",
+      "banner": "SECRET//SAR-JUNIOR PROM/SOPHOMORE DANCE-A1"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-JP_S__D-A1",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:JUNIOR_PROM SAR-DNI:SOPHOMORE__DANCE SAR-DNI:SOPHOMORE__DANCE-A1"
+    },
+    "expected": {
+      "portion": "(S//SAR-JUNIOR PROM/SOPHOMORE_DANCE-A1) ",
+      "banner": "SECRET//SAR-JUNIOR PROM/SOPHOMORE_DANCE-A1"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-HD_P-A1",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:HOMECOMING_DANCE SAR-DNI:PROM_TUX SAR-DNI:PROM_TUX-JR SAR-DNI:PROM_TUX-JR-A16 SAR-DNI:PROM_TUX-JR-A17 SAR-DNI:PROM_TUX-SR              SAR-DNI:PROM_TUX-SR-A17 SAR-DNI:PROM_TUX-SR-A18"
+    },
+    "expected": {
+      "portion": "(S//SAR-HOMECOMING DANCE/PROM TUX-JR A16 A17-SR A17 A18) ",
+      "banner": "SECRET//SAR-HOMECOMING DANCE/PROM TUX-JR A16 A17-SR A17 A18"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SI-G-ABCD-TK-SAP-ACCM",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI SI-G SI-G-ABCD SI-G-ACDE TK",
+      "SARIdentifier": "SAR-DNI:ABC SAR-DNI:DEF",
+      "nonICmarkings": "ACCM-TEA_LEAF ACCM-FICTITIOUS_EFFORT",
+      "disseminationControls": "OC"
+    },
+    "expected": {
+      "portion": "(TS//SI-G ABCD ACDE/TK//SAR-ABC/DEF//OC//ACCM-FICTITIOUS EFFORT/TEA LEAF) ",
+      "banner": "TOP SECRET//SI-G ABCD ACDE/TK//SAR-ABC/DEF//ORCON//ACCM-FICTITIOUS EFFORT/TEA LEAF"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SCI-SAP-AEM-ACCM-DISSEM",
+    "source": "ISM/IC-SAP-Style.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI SI-G SI-G-ABCD SI-G-ACDE TK",
+      "SARIdentifier": "SAR-DNI:ABC SAR-DNI:DEF",
+      "atomicEnergyMarkings": "RD",
+      "declassException": "AEA",
+      "nonICmarkings": "ACCM-TEA_LEAF ACCM-FICTITIOUS_EFFORT",
+      "disseminationControls": "OC"
+    },
+    "expected": {
+      "portion": "(TS//SI-G ABCD ACDE/TK//SAR-ABC/DEF//RD//OC//ACCM-FICTITIOUS EFFORT/TEA LEAF) ",
+      "banner": "TOP SECRET//SI-G ABCD ACDE/TK//SAR-ABC/DEF//RD//ORCON//ACCM-FICTITIOUS EFFORT/TEA LEAF"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "NatoCTS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "NATO"
+    },
+    "expected": {
+      "portion": "(//CTS) ",
+      "banner": "//COSMIC TOP SECRET"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoCTSA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "NATO",
+      "nonUSControls": "ATOMAL"
+    },
+    "expected": {
+      "portion": "(//CTS//ATOMAL) ",
+      "banner": "//COSMIC TOP SECRET//ATOMAL"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoCTSAOC",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "NATO",
+      "disseminationControls": "OC",
+      "nonUSControls": "ATOMAL"
+    },
+    "expected": {
+      "portion": "(//CTS//ATOMAL//OC) ",
+      "banner": "//COSMIC TOP SECRET//ATOMAL//ORCON"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoCTSAB",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "NATO",
+      "nonUSControls": "ATOMAL BOHEMIA"
+    },
+    "expected": {
+      "portion": "(//CTS//ATOMAL/BOHEMIA) ",
+      "banner": "//COSMIC TOP SECRET//ATOMAL/BOHEMIA"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoCTSB",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "NATO",
+      "nonUSControls": "BOHEMIA"
+    },
+    "expected": {
+      "portion": "(//CTS//BOHEMIA) ",
+      "banner": "//COSMIC TOP SECRET//BOHEMIA"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoCTSBALK",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "NATO",
+      "nonUSControls": "BALK"
+    },
+    "expected": {
+      "portion": "(//CTS//BALK) ",
+      "banner": "//COSMIC TOP SECRET//BALK"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "NATO"
+    },
+    "expected": {
+      "portion": "(//NS) ",
+      "banner": "//NATO SECRET"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoS-NAC",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "NATO:Partnership_For_Peace"
+    },
+    "expected": {
+      "portion": "(//NPfPS) ",
+      "banner": "//NATO Partnership For Peace SECRET"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoSAT",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "NATO",
+      "nonUSControls": "ATOMAL"
+    },
+    "expected": {
+      "portion": "(//NS//ATOMAL) ",
+      "banner": "//NATO SECRET//ATOMAL"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoC",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "C",
+      "ownerProducer": "NATO"
+    },
+    "expected": {
+      "portion": "(//NC) ",
+      "banner": "//NATO CONFIDENTIAL"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoCA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "C",
+      "ownerProducer": "NATO",
+      "nonUSControls": "ATOMAL"
+    },
+    "expected": {
+      "portion": "(//NC//ATOMAL) ",
+      "banner": "//NATO CONFIDENTIAL//ATOMAL"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoR",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "R",
+      "ownerProducer": "NATO"
+    },
+    "expected": {
+      "portion": "(//NR) ",
+      "banner": "//NATO RESTRICTED"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NatoU",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "NATO"
+    },
+    "expected": {
+      "portion": "(//NU) ",
+      "banner": "//NATO UNCLASSIFIED"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "HCS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "HCS",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2045-12-31",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(TS//HCS//NF) ",
+      "banner": "TOP SECRET//HCS//NOFORN"
+    }
+  },
+  {
+    "label": "SITK",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI TK"
+    },
+    "expected": {
+      "portion": "(TS//SI/TK) ",
+      "banner": "TOP SECRET//SI/TK"
+    }
+  },
+  {
+    "label": "SITKCheckorder",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "TK SI"
+    },
+    "expected": {
+      "portion": "(TS//SI/TK) ",
+      "banner": "TOP SECRET//SI/TK"
+    }
+  },
+  {
+    "label": "TS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "portion": "(TS) ",
+      "banner": "TOP SECRET"
+    }
+  },
+  {
+    "label": "S",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "portion": "(S) ",
+      "banner": "SECRET"
+    }
+  },
+  {
+    "label": "C",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "C",
+      "ownerProducer": "USA"
+    },
+    "expected": {
+      "portion": "(C) ",
+      "banner": "CONFIDENTIAL"
+    }
+  },
+  {
+    "label": "SI-G",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI SI-G SI-G-ACDE TK",
+      "disseminationControls": "OC"
+    },
+    "expected": {
+      "portion": "(TS//SI-G ACDE/TK//OC) ",
+      "banner": "TOP SECRET//SI-G ACDE/TK//ORCON"
+    }
+  },
+  {
+    "label": "RSV-ABC-DEF",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "RSV RSV-ABC RSV-DEF TK"
+    },
+    "expected": {
+      "portion": "(TS//RSV-ABC-DEF/TK) ",
+      "banner": "TOP SECRET//RSV-ABC-DEF/TK"
+    }
+  },
+  {
+    "label": "SI-G-ABCD",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI SI-G SI-G-ABCD",
+      "disseminationControls": "OC"
+    },
+    "expected": {
+      "portion": "(TS//SI-G ABCD//OC) ",
+      "banner": "TOP SECRET//SI-G ABCD//ORCON"
+    }
+  },
+  {
+    "label": "SI-G-ABCD SI-G-ACDE",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI SI-G SI-G-ABCD SI-G-ACDE",
+      "disseminationControls": "OC"
+    },
+    "expected": {
+      "portion": "(TS//SI-G ABCD ACDE//OC) ",
+      "banner": "TOP SECRET//SI-G ABCD ACDE//ORCON"
+    }
+  },
+  {
+    "label": "SI-G-ABCD TK",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI SI-G SI-G-ABCD SI-G-ACDE TK",
+      "disseminationControls": "OC"
+    },
+    "expected": {
+      "portion": "(TS//SI-G ABCD ACDE/TK//OC) ",
+      "banner": "TOP SECRET//SI-G ABCD ACDE/TK//ORCON"
+    }
+  },
+  {
+    "label": "FGI-AUS-SI",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI",
+      "FGIsourceOpen": "AUS",
+      "disseminationControls": "OC"
+    },
+    "expected": {
+      "portion": "(TS//SI//FGI AUS//OC) ",
+      "banner": "TOP SECRET//SI//FGI AUS//ORCON"
+    }
+  },
+  {
+    "label": "OC-OC-USGOV",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI",
+      "FGIsourceOpen": "AUS",
+      "disseminationControls": "OC OC-USGOV"
+    },
+    "expected": {
+      "portion": "(TS//SI//FGI AUS//OC-USGOV) ",
+      "banner": "TOP SECRET//SI//FGI AUS//ORCON-USGOV"
+    }
+  },
+  {
+    "label": "USA-non-US-controls-BOHEMIA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "TK",
+      "nonUSControls": "BOHEMIA",
+      "FGIsourceOpen": "NATO",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(TS//TK/BOHEMIA//FGI NATO//NF) ",
+      "banner": "TOP SECRET//TK/BOHEMIA//FGI NATO//NOFORN"
+    }
+  },
+  {
+    "label": "USA-non-US-controls-BALK",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "TK",
+      "nonUSControls": "BALK",
+      "FGIsourceOpen": "NATO",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(TS//TK/BALK//FGI NATO//NF) ",
+      "banner": "TOP SECRET//TK/BALK//FGI NATO//NOFORN"
+    }
+  },
+  {
+    "label": "USA-non-US-controls-ATOMAL",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "RD",
+      "nonUSControls": "ATOMAL",
+      "FGIsourceOpen": "NATO",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(S//RD/ATOMAL//FGI NATO//NF) ",
+      "banner": "SECRET//RD/ATOMAL//FGI NATO//NOFORN"
+    }
+  },
+  {
+    "label": "USA-non-US-controls-mixed-ATOMAL-BOHEMIA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "TK",
+      "atomicEnergyMarkings": "RD",
+      "nonUSControls": "ATOMAL BOHEMIA",
+      "FGIsourceOpen": "NATO",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(TS//TK/BOHEMIA//RD/ATOMAL//FGI NATO//NF) ",
+      "banner": "TOP SECRET//TK/BOHEMIA//RD/ATOMAL//FGI NATO//NOFORN"
+    }
+  },
+  {
+    "label": "AUS-SI",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "AUS",
+      "SCIcontrols": "SI"
+    },
+    "expected": {
+      "portion": "(//AUS TS//SI) ",
+      "banner": "//AUS TOP SECRET//SI"
+    }
+  },
+  {
+    "label": "RS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "RS"
+    },
+    "expected": {
+      "portion": "(S//RS) ",
+      "banner": "SECRET//RSEN"
+    }
+  },
+  {
+    "label": "UCNI",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "UCNI"
+    },
+    "expected": {
+      "portion": "(U//UCNI) ",
+      "banner": "UNCLASSIFIED//DOE UCNI"
+    }
+  },
+  {
+    "label": "DCNI",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "DCNI"
+    },
+    "expected": {
+      "portion": "(U//DCNI) ",
+      "banner": "UNCLASSIFIED//DOD UCNI"
+    }
+  },
+  {
+    "label": "RD",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "RD"
+    },
+    "expected": {
+      "portion": "(S//RD) ",
+      "banner": "SECRET//RD"
+    }
+  },
+  {
+    "label": "FRD",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "FRD"
+    },
+    "expected": {
+      "portion": "(S//FRD) ",
+      "banner": "SECRET//FRD"
+    }
+  },
+  {
+    "label": "FRD-SIGMA1",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "FRD FRD-SG-14"
+    },
+    "expected": {
+      "portion": "(S//FRD-SG 14) ",
+      "banner": "SECRET//FRD-SIGMA 14"
+    }
+  },
+  {
+    "label": "FRD-SIGMA1-2-RD-CNWDI-SIGMA-5",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "RD RD-CNWDI RD-SG-14 FRD FRD-SG-14 FRD-SG-20"
+    },
+    "expected": {
+      "portion": "(S//RD-CNWDI-SG 14/FRD-SG 14 20) ",
+      "banner": "SECRET//RD-CNWDI-SIGMA 14/FRD-SIGMA 14 20"
+    }
+  },
+  {
+    "label": "RD-SIGMA1",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "RD RD-SG-14"
+    },
+    "expected": {
+      "portion": "(S//RD-SG 14) ",
+      "banner": "SECRET//RD-SIGMA 14"
+    }
+  },
+  {
+    "label": "RD-SIGMA1-2",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "RD RD-SG-14 RD-SG-20"
+    },
+    "expected": {
+      "portion": "(S//RD-SG 14 20) ",
+      "banner": "SECRET//RD-SIGMA 14 20"
+    }
+  },
+  {
+    "label": "RD-SIGMA1-2-FRD-SIGMA1-2",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "RD RD-SG-14 RD-SG-20 FRD FRD-SG-14 FRD-SG-20"
+    },
+    "expected": {
+      "portion": "(S//RD-SG 14 20/FRD-SG 14 20) ",
+      "banner": "SECRET//RD-SIGMA 14 20/FRD-SIGMA 14 20"
+    }
+  },
+  {
+    "label": "RD-CNWDI-SIGMA1-2-FRD-SIGMA1-2",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": "RD RD-CNWDI RD-SG-14 RD-SG-20 FRD FRD-SG-14 FRD-SG-20"
+    },
+    "expected": {
+      "portion": "(S//RD-CNWDI-SG 14 20/FRD-SG 14 20) ",
+      "banner": "SECRET//RD-CNWDI-SIGMA 14 20/FRD-SIGMA 14 20"
+    }
+  },
+  {
+    "label": "DISPLAY-ONLY-AFG",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "DISPLAYONLY",
+      "displayOnlyTo": "AFG"
+    },
+    "expected": {
+      "portion": "(S//DISPLAY ONLY AFG) ",
+      "banner": "SECRET//DISPLAY ONLY AFG"
+    }
+  },
+  {
+    "label": "DISPLAY-ONLY-AFG-IRQ-REL-NATO-AUS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "USA AUS NATO",
+      "displayOnlyTo": "AFG IRQ"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, AUS, NATO/DISPLAY ONLY AFG, IRQ) ",
+      "banner": "SECRET//REL TO USA, AUS, NATO/DISPLAY ONLY AFG, IRQ"
+    }
+  },
+  {
+    "label": "REL-NATO-AUS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA AUS NATO"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, AUS, NATO) ",
+      "banner": "SECRET//REL TO USA, AUS, NATO"
+    }
+  },
+  {
+    "label": "REL-USA-DEU-GBR-NATO",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU GBR NATO"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, DEU, GBR, NATO) ",
+      "banner": "SECRET//REL TO USA, DEU, GBR, NATO"
+    }
+  },
+  {
+    "label": "DEU JPN NZL ZAF FVEY NATO RSMA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA JPN FVEY RSMA DEU NZL ZAF NATO"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, DEU, JPN, NZL, ZAF, FVEY, NATO, RSMA) ",
+      "banner": "SECRET//REL TO USA, DEU, JPN, NZL, ZAF, FVEY, NATO, RSMA"
+    }
+  },
+  {
+    "label": "USA FVEY DEU GBR NATO",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA FVEY DEU GBR NATO"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, DEU, GBR, FVEY, NATO) ",
+      "banner": "SECRET//REL TO USA, DEU, GBR, FVEY, NATO"
+    }
+  },
+  {
+    "label": "DEU JPN NZL ZAF FVEY NATO RSMA with dupes",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU JPN FVEY RSMA DEU DEU NZL FVEY ZAF NATO"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, DEU, JPN, NZL, ZAF, FVEY, NATO, RSMA) ",
+      "banner": "SECRET//REL TO USA, DEU, JPN, NZL, ZAF, FVEY, NATO, RSMA"
+    }
+  },
+  {
+    "label": "DEU JPN FVEY NATO:DEF RSMA DEU NATO:ABC DEU NZL FVEY ZAF NATO",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU JPN FVEY NATO:DEF RSMA DEU NATO:ABC DEU NZL FVEY ZAF NATO"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, DEU, JPN, NZL, ZAF, FVEY, NATO ABC, NATO DEF, RSMA) ",
+      "banner": "SECRET//REL TO USA, DEU, JPN, NZL, ZAF, FVEY, NATO ABC, NATO DEF, RSMA"
+    }
+  },
+  {
+    "label": "DEU FVEY NATO:DEF RSMA DEU NATO:ABC DEU NZL FVEY NATO",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU FVEY NATO:DEF RSMA DEU NATO:ABC DEU NZL FVEY NATO"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, DEU, NZL, FVEY, NATO ABC, NATO DEF, RSMA) ",
+      "banner": "SECRET//REL TO USA, DEU, NZL, FVEY, NATO ABC, NATO DEF, RSMA"
+    }
+  },
+  {
+    "label": "RELEASABLETO-NATO-AUS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "NATO",
+      "disseminationControls": "REL",
+      "releasableTo": "USA AUS NATO"
+    },
+    "expected": {
+      "portion": "(//NS//REL TO USA, AUS, NATO) ",
+      "banner": "//NATO SECRET//RELEASABLE TO USA, AUS, NATO"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "USA-AUS-CAN-NZL-EYES-ONLY",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "EYES",
+      "releasableTo": "USA AUS CAN NZL"
+    },
+    "expected": {
+      "portion": "(S//USA/AUS/CAN/NZL EYES ONLY) ",
+      "banner": "SECRET//USA/AUS/CAN/NZL EYES ONLY"
+    }
+  },
+  {
+    "label": "IMCON-REL-USA-FVEY",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "IMC REL",
+      "releasableTo": "USA FVEY"
+    },
+    "expected": {
+      "portion": "(S//IMC/REL TO USA, FVEY) ",
+      "banner": "SECRET//IMCON/REL TO USA, FVEY"
+    }
+  },
+  {
+    "label": "UNCLASSIFIED-LIMDIS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "nonICmarkings": "DS"
+    },
+    "expected": {
+      "portion": "(U//DS) ",
+      "banner": "UNCLASSIFIED//LIMDIS"
+    }
+  },
+  {
+    "label": "UNCLASSIFIED-SBU-NF",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "nonICmarkings": "SBU-NF"
+    },
+    "expected": {
+      "portion": "(U//SBU-NF) ",
+      "banner": "UNCLASSIFIED//SBU NOFORN"
+    }
+  },
+  {
+    "label": "UNCLASSIFIED-LES-NF",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "U",
+      "ownerProducer": "USA",
+      "nonICmarkings": "LES-NF"
+    },
+    "expected": {
+      "portion": "(U//LES-NF) ",
+      "banner": "UNCLASSIFIED//LES NOFORN"
+    }
+  },
+  {
+    "label": "SECRET-NOFORN-EXDIS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "nonICmarkings": "XD",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(S//NF//XD) ",
+      "banner": "SECRET//NOFORN//EXDIS"
+    }
+  },
+  {
+    "label": "SECRET-NOFORN-NODIS",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "nonICmarkings": "ND",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(S//NF//ND) ",
+      "banner": "SECRET//NOFORN//NODIS"
+    }
+  },
+  {
+    "label": "JOINT",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "DEU USA",
+      "joint": "true",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU NATO"
+    },
+    "expected": {
+      "portion": "(//JOINT S DEU USA//REL TO USA, DEU, NATO) ",
+      "banner": "//JOINT SECRET DEU USA//REL TO USA, DEU, NATO"
+    }
+  },
+  {
+    "label": "Non-JOINT",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "DEU GBR",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU GBR NATO"
+    },
+    "expected": {
+      "portion": "(//DEU GBR S//REL TO USA, DEU, GBR, NATO) ",
+      "banner": "//DEU GBR SECRET//REL TO USA, DEU, GBR, NATO"
+    }
+  },
+  {
+    "label": "Authority-50X1-HUM-OCA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "classifiedBy": "John Doe, Director CIA",
+      "classificationReason": "1.4c",
+      "declassException": "50X1-HUM"
+    },
+    "expected": {
+      "portion": "(TS) ",
+      "banner": "TOP SECRET"
+    }
+  },
+  {
+    "label": "Authority-50X2-WMD",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "classifiedBy": "John Doe, Director CIA",
+      "classificationReason": "1.4c",
+      "declassException": "50X2-WMD"
+    },
+    "expected": {
+      "portion": "(TS) ",
+      "banner": "TOP SECRET"
+    }
+  },
+  {
+    "label": "Declass-DerivativelyClassified-MultipleSources",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "declassDate": "2035-09-11"
+    },
+    "expected": {
+      "portion": "(TS) ",
+      "banner": "TOP SECRET"
+    }
+  },
+  {
+    "label": "Authority-50X1-HUM",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "declassException": "50X1-HUM",
+      "declassDate": "2050-01-01"
+    },
+    "expected": {
+      "portion": "(TS) ",
+      "banner": "TOP SECRET"
+    }
+  },
+  {
+    "label": "Authority-AEA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "declassException": "AEA"
+    },
+    "expected": {
+      "portion": "(TS) ",
+      "banner": "TOP SECRET"
+    }
+  },
+  {
+    "label": "Authority-NATO",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "declassException": "NATO"
+    },
+    "expected": {
+      "portion": "(TS) ",
+      "banner": "TOP SECRET"
+    }
+  },
+  {
+    "label": "Authority-NATO-AEA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "declassException": "NATO-AEA"
+    },
+    "expected": {
+      "portion": "(TS) ",
+      "banner": "TOP SECRET"
+    }
+  },
+  {
+    "label": "ACCM",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "nonICmarkings": "ACCM-TEA_LEAF ACCM-FICTITIOUS_EFFORT",
+      "declassDate": "2050-01-01"
+    },
+    "expected": {
+      "portion": "(TS//ACCM-FICTITIOUS EFFORT/TEA LEAF) ",
+      "banner": "TOP SECRET//ACCM-FICTITIOUS EFFORT/TEA LEAF"
+    }
+  },
+  {
+    "label": "NATO/NAC-ISAF",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "R",
+      "ownerProducer": "NATO:ISAF"
+    },
+    "expected": {
+      "portion": "(//NIR) ",
+      "banner": "//NATO ISAF RESTRICTED"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "NATO/NAC-ISAF-complex",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "R",
+      "ownerProducer": "NATO:ISAF",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "GBR NATO:PfP",
+      "displayOnlyTo": "AFG NATO:Operation_Unified_Protector"
+    },
+    "expected": {
+      "portion": "(//NIR//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector) ",
+      "banner": "//NATO ISAF RESTRICTED//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "USA-NAC",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "GBR NATO:PfP",
+      "displayOnlyTo": "AFG NATO:Operation_Unified_Protector",
+      "FGIsourceOpen": "AGO NATO:ISAF"
+    },
+    "expected": {
+      "portion": "(S//FGI AGO NATO ISAF//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector) ",
+      "banner": "SECRET//FGI AGO NATO ISAF//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector"
+    }
+  },
+  {
+    "label": "REL-FAKE_TETRA-UNDERSCORE",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA FAKE_TETRA"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, FAKE TETRA) ",
+      "banner": "SECRET//REL TO USA, FAKE TETRA"
+    }
+  },
+  {
+    "label": "FGI Protected Mixed Portion",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "FGIsourceProtected": "FGI"
+    },
+    "expected": {
+      "portion": "(TS//FGI) ",
+      "banner": "TOP SECRET//FGI"
+    }
+  },
+  {
+    "label": "NGIC_Test_1",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "FGIsourceProtected": "FGI",
+      "disseminationControls": "NF FISA",
+      "SCIcontrols": "SI"
+    },
+    "expected": {
+      "portion": "(TS//SI//FGI//NF/FISA) ",
+      "banner": "TOP SECRET//SI//FGI//NOFORN/FISA"
+    }
+  },
+  {
+    "label": "NGIC_Test_4",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "GBR",
+      "FGIsourceOpen": "GBR"
+    },
+    "expected": {
+      "portion": "(//GBR S) ",
+      "banner": "//GBR SECRET"
+    }
+  },
+  {
+    "label": "NGIC_Test_5",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "FGIsourceOpen": "GBR"
+    },
+    "expected": {
+      "portion": "(S//FGI GBR) ",
+      "banner": "SECRET//FGI GBR"
+    }
+  },
+  {
+    "label": "RAWFISA",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "RAWFISA"
+    },
+    "expected": {
+      "portion": "(S//RAWFISA) ",
+      "banner": "SECRET//RAWFISA"
+    }
+  },
+  {
+    "label": "MultipleDeclass",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "NF",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "derivative",
+      "declassException": "25X1 25X3",
+      "declassDate": "2035-12-31",
+      "classificationReason": "1.4c"
+    },
+    "expected": {
+      "portion": "(S//NF) ",
+      "banner": "SECRET//NOFORN"
+    }
+  },
+  {
+    "label": "MultipleDeclass2",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "NF",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "derivative",
+      "declassException": "25X1 25X3",
+      "declassDate": "2035-12-31"
+    },
+    "expected": {
+      "portion": "(S//NF) ",
+      "banner": "SECRET//NOFORN"
+    }
+  },
+  {
+    "label": "Exempt_from_ICD501_Discovery",
+    "source": "ISM/ISM.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "HCS",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "My Guide",
+      "declassDate": "2045-12-31",
+      "disseminationControls": "NF EXEMPT_FROM_ICD501_DISCOVERY"
+    },
+    "expected": {
+      "portion": "(TS//HCS//NF) ",
+      "banner": "TOP SECRET//HCS//NOFORN"
+    }
+  },
+  {
+    "label": "ACCM-REL-Order",
+    "source": "ISM/Misc-MarkingsTests.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": "USA FVEY",
+      "nonICmarkings": "ACCM-TEA_LEAF ACCM-FICTICIOUS_EFFORT"
+    },
+    "expected": {
+      "portion": "(TS//REL TO USA, FVEY//ACCM-FICTICIOUS EFFORT/TEA LEAF) ",
+      "banner": "TOP SECRET//REL TO USA, FVEY//ACCM-FICTICIOUS EFFORT/TEA LEAF"
+    }
+  },
+  {
+    "label": "AEAOrder-SIGMA-FRD-RD",
+    "source": "ISM/OrderingTests/AEAOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "atomicEnergyMarkings": " FRD-SG-20 FRD-SG-14 RD-CNWDI RD-SG-20 RD-SG-14  RD FRD "
+    },
+    "expected": {
+      "portion": "(S//RD-CNWDI-SG 14 20/FRD-SG 14 20) ",
+      "banner": "SECRET//RD-CNWDI-SIGMA 14 20/FRD-SIGMA 14 20"
+    }
+  },
+  {
+    "label": "DisplayOrder-NATO/NAC-ISAF-complex-Checkorder",
+    "source": "ISM/OrderingTests/DisplayOnlyOrder.xspec",
+    "attributes": {
+      "classification": "R",
+      "ownerProducer": "NATO:ISAF",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "GBR NATO:PfP",
+      "displayOnlyTo": "NATO:Operation_Unified_Protector AFG"
+    },
+    "expected": {
+      "portion": "(//NIR//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector) ",
+      "banner": "//NATO ISAF RESTRICTED//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "DisplayOrder-NATO/NAC-ISAF-complex2-Checkorder",
+    "source": "ISM/OrderingTests/DisplayOnlyOrder.xspec",
+    "attributes": {
+      "classification": "R",
+      "ownerProducer": "NATO:ISAF",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "GBR NATO:PfP",
+      "displayOnlyTo": "NATO:Operation_Unified_Protector NATO:ABC AFG"
+    },
+    "expected": {
+      "portion": "(//NIR//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO ABC, NATO Operation Unified Protector) ",
+      "banner": "//NATO ISAF RESTRICTED//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO ABC, NATO Operation Unified Protector"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "DisplayOrder-DISPLAY-ONLY-AFG-IRQ-REL-NATO-AUS-Checkorder",
+    "source": "ISM/OrderingTests/DisplayOnlyOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "USA NATO AUS",
+      "displayOnlyTo": "IRQ AFG "
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, AUS, NATO/DISPLAY ONLY AFG, IRQ) ",
+      "banner": "SECRET//REL TO USA, AUS, NATO/DISPLAY ONLY AFG, IRQ"
+    }
+  },
+  {
+    "label": "OC-OC-USGOV-Checkorder",
+    "source": "ISM/OrderingTests/DissemOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "SI",
+      "FGIsourceOpen": "AUS",
+      "disseminationControls": "OC-USGOV OC"
+    },
+    "expected": {
+      "portion": "(TS//SI//FGI AUS//OC-USGOV) ",
+      "banner": "TOP SECRET//SI//FGI AUS//ORCON-USGOV"
+    }
+  },
+  {
+    "label": "DSEN-NF-Checkorder",
+    "source": "ISM/OrderingTests/DissemOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "disseminationControls": "DSEN NF"
+    },
+    "expected": {
+      "portion": "(TS//NF/DSEN) ",
+      "banner": "TOP SECRET//NOFORN/DEA SENSITIVE"
+    }
+  },
+  {
+    "label": "FGI-Open-OrderTest-USA-NAC",
+    "source": "ISM/OrderingTests/FGIOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "GBR NATO:PfP",
+      "displayOnlyTo": "AFG NATO:Operation_Unified_Protector",
+      "FGIsourceOpen": "NATO:ISAF AGO"
+    },
+    "expected": {
+      "portion": "(S//FGI AGO NATO ISAF//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector) ",
+      "banner": "SECRET//FGI AGO NATO ISAF//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector"
+    }
+  },
+  {
+    "label": "FGI-Protected-OrderTest-USA-NAC",
+    "source": "ISM/OrderingTests/FGIOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "GBR NATO:PfP",
+      "displayOnlyTo": "AFG NATO:Operation_Unified_Protector",
+      "FGIsourceProtected": "NATO:ISAF AGO"
+    },
+    "expected": {
+      "portion": "(S//FGI//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector) ",
+      "banner": "SECRET//FGI//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector"
+    }
+  },
+  {
+    "label": "OwnerProducerOrder-Joint",
+    "source": "ISM/OrderingTests/OwnerProducerOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA DEU",
+      "joint": "true",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU NATO"
+    },
+    "expected": {
+      "portion": "(//JOINT S DEU USA//REL TO USA, DEU, NATO) ",
+      "banner": "//JOINT SECRET DEU USA//REL TO USA, DEU, NATO"
+    }
+  },
+  {
+    "label": "OwnerProducerOrder-Non-JOINT",
+    "source": "ISM/OrderingTests/OwnerProducerOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "GBR DEU",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU GBR NATO"
+    },
+    "expected": {
+      "portion": "(//DEU GBR S//REL TO USA, DEU, GBR, NATO) ",
+      "banner": "//DEU GBR SECRET//REL TO USA, DEU, GBR, NATO"
+    }
+  },
+  {
+    "label": "NATO/NAC-ISAF-complex-Checkorder",
+    "source": "ISM/OrderingTests/RELOrder.xspec",
+    "attributes": {
+      "classification": "R",
+      "ownerProducer": "NATO:ISAF",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "GBR NATO:PfP",
+      "displayOnlyTo": "AFG NATO:Operation_Unified_Protector"
+    },
+    "expected": {
+      "portion": "(//NIR//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector) ",
+      "banner": "//NATO ISAF RESTRICTED//REL TO GBR, NATO PfP/DISPLAY ONLY AFG, NATO Operation Unified Protector"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "DISPLAY-ONLY-AFG-IRQ-REL-NATO-AUS-Checkorder",
+    "source": "ISM/OrderingTests/RELOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL DISPLAYONLY",
+      "releasableTo": "USA  NATO AUS",
+      "displayOnlyTo": "AFG IRQ"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, AUS, NATO/DISPLAY ONLY AFG, IRQ) ",
+      "banner": "SECRET//REL TO USA, AUS, NATO/DISPLAY ONLY AFG, IRQ"
+    }
+  },
+  {
+    "label": "REL-NATO-AUS-Checkorder",
+    "source": "ISM/OrderingTests/RELOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": " AUS NATO USA"
+    },
+    "expected": {
+      "portion": "(S//REL TO USA, AUS, NATO) ",
+      "banner": "SECRET//REL TO USA, AUS, NATO"
+    }
+  },
+  {
+    "label": "RELEASABLETO-NATO-AUS-Checkorder",
+    "source": "ISM/OrderingTests/RELOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "NATO",
+      "disseminationControls": "REL",
+      "releasableTo": "NATO AUS  USA"
+    },
+    "expected": {
+      "portion": "(//NS//REL TO USA, AUS, NATO) ",
+      "banner": "//NATO SECRET//RELEASABLE TO USA, AUS, NATO"
+    },
+    "skip": "nato-deferred"
+  },
+  {
+    "label": "RELEASABLETO-Non-JOINT",
+    "source": "ISM/OrderingTests/RELOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "DEU GBR",
+      "disseminationControls": "REL",
+      "releasableTo": "USA DEU GBR NATO"
+    },
+    "expected": {
+      "portion": "(//DEU GBR S//REL TO USA, DEU, GBR, NATO) ",
+      "banner": "//DEU GBR SECRET//REL TO USA, DEU, GBR, NATO"
+    }
+  },
+  {
+    "label": "SITK-Checkorder",
+    "source": "ISM/OrderingTests/SCIOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "TK SI"
+    },
+    "expected": {
+      "portion": "(TS//SI/TK) ",
+      "banner": "TOP SECRET//SI/TK"
+    }
+  },
+  {
+    "label": "SI-G-ABCD-TK-SAP-ACCM-Checkorder",
+    "source": "ISM/OrderingTests/SCIOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": " SI-G-ACDE SI-G-ABCD  TK SI SI-G ",
+      "SARIdentifier": "SAR-DNI:ABC SAR-DNI:DEF",
+      "nonICmarkings": "ACCM-TEA_LEAF ACCM-FICTICIOUS_EFFORT",
+      "disseminationControls": "OC"
+    },
+    "expected": {
+      "portion": "(TS//SI-G ABCD ACDE/TK//SAR-ABC/DEF//OC//ACCM-FICTICIOUS EFFORT/TEA LEAF) ",
+      "banner": "TOP SECRET//SI-G ABCD ACDE/TK//SAR-ABC/DEF//ORCON//ACCM-FICTICIOUS EFFORT/TEA LEAF"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "SAR-JP_SD-A1-Checkorder",
+    "source": "ISM/OrderingTests/SarOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "SARIdentifier": "SAR-DNI:SOPHOMORE_DANCE SAR-DNI:JUNIOR_PROM SAR-DNI:SOPHOMORE_DANCE-A1"
+    },
+    "expected": {
+      "portion": "(S//SAR-JUNIOR PROM/SOPHOMORE DANCE-A1) ",
+      "banner": "SECRET//SAR-JUNIOR PROM/SOPHOMORE DANCE-A1"
+    },
+    "skip": "sap-deferred"
+  },
+  {
+    "label": "nonICmarkingsOrderTest-ACCM",
+    "source": "ISM/OrderingTests/nonICmarkingsOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "nonICmarkings": "ACCM-TEA_LEAF ACCM-FICTICIOUS_EFFORT",
+      "declassDate": "2050-01-01"
+    },
+    "expected": {
+      "portion": "(TS//ACCM-FICTICIOUS EFFORT/TEA LEAF) ",
+      "banner": "TOP SECRET//ACCM-FICTICIOUS EFFORT/TEA LEAF"
+    }
+  },
+  {
+    "label": "nonICmarkingsOrderTest-ACCM-DS",
+    "source": "ISM/OrderingTests/nonICmarkingsOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "nonICmarkings": "ACCM-TEA_LEAF ACCM-FICTICIOUS_EFFORT DS",
+      "declassDate": "2050-01-01"
+    },
+    "expected": {
+      "portion": "(TS//DS/ACCM-FICTICIOUS EFFORT/TEA LEAF) ",
+      "banner": "TOP SECRET//LIMDIS/ACCM-FICTICIOUS EFFORT/TEA LEAF"
+    }
+  },
+  {
+    "label": "nonICmarkingsOrderTest-ACCM-SSI-DS",
+    "source": "ISM/OrderingTests/nonICmarkingsOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "derivativelyClassifiedBy": "John Doe, JITF-CT DIA",
+      "classificationReason": "NDP-1",
+      "derivedFrom": "Multiple Sources",
+      "nonICmarkings": "ACCM-TEA_LEAF ACCM-FICTICIOUS_EFFORT DS SSI",
+      "declassDate": "2050-01-01"
+    },
+    "expected": {
+      "portion": "(TS//DS/ACCM-FICTICIOUS EFFORT/TEA LEAF/SSI) ",
+      "banner": "TOP SECRET//LIMDIS/ACCM-FICTICIOUS EFFORT/TEA LEAF/SSI"
+    }
+  },
+  {
+    "label": "nonUSmarkingsOrderTest-BALK",
+    "source": "ISM/OrderingTests/nonUSmarkingsOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "TK",
+      "nonUSControls": "BALK ATOMAL",
+      "FGIsourceOpen": "NATO",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(TS//TK/BALK//FGI NATO//NF) ",
+      "banner": "TOP SECRET//TK/BALK//FGI NATO//NOFORN"
+    }
+  },
+  {
+    "label": "nonUSmarkingsOrderTest-ATOMAL-BOHEMIA",
+    "source": "ISM/OrderingTests/nonUSmarkingsOrder.xspec",
+    "attributes": {
+      "classification": "TS",
+      "ownerProducer": "USA",
+      "SCIcontrols": "TK",
+      "atomicEnergyMarkings": "RD",
+      "nonUSControls": "BOHEMIA ATOMAL",
+      "FGIsourceOpen": "NATO",
+      "disseminationControls": "NF"
+    },
+    "expected": {
+      "portion": "(TS//TK/BOHEMIA//RD/ATOMAL//FGI NATO//NF) ",
+      "banner": "TOP SECRET//TK/BOHEMIA//RD/ATOMAL//FGI NATO//NOFORN"
+    }
+  },
+  {
+    "label": "Overall-REL-NATO-AUS-Checkorder",
+    "source": "ISM/OrderingTests/overallRelOrder.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "REL",
+      "releasableTo": " AUS NATO USA"
+    },
+    "expected": {
+      "banner": "SECRET//REL TO USA, AUS, NATO"
+    }
+  },
+  {
+    "label": "SecondBannerLine",
+    "source": "ISM/SecondBanner.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "secondBannerLine": "ACPI AWP"
+    },
+    "expected": {
+      "banner": "SECRET|ATTORNEY-CLIENT PRIVILEGED INFO/ATTORNEY WORK PRODUCT"
+    }
+  },
+  {
+    "label": "SecondBannerLine-HVCO",
+    "source": "ISM/SecondBanner.xspec",
+    "attributes": {
+      "compliesWith": "USGov USIC",
+      "DESVersion": "202111.202211",
+      "ISMCATCESVersion": "202211",
+      "resourceElement": "true",
+      "createDate": "2009-06-01",
+      "classification": "S",
+      "ownerProducer": "USA",
+      "disseminationControls": "NF",
+      "secondBannerLine": "ACPI HVCO",
+      "handleViaChannels": "TALENT KEYHOLE",
+      "derivativelyClassifiedBy": "John Smith",
+      "derivedFrom": "something",
+      "declassDate": "2034-12-31"
+    },
+    "expected": {
+      "banner": "SECRET//NOFORN|ATTORNEY-CLIENT PRIVILEGED INFO/HANDLE VIA TALENT KEYHOLE CHANNELS ONLY"
+    }
+  },
+  {
+    "label": "SecondBannerLine-2",
+    "source": "ISM/SecondBanner.xspec",
+    "attributes": {
+      "classification": "S",
+      "ownerProducer": "USA",
+      "secondBannerLine": "CUSPI DPPD SSS"
+    },
+    "expected": {
+      "banner": "SECRET|CONTENTS INCLUDE US PERSON INFORMATION/DELIBERATIVE PROCESS PRIVILEGED DOCUMENT/SOURCE SELECTION SENSITIVE"
+    }
+  }
+]

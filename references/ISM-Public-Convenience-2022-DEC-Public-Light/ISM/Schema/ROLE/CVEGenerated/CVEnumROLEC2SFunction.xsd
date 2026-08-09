@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../BuildDependencies/ISM/Schematron/ISM/ISM_XML.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<xsd:schema xmlns="urn:us:gov:ic:cvenum:role:c2sfunction"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            xml:lang="en"
+            targetNamespace="urn:us:gov:ic:cvenum:role:c2sfunction"
+            version="202111">
+   <xsd:annotation>
+      <xsd:documentation>
+                    The W3C XML Schema fragment encoding types for CVEnumROLEC2SFunction Version 2.1 controlled vocabulary enumerations. This file is generated, so edits should be made to the CVEnumROLEC2SFunction.xml CVE it is based on, instead of here.
+                </xsd:documentation>
+   </xsd:annotation>
+   <!--*************************************************************-->
+   <!--Generated TYPE DEFINITIONS ..................................-->
+   <!--*************************************************************-->
+   <xsd:simpleType name="CVEnumROLEC2SFunction">
+      <xsd:annotation>
+         <xsd:documentation>(U) All currently identified
+		        C2SFunctions within the ROLE CES.
+                         PERMISSIBLE VALUES
+                         
+                         The permissible values for this simple type are defined in the Controlled Value Enumeration:
+                         
+                         CVEnumROLEC2SFunction.xml
+                         
+                     </xsd:documentation>
+      </xsd:annotation>
+      <xsd:union>
+         <xsd:simpleType>
+            <xsd:restriction base="xsd:token">
+               <xsd:pattern value="[A-Z0-9_]{1,64}">
+                  <xsd:annotation>
+                     <xsd:documentation>Custom Function that can be created by Service Providers</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:pattern>
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType>
+            <xsd:restriction base="xsd:token">
+               <xsd:enumeration value="CAPMGR">
+                  <xsd:annotation>
+                     <xsd:documentation>Account Data Administrator</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:enumeration>
+               <xsd:enumeration value="NETADMIN">
+                  <xsd:annotation>
+                     <xsd:documentation>Network Administrator</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:enumeration>
+               <xsd:enumeration value="PROVISIONING">
+                  <xsd:annotation>
+                     <xsd:documentation>Provisioning Administrator</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:enumeration>
+               <xsd:enumeration value="READONLY">
+                  <xsd:annotation>
+                     <xsd:documentation>Read Only</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:enumeration>
+               <xsd:enumeration value="S3ONLY">
+                  <xsd:annotation>
+                     <xsd:documentation>S3 Access Only</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:enumeration>
+               <xsd:enumeration value="SVCADMIN">
+                  <xsd:annotation>
+                     <xsd:documentation>Service Administrator</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:enumeration>
+               <xsd:enumeration value="WLDEVELOPER">
+                  <xsd:annotation>
+                     <xsd:documentation>Workload Developer</xsd:documentation>
+                  </xsd:annotation>
+               </xsd:enumeration>
+            </xsd:restriction>
+         </xsd:simpleType>
+      </xsd:union>
+   </xsd:simpleType>
+</xsd:schema>

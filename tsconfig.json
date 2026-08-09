@@ -1,0 +1,12 @@
+{
+  // Repo-wide: what the editor and `bun run typecheck` see. Each package also
+  // has its own, which is what its build reads.
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "packages/*/src",
+    "packages/*/test",
+    "packages/*/scripts",
+    "packages/*/*.config.ts",
+    "*.config.ts"
+  ]
+}

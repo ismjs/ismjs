@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Notices - Distribution Notice: 
+           This document has been approved for Public Release and is available for use without restriction.
+       -->
+<cve:CVE xmlns:cve="urn:us:gov:ic:cve"
+         xmlns:ism="urn:us:gov:ic:ism"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         ism:compliesWith="USGov USIC"
+         ism:ownerProducer="USA"
+         ism:classification="U"
+         ism:DESVersion="202111"
+         ism:ISMCATCESVersion="202205"
+         ism:resourceElement="true"
+         CVEVersion="2.1"
+         specVersion="202111"
+         ism:createDate="2019-08-23"
+         xsi:schemaLocation="urn:us:gov:ic:cve ../CveSchema/CVEXml.xsd">
+
+	  <cve:IRM documentationSortOrder="3">
+		    <URN xmlns="urn:us:gov:ic:cve">urn:us:gov:ic:cvenum:role:paasfunction</URN>
+		    <Title xmlns="urn:us:gov:ic:cve"
+             ism:ownerProducer="USA"
+             ism:classification="U">CVEnumROLEPAASFunction</Title>
+		    <Description xmlns="urn:us:gov:ic:cve"
+                   ism:ownerProducer="USA"
+                   ism:classification="U">All currently identified
+		        PAASFunctions within the ROLE CES.</Description>
+
+		    <cve:Created>2016-01-06T12:15:52-05:00</cve:Created>
+
+		    <Source xmlns="urn:us:gov:ic:cve"
+              ism:classification="U"
+              ism:ownerProducer="USA">IC-CIO</Source>
+		    <PointOfContact xmlns="urn:us:gov:ic:cve"
+                      ism:classification="U"
+                      ism:ownerProducer="USA">
+			      <Name>Office IC CIO</Name>
+			      <Email>ic-standards-support@odni.gov</Email>
+		    </PointOfContact>
+	  </cve:IRM>
+
+	  <Enumeration xmlns="urn:us:gov:ic:cve"
+                ism:classification="U"
+                multivalue="false"
+                ism:ownerProducer="USA">
+     
+			<Term ism:classification="U" ism:ownerProducer="USA">
+				      <Value ism:classification="U" ism:ownerProducer="USA">CAPMGR</Value>
+				      <Description ism:classification="U" ism:ownerProducer="USA">Account Data Administrator</Description>
+			</Term>
+			<Term ism:classification="U" ism:ownerProducer="USA">
+				      <Value ism:classification="U" ism:ownerProducer="USA">NETADMIN</Value>
+				      <Description ism:classification="U" ism:ownerProducer="USA">Network Administrator</Description>
+			</Term>
+			<Term ism:classification="U" ism:ownerProducer="USA">
+				      <Value ism:classification="U" ism:ownerProducer="USA">PROVISIONING</Value>
+				      <Description ism:classification="U" ism:ownerProducer="USA">Provisioning Administrator</Description>
+			</Term>
+			<Term ism:classification="U" ism:ownerProducer="USA">
+				      <Value ism:classification="U" ism:ownerProducer="USA">READONLY</Value>
+				      <Description ism:classification="U" ism:ownerProducer="USA">Read Only</Description>
+			</Term>
+			<Term ism:classification="U" ism:ownerProducer="USA">
+				      <Value ism:classification="U" ism:ownerProducer="USA">S3ONLY</Value>
+				      <Description ism:classification="U" ism:ownerProducer="USA">S3 Access Only</Description>
+			</Term>
+			<Term ism:classification="U" ism:ownerProducer="USA">
+				      <Value ism:classification="U" ism:ownerProducer="USA">SVCADMIN</Value>
+				      <Description ism:classification="U" ism:ownerProducer="USA">Service Administrator</Description>
+			</Term>
+			<Term ism:classification="U" ism:ownerProducer="USA">
+				      <Value ism:classification="U" ism:ownerProducer="USA">WLDEVELOPER</Value>
+				      <Description ism:classification="U" ism:ownerProducer="USA">Workload Developer</Description>
+			</Term>
+			<Term ism:classification="U" ism:ownerProducer="USA">
+			  <Value ism:classification="U"
+			  	ism:ownerProducer="USA"
+			  	regularExpression="true">[A-Z0-9_]{1,64}</Value>
+			  <Description ism:classification="U" ism:ownerProducer="USA">Custom Function that can be created by Service Providers</Description>
+			</Term>
+   </Enumeration>
+</cve:CVE>

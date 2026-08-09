@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../BuildDependencies/ISM/Schematron/ISM/ISM_XML.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<xsd:schema xmlns:ac="urn:us:gov:ic:cvenum:authcat:authcattype"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            xml:lang="en"
+            targetNamespace="urn:us:gov:ic:cvenum:authcat:authcattype"
+            version="201804">
+   <xsd:annotation>
+      <xsd:documentation>
+                    The W3C XML Schema fragment encoding types for CVEnumAuthCatType Version 2.1 controlled vocabulary enumerations. This file is generated, so edits should be made to the CVEnumAuthCatType.xml CVE it is based on, instead of here.
+                </xsd:documentation>
+   </xsd:annotation>
+   <!--*************************************************************-->
+   <!--Generated TYPE DEFINITIONS ..................................-->
+   <!--*************************************************************-->
+   <xsd:simpleType name="CVEnumAuthCatTypeValues">
+      <xsd:annotation>
+         <xsd:documentation>(U) All currently authorized Authority Category types.
+                         PERMISSIBLE VALUES
+                         
+                         The permissible values for this simple type are defined in the Controlled Value Enumeration:
+                         
+                         CVEnumAuthCatType.xml
+                         
+                     </xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction base="xsd:token">
+         <xsd:enumeration value="IC_DATA">
+            <xsd:annotation>
+               <xsd:documentation>IC_DATA</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PPD42_MASINT">
+            <xsd:annotation>
+               <xsd:documentation>PPD42_MASINT</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SYSTEM_MSNMGT">
+            <xsd:annotation>
+               <xsd:documentation>SYSTEM_MSNMGT</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TEST_DATA">
+            <xsd:annotation>
+               <xsd:documentation>TEST_DATA</xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:simpleType name="CVEnumAuthCatType">
+      <xsd:annotation>
+         <xsd:documentation>(U) ac:CVEnumAuthCatType definition</xsd:documentation>
+      </xsd:annotation>
+      <xsd:restriction>
+         <xsd:simpleType>
+            <xsd:annotation>
+               <xsd:documentation>(U) A list of ac:CVEnumAuthCatTypeValues</xsd:documentation>
+            </xsd:annotation>
+            <xsd:list itemType="ac:CVEnumAuthCatTypeValues"/>
+         </xsd:simpleType>
+         <xsd:maxLength value="4"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+</xsd:schema>

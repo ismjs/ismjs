@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a generated file. DO NOT EDIT!-->
+<cve:CVE xmlns="urn:us:gov:ic:cve"
+         xmlns:cve="urn:us:gov:ic:cve"
+         xmlns:ism="urn:us:gov:ic:ism"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         ism:compliesWith="USGov USIC"
+         ism:ownerProducer="USA"
+         ism:classification="U"
+         ism:DESVersion="202111"
+         ism:ISMCATCESVersion="202205"
+         ism:resourceElement="true"
+         CVEVersion="2.1"
+         specVersion="201804"
+         ism:createDate="2023-06-09"
+         xsi:schemaLocation="urn:us:gov:ic:cve ../CveSchema/CVEXml.xsd">
+         <cve:IRM>
+                  <URN>urn:us:gov:ic:cvenum:authcat:authcattype</URN>
+                  <Title ism:ownerProducer="USA" ism:classification="U">CVEnumAuthCatType</Title>
+                  <Description ism:ownerProducer="USA" ism:classification="U">All currently authorized Authority Category types.</Description>
+                  
+                  <Created>2023-06-09T19:40:34.674Z</Created>
+                  
+                  <Source ism:classification="U" ism:ownerProducer="USA">Authoritative source for authority categories.</Source>
+                  <PointOfContact ism:classification="U" ism:ownerProducer="USA">
+                           <Name>Office IC CIO</Name>
+                           <Email>ic-standards-support@odni.gov</Email>
+                  </PointOfContact>
+         </cve:IRM>
+	
+	  <cve:Enumeration multivalue="true" ism:ownerProducer="USA" ism:classification="U">
+      <Term ism:classification="U" ism:ownerProducer="USA">
+	                    <Value ism:classification="U" ism:ownerProducer="USA">IC_DATA</Value>
+	                    <Description ism:classification="U" ism:ownerProducer="USA">IC_DATA</Description>
+	           </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+	                    <Value ism:classification="U" ism:ownerProducer="USA">PPD42_MASINT</Value>
+	                    <Description ism:classification="U" ism:ownerProducer="USA">PPD42_MASINT</Description>
+	           </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+	                    <Value ism:classification="U" ism:ownerProducer="USA">SYSTEM_MSNMGT</Value>
+	                    <Description ism:classification="U" ism:ownerProducer="USA">SYSTEM_MSNMGT</Description>
+	           </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+	                    <Value ism:classification="U" ism:ownerProducer="USA">TEST_DATA</Value>
+	                    <Description ism:classification="U" ism:ownerProducer="USA">TEST_DATA</Description>
+	           </Term>
+   </cve:Enumeration>
+</cve:CVE>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a generated file. DO NOT EDIT!-->
+<cve:CVE xmlns:cve="urn:us:gov:ic:cve"
+         xmlns:ism="urn:us:gov:ic:ism"
+         xmlns:uias="urn:us:gov:ic:uias"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         ism:compliesWith="USGov USIC"
+         ism:ownerProducer="USA"
+         ism:classification="U"
+         ism:DESVersion="202111"
+         ism:resourceElement="true"
+         ism:ISMCATCESVersion="202205"
+         CVEVersion="2.1"
+         specVersion="202207"
+         ism:createDate="2023-06-09"
+         xsi:schemaLocation="urn:us:gov:ic:cve ../CveSchema/CVEXml.xsd">
+
+	  <cve:IRM>
+		    <URN xmlns="urn:us:gov:ic:cve">urn:us:gov:ic:cvenum:usagency:auditRoutingUnique</URN>
+		    <Title xmlns="urn:us:gov:ic:cve"
+             ism:ownerProducer="USA"
+             ism:classification="U">CVEnumAuditRoutingUnique</Title>
+		    <Description xmlns="urn:us:gov:ic:cve"
+                   ism:ownerProducer="USA"
+                   ism:classification="U">All ICAS approved values for organization to which Audit Records are routed 
+			that are not already in USAgency CVE.</Description>
+
+		    <Created xmlns="urn:us:gov:ic:cve">2023-06-09T19:40:32.707Z</Created>
+
+		    <Source xmlns="urn:us:gov:ic:cve"
+              ism:classification="U"
+              ism:ownerProducer="USA">ICAS</Source>
+		    <PointOfContact xmlns="urn:us:gov:ic:cve"
+                      ism:classification="U"
+                      ism:ownerProducer="USA">
+			      <Name>Office IC CIO</Name>
+			      <Email>ic-standards-support@odni.gov</Email>
+		    </PointOfContact>
+	  </cve:IRM>
+
+	  <cve:Enumeration multivalue="true" ism:ownerProducer="USA" ism:classification="U"><!--Extensions beyond the USAgency List-->
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USAFRICOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Africa Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USCENTCOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Central Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USCYBERCOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Strategic Command, US Cyber Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USEUCOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States European Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USFK</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Pacific Command, US Forces Korea (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USNORTHCOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Northern Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USPACOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Pacific Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USSOCOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Special Operations Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USSOUTHCOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Southern Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USSTRATCOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Strategic Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.USTRANSCOM</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Transportation Command (Type: COCOM)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.DARPA</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Defense Advanced Research Projects Agency  (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.DISA</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Defense Information Systems Agency (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.DODCIO</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Assistant Secretary of Defense for Networks and Information Integration and DoD Chief Information Officer (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.DODIG</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Department of Defense Inspector General (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.DODIO</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Assistant to the Secretary of Defense for Intelligence Oversight (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.DSS</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Defense Security Service (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.DTRA</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Defense Threat-Reduction Agency (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.JCS</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Office of the Joint Chiefs of Staff (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.JIDA</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Joint Improvised-Threat Defeat Agency (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.MDA</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Missile Defense Agency (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.OUSDATL</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Office of the Undersecretary of Defense (Acquisition, Technology and Logistics) (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.OUSDI</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				Office of the Undersecretary of Defense (Intelligence) (Type: DOD)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.INA</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Department of Homeland Security, Office of Intelligence and Analysis (Type: IC)
+			</Description>
+		    </Term>
+		
+		    <Term xmlns="urn:us:gov:ic:cve"
+            ism:classification="U"
+            ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">USA.TSA</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">
+				United States Department of Homeland Security, Transportation Security Administration (Type: IC)
+			</Description>
+		    </Term>		
+		
+	  </cve:Enumeration>
+</cve:CVE>

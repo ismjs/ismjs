@@ -1,0 +1,2064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a generated file. DO NOT EDIT!-->
+<cve:CVE xmlns:cve="urn:us:gov:ic:cve"
+         xmlns="urn:us:gov:ic:cve"
+         xmlns:ism="urn:us:gov:ic:ism"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         ism:compliesWith="USGov USIC"
+         ism:ownerProducer="USA"
+         ism:classification="U"
+         ism:DESVersion="202111"
+         ism:ISMCATCESVersion="202205"
+         ism:resourceElement="true"
+         CVEVersion="2.1"
+         specVersion="202211"
+         ism:createDate="2023-06-09"
+         xsi:schemaLocation="urn:us:gov:ic:cve ../CveSchema/CVEXml.xsd">
+
+	  <cve:IRM>
+		    <URN>urn:us:gov:ic:cvenum:ismcat:relto</URN>
+		    <Title ism:ownerProducer="USA" ism:classification="U">CVEnumISMCATRelTo</Title>
+		    <Description ism:ownerProducer="USA" ism:classification="U">USA, followed by GENC trigraphs
+			(except USA and AX1) in alphabetical order by trigraph, followed by IC Markings System Register
+			and Manual Coalition tetragraphs in alphabetical order by tetragraph. This CVE is used by 
+			@ism:releasableTo and @ism:displayOnlyTo.</Description>
+
+		    <Created>2023-06-09T19:40:37.463Z</Created>
+
+		    <cve:Source ism:classification="U" ism:ownerProducer="USA">IC Markings System Register and Manual Register Appendix A</cve:Source>
+		    <cve:Source ism:classification="U" ism:ownerProducer="USA">GENC http://geo.aitcnet.org/NSGREG/genc</cve:Source>
+		    <cve:PointOfContact ism:classification="U" ism:ownerProducer="USA">
+         <cve:Name>Office IC CIO</cve:Name>
+         <cve:Email>ic-standards-support@odni.gov</cve:Email>
+      </cve:PointOfContact>
+	  </cve:IRM>
+
+	  <cve:Enumeration multivalue="true" ism:ownerProducer="USA" ism:classification="U"><!--Only copies out the USA trigraph from GENC-->
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">USA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">United States of America</cve:Description>
+      </cve:Term>
+      <!--All currently valid GENC trigraphs except USA and AX1 in alphabetical order by trigraph-->
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ABW</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Aruba</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AFG</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Islamic Republic of Afghanistan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AGO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Angola</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AIA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Anguilla</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ALB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Albania</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AND</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Principality of Andorra</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ARE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">United Arab Emirates</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ARG</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Argentine Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ARM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Armenia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ASM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territory of American Samoa</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ATA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Antarctica</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ATF</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">French Southern and Antarctic Lands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ATG</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Antigua and Barbuda</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AUS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Commonwealth of Australia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AUT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Austria</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AX2</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Guantanamo Bay Naval Base</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AX3</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Entity 6</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">AZE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Azerbaijan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BDI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Burundi</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BEL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Belgium</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BEN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Benin</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BES</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Bonaire, Sint Eustatius, and Saba</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BFA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Burkina Faso</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BGD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">People’s Republic of Bangladesh</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BGR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Bulgaria</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BHR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Bahrain</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BHS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Commonwealth of The Bahamas</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BIH</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Bosnia and Herzegovina</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BLM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Saint Barthelemy</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BLR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Belarus</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BLZ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Belize</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BMU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Bermuda</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BOL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Plurinational State of Bolivia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BRA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Federative Republic of Brazil</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BRB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Barbados</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BRN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Brunei Darussalam</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BTN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Bhutan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BVT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Bouvet Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">BWA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Botswana</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CAF</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Central African Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CAN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Canada</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CCK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territory of Cocos (Keeling) Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CHE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Swiss Confederation</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CHL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Chile</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CHN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">People’s Republic of China</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CIV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Côte d’Ivoire</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CMR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Cameroon</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">COD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Democratic Republic of the Congo</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">COG</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of the Congo</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">COK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Cook Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">COL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Colombia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">COM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Union of the Comoros</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CPT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Clipperton Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CPV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Cabo Verde</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CRI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Costa Rica</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CUB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Cuba</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CUW</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Curaçao</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CXR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territory of Christmas Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CYM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Cayman Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CYP</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Cyprus</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">CZE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Czech Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">DEU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Federal Republic of Germany</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">DGA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Diego Garcia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">DJI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Djibouti</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">DMA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Commonwealth of Dominica</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">DNK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Denmark</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">DOM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Dominican Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">DZA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">People’s Democratic Republic of Algeria</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ECU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Ecuador</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">EGY</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Arab Republic of Egypt</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ERI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">State of Eritrea</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ESH</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Western Sahara</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ESP</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Spain</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">EST</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Estonia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ETH</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Federal Democratic Republic of Ethiopia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">FIN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Finland</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">FJI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Fiji</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">FLK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Falkland Islands (Islas Malvinas)</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">FRA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">French Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">FRO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Faroe Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">FSM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Federated States of Micronesia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GAB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Gabonese Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GBR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">United Kingdom of Great Britain and Northern Ireland</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GEO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Georgia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GGY</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Bailiwick of Guernsey</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GHA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Ghana</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GIB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Gibraltar</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GIN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Guinea</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GLP</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Region of Guadeloupe</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GMB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of The Gambia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GNB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Guinea-Bissau</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GNQ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Equatorial Guinea</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GRC</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Hellenic Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GRD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Grenada</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GRL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Greenland</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GTM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Guatemala</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GUF</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territorial Collectivity of Guiana</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GUM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territory of Guam</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">GUY</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Co-operative Republic of Guyana</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">HKG</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Hong Kong Special Administrative Region</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">HMD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territory of Heard Island and McDonald Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">HND</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Honduras</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">HRV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Croatia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">HTI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Haiti</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">HUN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Hungary</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">IDN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Indonesia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">IMN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Isle of Man</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">IND</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of India</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">IOT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">British Indian Ocean Territory</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">IRL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Ireland</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">IRN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Islamic Republic of Iran</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">IRQ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Iraq</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ISL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Iceland</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ISR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">State of Israel</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ITA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Italian Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">JAM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Jamaica</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">JEY</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Bailiwick of Jersey</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">JOR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Hashemite Kingdom of Jordan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">JPN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Japan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">KAZ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Kazakhstan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">KEN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Kenya</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">KGZ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kyrgyz Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">KHM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Cambodia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">KIR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Kiribati</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">KNA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Federation of Saint Kitts and Nevis</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">KOR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Korea</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">KWT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">State of Kuwait</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LAO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Lao People’s Democratic Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LBN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Lebanese Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LBR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Liberia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LBY</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">State of Libya</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LCA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Saint Lucia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LIE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Principality of Liechtenstein</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LKA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Democratic Socialist Republic of Sri Lanka</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LSO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Lesotho</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LTU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Lithuania</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LUX</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Grand Duchy of Luxembourg</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">LVA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Latvia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MAC</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Macau Special Administrative Region</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MAF</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Saint Martin</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MAR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Morocco</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MCO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Principality of Monaco</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MDA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Moldova</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MDG</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Madagascar</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MDV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Maldives</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MEX</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">United Mexican States</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MHL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of the Marshall Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MKD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of North Macedonia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MLI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Mali</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MLT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Malta</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MMR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Union of Burma</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MNE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Montenegro</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MNG</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Mongolia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MNP</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Commonwealth of the Northern Mariana Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MOZ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Mozambique</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MRT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Islamic Republic of Mauritania</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MSR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Montserrat</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MTQ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territorial Collectivity of Martinique</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MUS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Mauritius</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MWI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Malawi</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MYS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Malaysia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">MYT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Department of Mayotte</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NAM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Namibia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NCL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">New Caledonia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NER</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Niger</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NFK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territory of Norfolk Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NGA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Federal Republic of Nigeria</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NIC</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Nicaragua</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NIU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Niue</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NLD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of the Netherlands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NOR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Norway</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NPL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Federal Democratic Republic of Nepal</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NRU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Nauru</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">NZL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">New Zealand</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">OMN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Sultanate of Oman</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PAK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Islamic Republic of Pakistan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PAN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Panama</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PCN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Pitcairn, Henderson, Ducie, and Oeno Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PER</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Peru</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PHL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of the Philippines</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PLW</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Palau</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PNG</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Independent State of Papua New Guinea</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">POL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Poland</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PRI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Commonwealth of Puerto Rico</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PRK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Democratic People’s Republic of Korea</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PRT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Portuguese Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PRY</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Paraguay</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">PYF</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">French Polynesia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">QAT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">State of Qatar</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">REU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Region of Reunion</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ROU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Romania</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">RUS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Russian Federation</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">RWA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Rwanda</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SAU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Saudi Arabia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SDN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of the Sudan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SEN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Senegal</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SGP</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Singapore</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SGS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">South Georgia and the South Sandwich Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SHN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Saint Helena, Ascension, and Tristan da Cunha</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SLB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Solomon Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SLE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Sierra Leone</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SLV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of El Salvador</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SMR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of San Marino</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SOM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Federal Republic of Somalia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SPM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territorial Collectivity of Saint Pierre and Miquelon</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SRB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Serbia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SSD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of South Sudan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">STP</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Democratic Republic of Sao Tome and Principe</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SUR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Suriname</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SVK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Slovak Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SVN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Slovenia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SWE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Sweden</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SWZ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Eswatini</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SXM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Sint Maarten</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SYC</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Seychelles</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">SYR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Syrian Arab Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TCA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Turks and Caicos Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TCD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Chad</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TGO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Togolese Republic</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">THA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Thailand</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TJK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Tajikistan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TKL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Tokelau</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TKM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Turkmenistan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TLS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Democratic Republic of Timor-Leste</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TON</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingdom of Tonga</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TTO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Trinidad and Tobago</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TUN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Tunisia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TUR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Turkey</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TUV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Tuvalu</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TWN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Taiwan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">TZA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">United Republic of Tanzania</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">UGA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Uganda</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">UKR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Ukraine</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">URY</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Oriental Republic of Uruguay</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">UZB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Uzbekistan</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">VAT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">State of the Vatican City</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">VCT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Saint Vincent and the Grenadines</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">VEN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Bolivarian Republic of Venezuela</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">VGB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">British Virgin Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">VIR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">United States Virgin Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">VNM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Socialist Republic of Vietnam</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">VUT</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Vanuatu</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">WLF</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Wallis and Futuna</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">WSM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Independent State of Samoa</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XAC</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Territory of Ashmore and Cartier Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XAZ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Entity 1</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XBI</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Bassas da India</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XBK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Baker Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XCR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Entity 2</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XCS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Coral Sea Islands Territory</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XCY</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Entity 3</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XEU</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Europa Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XGL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Glorioso Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XGZ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Gaza Strip</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XHO</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Howland Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XJA</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Johnston Atoll</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XJM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Jan Mayen</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XJN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Juan de Nova Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XJV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Jarvis Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XKM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Entity 4</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XKN</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Entity 5</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XKR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Kingman Reef</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XKS</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Kosovo</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XMW</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Midway Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XNV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Navassa Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XPL</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Palmyra Atoll</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XPR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Paracel Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XQZ</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Akrotiri</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XSP</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Spratly Islands</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XSV</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Svalbard</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XTR</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Tromelin Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XWB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">West Bank</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XWK</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Wake Island</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">XXD</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Dhekelia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">YEM</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Yemen</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ZAF</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of South Africa</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ZMB</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Zambia</cve:Description>
+      </cve:Term>
+      <cve:Term ism:classification="U"
+                ism:ownerProducer="USA"
+                cve:codespace="ge:GENC:3:3-11">
+         <cve:Value ism:classification="U" ism:ownerProducer="USA">ZWE</cve:Value>
+         <cve:Description ism:classification="U" ism:ownerProducer="USA">Republic of Zimbabwe</cve:Description>
+      </cve:Term>
+      <!--All currently valid IC Markings System Register and Manual Coalition tetragraphs in alphabetical order by tetragraph-->
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">ACGU</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">FOUR EYES</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">AMSP</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">AFRICOM Multinational Strategic Partners</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2005-12-12"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">AOSC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Athens Olympics Security Coalition</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">APFS</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">African Peacekeeping Force Somalia</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">ASEA</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Association of Southeast Asian Nations (ASEAN)</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">AUSTRALIA_GROUP</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Australia Group</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2015-10-27"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">BHTF</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Boko Haram Task Force</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">BWCS</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Biological Weapons Convention States</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">CFCK</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Combined Forces Command Korea</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">CFOD</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Coalition Forces Odyssey Dawn</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:ownerProducer="USA" ism:classification="U">CFUP</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Coalition Forces Unified Protector</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">CLFC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Combined Libya Fusion Cell</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">CMFC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Combined Maritime Forces Central</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">CMFP</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Cooperative Maritime Forces Pacific</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">CPMT</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Civilian Protection Monitoring Team for Sudan</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">CTOC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Countering Transnational Organized Crime</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">CWCS</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Chemical Weapons Convention States</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:ownerProducer="USA" ism:classification="U">ECTF</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">European Counter-Terrorism Forces</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">EFOR</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">European Union Stabilization Forces in Bosnia</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">EU</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">European Union</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">EUDA</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">European Union DARFUR</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">FRME</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Counter Violent Extremist Organizations Framework Partners</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">FVEY</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">FIVE EYES</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:ownerProducer="USA" ism:classification="U">GCCH</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Gulf Cooperation Council</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">GCTF</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Global Counter-Terrorism Forces</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">GFNX</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Global Foreign Terrorist Fighter Network Exchange</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">GMIF</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Global Maritime Interception Forces</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">IESC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">International Events Security Coalition</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">IMSC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">International Maritime Security Construct</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">IMSP</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">INDOPACOM Multinational Strategic Partners</Description>		
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">IPMC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">INDO PACIFIC Maritime Call</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">IRKS</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Inherent Resolve Kinetic Support</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">ISAF</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">International Security Assistance Force for Afghanistan</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">ISSG</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">International Syria Support Group</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">KFOR</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Stabilization Forces in Kosovo</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">MCFI</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Multinational Coalition Forces-Iraq</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">MESF</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Middle East Stability Force</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">MGEU</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Multinational GEOINT Europe</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">MIFH</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Multinational Interim Force Haiti</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">MLEC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Multi-Lateral Enduring Contingency</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA"> 
+		       <Value ism:classification="U" ism:ownerProducer="USA">MNTF</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Multinational Task Force</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">MPFL</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Multinational Peacekeeping Forces</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA"> 
+		       <Value ism:classification="U" ism:ownerProducer="USA">NACT</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">North African Counter-Terrorism Forces</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">NATO</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">North Atlantic Treaty Organization</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+         <Value ism:classification="U"
+                ism:ownerProducer="USA"
+                regularExpression="true">NATO:[a-zA-Z\-_]{1,256}</Value>
+         <Description ism:classification="U" ism:ownerProducer="USA">North Atlantic Treaty Organization Special Words</Description>
+      </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">NCFE</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">NATO CFE Treaty on Conventional Armed Forces in Europe</Description>
+		
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">NKIC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">North Korea Intelligence Coalition</Description>
+		
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">NRDC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">NORDIC</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">NSG</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Nuclear Suppliers' Group</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">OSAG</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Olympic Security Advisory Group</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">OSTY</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Open Skies Treaty</Description>
+		
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">PAWA</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Partnership for Actions in West Africa</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">PGMF</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Persian Gulf Multinational Forces</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">PSMX</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Pacific Security Monitoring Exchange</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">RISC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Russia Intelligence Sharing Coalition</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2021-11-03"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">RSMA</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Resolute Support Mission Afghanistan</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2016-03-17"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">SFOR</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Stabilization Force</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">SOFP</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Special Operations Forces Partners</Description>
+		
+	     </Term>
+      <Term ism:classification="U"
+            deprecated="2021-11-03"
+            ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">SPAA</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">SOF Planning Activities in Afghanistan (also called "11-Eyes")</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">TEYE</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">THREE EYES</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">TFTC</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">Terrorist Financing Targeting Center</Description>
+		
+	     </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+		       <Value ism:classification="U" ism:ownerProducer="USA">UNCK</Value>
+		       <Description ism:classification="U" ism:ownerProducer="USA">United Nations Command, Korea</Description>
+		
+	     </Term>
+   </cve:Enumeration>
+</cve:CVE>

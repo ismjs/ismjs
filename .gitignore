@@ -1,0 +1,43 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# directories
+coverage
+dist
+node_modules
+
+# misc
+.DS_Store
+.idea
+*.log*
+
+# NOTE: references/ and packages/*/src/generated/ are deliberately NOT ignored.
+# The vendored ODNI packages and the code generated from them are committed
+# on purpose — see docs/adr/0003-vocabularies-are-generated-and-committed.md
+
+# --- references/ ---------------------------------------------------------
+# The vendored ODNI packages are committed (ADR-0003), but only the parts
+# codegen, harvest and the rules harvester actually read, plus the XSL and
+# Schematron the source comments cite as normative. Everything below is either
+# a second encoding of data kept elsewhere, or documentation for humans.
+
+# IC-GENC ships the geopolitical entity register that ISMCAT already enumerates.
+# Nothing reads it.
+references/IC-GENC-Public-Convenience-2022-DEC-Public-Light/
+
+# RELAX NG restates the XSDs; CSV restates the CVE JSON.
+references/**/*.rng
+references/**/*.rnc
+references/**/*.csv
+
+# Human documentation and packaging metadata.
+references/**/*.pdf
+references/**/*.png
+# Exception: DoDM 5200.01-V2 is the normative source for banner syntax and the
+# order of marking categories, which the XSL only implements. Source comments
+# cite it, so it is tracked for the same reason the XSL and Schematron are.
+!references/520001m_vol2.pdf
+!references/Cleared-CUI-Training-Aid-Markings-2024.pdf
+references/**/*.html
+references/**/*.xhtml
+references/**/*.md5
+references/**/*.properties

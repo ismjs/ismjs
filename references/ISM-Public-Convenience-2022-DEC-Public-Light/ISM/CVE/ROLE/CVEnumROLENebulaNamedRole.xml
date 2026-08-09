@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Notices - Distribution Notice: 
+           This document has been approved for Public Release and is available for use without restriction.
+       -->
+<cve:CVE xmlns:cve="urn:us:gov:ic:cve"
+         xmlns:ism="urn:us:gov:ic:ism"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         ism:compliesWith="USGov USIC"
+         ism:ownerProducer="USA"
+         ism:classification="U"
+         ism:DESVersion="202111"
+         ism:ISMCATCESVersion="202205"
+         ism:resourceElement="true"
+         CVEVersion="2.1"
+         specVersion="202111"
+         ism:createDate="2019-08-23"
+         xsi:schemaLocation="urn:us:gov:ic:cve ../CveSchema/CVEXml.xsd">
+
+	  <cve:IRM documentationSortOrder="1">
+		    <URN xmlns="urn:us:gov:ic:cve">urn:us:gov:ic:cvenum:role:nebula:namedrole</URN>
+		    <Title xmlns="urn:us:gov:ic:cve"
+             ism:ownerProducer="USA"
+             ism:classification="U">CVEnumROLENebulaNamedRole</Title>
+		    <Description xmlns="urn:us:gov:ic:cve"
+                   ism:ownerProducer="USA"
+                   ism:classification="U">All currently identified NamedRole for the Nebula namespace within the ROLE CES.</Description>
+
+		    <cve:Created>2016-01-06T12:12:11-05:00</cve:Created>
+
+		    <Source xmlns="urn:us:gov:ic:cve"
+              ism:classification="U"
+              ism:ownerProducer="USA">IC-CIO</Source>
+		    <PointOfContact xmlns="urn:us:gov:ic:cve"
+                      ism:classification="U"
+                      ism:ownerProducer="USA">
+			      <Name>Office IC CIO</Name>
+			      <Email>ic-standards-support@odni.gov</Email>
+		    </PointOfContact>
+	  </cve:IRM>
+
+	  <Enumeration xmlns="urn:us:gov:ic:cve"
+                ism:classification="U"
+                multivalue="false"
+                ism:ownerProducer="USA">
+      <Term ism:classification="U" ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">Bulk</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">Bulk</Description>
+		    </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">Content_Provider</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">Content Provider</Description>
+		    </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">Direct</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">Direct</Description>
+		    </Term>
+      <Term ism:classification="U" ism:ownerProducer="USA">
+			      <Value ism:classification="U" ism:ownerProducer="USA">Proxy</Value>
+			      <Description ism:classification="U" ism:ownerProducer="USA">Proxy</Description>
+		    </Term>
+   </Enumeration>
+
+</cve:CVE>

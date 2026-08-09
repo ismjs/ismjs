@@ -1,0 +1,75 @@
+{
+  "name": "@ismjs/core",
+  "version": "0.1.0",
+  "description": "A strict codec for Information Security Markings (ISM) to parse and format banner lines and portion marks.",
+  "keywords": [
+    "banner-line",
+    "capco",
+    "classification",
+    "codec",
+    "cui",
+    "ism",
+    "parser",
+    "portion-mark",
+    "security-marking"
+  ],
+  "homepage": "https://github.com/ismjs/ismjs#readme",
+  "bugs": {
+    "url": "https://github.com/ismjs/ismjs/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Justin Williams",
+    "url": "https://github.com/nerdstep"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ismjs/ismjs.git",
+    "directory": "packages/core"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "unpkg": "./dist/ismjs.global.js",
+  "jsdelivr": "./dist/ismjs.global.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./descriptions": {
+      "import": {
+        "types": "./dist/descriptions.d.mts",
+        "default": "./dist/descriptions.mjs"
+      },
+      "require": {
+        "types": "./dist/descriptions.d.cts",
+        "default": "./dist/descriptions.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "codegen": "node scripts/codegen.ts",
+    "harvest": "node scripts/harvest.ts",
+    "build": "tsdown",
+    "check:package": "publint && attw --pack . --profile node16"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
