@@ -1,12 +1,12 @@
 # ismjs
 
-ismjs is a dependency-free TypeScript codec for Information Security Markings: Banner
-Lines and Portion Marks used to label classified and controlled information in U.S.
-government systems.
-
 > [!NOTE]
 > ismjs is an independent open-source project. It is not affiliated with or endorsed by
 > the Office of the Director of National Intelligence or any other U.S. Government agency.
+
+ismjs is a dependency-free TypeScript codec for Information Security Markings: Banner
+Lines and Portion Marks used to label classified and controlled information in U.S.
+government systems.
 
 ```text
 SECRET//NOFORN      Banner Line
