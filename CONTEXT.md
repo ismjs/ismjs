@@ -49,6 +49,12 @@ stylesheet, it should.
 The set of security facts a marking string can carry, independent of how it is
 rendered. This is a strict subset of the ISM attribute set — it excludes anything
 no string can express.
+For a Special Access Program, a Marking carries only the projected SAP Program
+expression (for example `SAR-ABC`), never the SAR Identifier's source authority or
+required classification because a marking string cannot reconstruct them.
+Validation over a Marking claims an authoritative rule only when every input to that
+rule survives this projection; rules requiring discarded SAR metadata or
+`compliesWith` remain resource-level rules.
 A Marking never holds an empty multi-valued field: `createMarking` drops one
 rather than keeping it, so a field is present or absent and never both. Code
 reading a Marking therefore tests `=== undefined`. Code reading the plain input a
@@ -75,9 +81,56 @@ _Avoid_: security banner attributes, declass block, authority attributes
 
 **Rollup**:
 Deriving a document's overall Marking from the Markings of its constituent parts.
-Rollup is where information is deliberately destroyed — three distinct SAR
-identifiers roll up to `SAR-MULTIPLE PROGRAMS`, and that collapse cannot be undone.
+Rollup operates on a document tree and may deliberately destroy information, so it is
+separate from the single-Marking codec. `SAR-MULTIPLE PROGRAMS` is not a Rollup result:
+it is a lossy DoD Banner rendering of program facts that remain present in the Marking.
 _Avoid_: aggregation, overall marking computation, summarisation
+
+**Special Access Program (SAP)**:
+A defense or intelligence program whose information requires access controls beyond
+those normally required at its classification level.
+_Avoid_: SAR, SAR Identifier, program marking
+
+**SAR Identifier**:
+An ISM attribute token that identifies a Special Access Program by source authority,
+optional required classification, and program expression — `SAR-DOD:S:ABC`.
+Projecting it into a Marking discards the authority and required classification,
+leaving only the string-expressible program expression — `SAR-ABC`.
+_Avoid_: SAP, SAR, SAR marking
+
+**SAP Program Expression**:
+The projected, string-expressible program value stored in a Marking. Every expression
+retains its `SAR-` prefix — `SAR-DEMO-SAP99` — but carries no source authority or
+required classification. Under IC SAP Rendering Policy its dashes express hierarchy;
+under DoD SAP Rendering Policy they are opaque program-name characters.
+_Avoid_: SAR Identifier, SAR Segment, raw SAP value, program name
+
+**SAR Segment**:
+The string-visible rendering of one or more Special Access Programs in a Banner Line or
+Portion Mark — `//SAR-ABC/DEF`.
+_Avoid_: SAR Identifier, SAP attribute, SAR field
+
+**SAR Summary**:
+The DoD Banner Line rendering `SAR-MULTIPLE PROGRAMS`, used when a Marking carries more
+than two distinct Special Access Programs. It conceals their identities in that Banner
+Line; a Portion Mark still renders every program. A SAR Summary is not a program value
+and never belongs in a Marking, so `parse` can recognize it but cannot reconstruct the
+source Marking.
+_Avoid_: SAP, SAR Identifier, Rollup result, program expression
+
+**Rendering Policy**:
+The independent choices that govern how a codec renders and interprets a Marking.
+Rendering Policy is operation context: it is neither a security fact carried by the
+Marking, document-compliance metadata, nor a validation Profile. Its SAP choice is
+implemented first; a future CUI choice may vary independently.
+_Avoid_: document profile, compliance policy, validation profile, rendering mode
+
+**SAP Rendering Policy**:
+The IC-or-DoD choice within Rendering Policy that governs how the codec renders and
+interprets a SAR Segment. The parser enforces the selected grammar and never infers the
+policy from the string; an omitted choice defaults to IC. It varies independently of
+any future CUI rendering choice.
+_Avoid_: SAP style, SAP mode, SAPRenderingRuleSet, document policy
 
 **CUI**:
 Controlled Unclassified Information — a marking category carried inside a Marking
@@ -132,7 +185,7 @@ _Avoid_: sub-control, child marking, compartmented marking
 The registered control a token is built on — the longest vocabulary entry the token
 either equals or extends with a hyphen. `SI-G-ABCD` stems from `SI-G`, not `SI`,
 because a Compartment hangs off the most specific control that admits it. A token
-orders and supersedes by its stem.
+orders by its stem.
 _Avoid_: root, base, parent, prefix
 
 **Supersession**:
