@@ -3,4 +3,4 @@
 # Vendored ODNI specification packages are stored byte-for-byte.
 # They are normative source data — line-ending normalisation must not alter
 # them, so that checksums against the original ODNI download still match.
-references/** -text
+references/** -text linguist-vendored
