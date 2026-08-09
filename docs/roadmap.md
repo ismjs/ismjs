@@ -28,13 +28,14 @@ grammar and authority-backed tests.
 ### NATO ownership
 
 Twenty official vectors are deferred. NATO ownership is distinct from NATO
-sub-organisations in `releasableTo`, which the library already supports. It requires:
+Special Words in entity lists, which the library already recognizes. It requires:
 
-- `CVEnumISMHighWaterNATO` (`NATO-U` through `NATO-TS`) as another classification
-  vocabulary;
-- a representation of NATO ownership that does not weaken US and foreign ownership
-  types;
-- classification-segment parsing and rendering selected by the ownership regime.
+- a precise ownership/classification union that adds NATO RESTRICTED without weakening
+  US and foreign ownership branches;
+- authority-derived NATO Special Word spelling and Portion Mark abbreviations;
+- classification-segment parsing and rendering selected by ownership; and
+- explicit failures where rendered syntax cannot distinguish a NATO Special Word from
+  multiple Owner-Producers, or cannot preserve an unabbreviated Special Word.
 
 ### Additional Marking-level validation rules
 
@@ -51,6 +52,18 @@ belong with the wider resource model below.
 
 These cannot be added by widening `Marking`. [ADR 0001](./adr/0001-marking-is-the-string-expressible-projection.md)
 defines `Marking` as the string-expressible projection of the ISM attribute set.
+
+### NATO high-water metadata
+
+`highWaterNATO` records the highest NATO classification represented among relevant
+portions so resource rollup and entity access controls can evaluate NATO content. It is
+not the primary classification of a NATO-Owned Marking; the authority rules prohibit it
+when the sole Owner-Producer is `NATO`.
+
+The schema annotation says the attribute is rendered in Banner Lines and Portion Marks,
+but the supplied banner and portion rendering XSLT does not consume it directly. A future
+resource model should resolve that discrepancy against additional authority evidence
+before exposing a public NATO High-Water Value or claiming rendering behavior.
 
 ### Classification Authority and Control/Decontrol Blocks
 
