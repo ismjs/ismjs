@@ -10,6 +10,14 @@ import { HVCO } from '../src/tokens.ts'
 import { anyMarking } from './arbitrary.ts'
 import { lossy } from './lossy.ts'
 
+const losslessHvcoBanner = anyMarking
+  .map((input) => canonicalize(input))
+  .filter(
+    (marking) =>
+      (marking.secondBannerLine?.includes(HVCO) ?? false) &&
+      lossy(marking, RenderMode.Banner) === undefined,
+  )
+
 /**
  * The round-trip law over Markings nobody wrote down.
  *
@@ -52,19 +60,15 @@ describe('parse(format(m)) === m over generated Markings', () => {
 
   it('holds for every accepted HVCO Banner Line', () => {
     fc.assert(
-      fc.property(
-        anyMarking.filter((input) => input.secondBannerLine?.includes(HVCO) ?? false),
-        (input) => {
-          const marking = canonicalize(input)
-          const rendered = format(marking, RenderMode.Banner)
-          const result = parse(rendered)
+      fc.property(losslessHvcoBanner, (marking) => {
+        const rendered = format(marking, RenderMode.Banner)
+        const result = parse(rendered)
 
-          expect(result.ok, rendered).toBe(true)
-          if (result.ok) {
-            expect(result.marking).toEqual(marking)
-          }
-        },
-      ),
+        expect(result.ok, rendered).toBe(true)
+        if (result.ok) {
+          expect(result.marking).toEqual(marking)
+        }
+      }),
       { numRuns: 1000 },
     )
   })

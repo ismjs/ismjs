@@ -48,6 +48,27 @@ Add a remaining rule to `Marking` validation only when all of its inputs are
 string-expressible. Rules requiring document structure or authority-block attributes
 belong with the wider resource model below.
 
+## Planned Rollup package
+
+### Classification High-Water and Marking Rollup
+
+`@ismjs/rollup` will derive one overall Marking from an explicit set of canonical
+contributing Markings. It also exposes Classification High-Water independently for
+builder workflows. This flat kernel does not require a Resource tree; it is a separate
+package because Rollup is lossy, many-to-one derivation rather than a strict codec
+operation.
+
+The first target profile is USA-owned output. It covers the authority-backed field
+matrix, including CUI union, and fails explicitly for unresolved `displayOnlyTo`, second
+Banner Line, and `HVCO` channel semantics. NATO-owned and arbitrary foreign output
+profiles remain later work. Implementation follows the NATO and SAP core model changes
+but does not by itself establish 1.0.0 readiness.
+
+The complete contract, authority hierarchy, diagnostics, evidence plan, and phased
+implementation order are in the [Rollup capability design](./rollup.md). The package
+boundary and separation from Resource Rollup are recorded in
+[ADR 0008](./adr/0008-marking-rollup-is-a-separate-package-and-resource-rollup-remains-separate.md).
+
 ## Capabilities requiring a wider resource model
 
 These cannot be added by widening `Marking`. [ADR 0001](./adr/0001-marking-is-the-string-expressible-projection.md)
@@ -81,15 +102,15 @@ The current package is a string codec. Reading `ism:*` attributes from XML and w
 them back depends on the resource-level model above. XML transport should remain outside
 the parse/format grammar even if it ultimately ships from the same package.
 
-### Rollup
+### Resource Rollup
 
-Rollup derives a document's overall Marking from the Markings of its constituent parts.
-It operates on a tree, deliberately loses information in some cases, and therefore needs
-a document model rather than a wider single `Marking`.
+Resource Rollup discovers contributing parts in a document tree and derives both the
+overall Marking and document-only metadata. It requires a Resource model for exclusion,
+ownership, declassification, Notices, Need-To-Know, and related context, then delegates
+the explicit contributor batch to the Marking Rollup kernel.
 
-The reference implementation lives under `references/ISM-Rollup-.../XSL`. Whether the
-future document model remains in `@ismjs/core` or earns a separate package should be
-decided from the resulting public interface, not in advance.
+Resource design remains a separate planning topic. It should not be inferred from the
+reference XML transform while implementing `@ismjs/rollup`.
 
 ## Outside the marking codec
 

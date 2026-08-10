@@ -183,6 +183,37 @@ field lists are not automatically one abstraction; admission, ordering, assembly
 validation encode different facts and need different types. See
 [ADR 0004](./docs/adr/0004-marking-field-knowledge-remains-explicit.md).
 
+## Planned Rollup boundary
+
+`@ismjs/rollup` is planned as a separate package over canonical `Marking` values. It
+does not widen the codec or require an XML document merely to combine an explicit set of
+contributors.
+
+```mermaid
+flowchart LR
+  Values["Classification values"] --> HighWater["highestClassification"]
+  Contributors["Explicit contributing Markings"] --> MarkingRollup["rollupMarkings"]
+  HighWater --> MarkingRollup
+  Core["@ismjs/core"] --> MarkingRollup
+  MarkingRollup --> Overall["Overall Marking"]
+
+  Tree["Future Resource tree"] --> ResourceRollup["Resource Rollup"]
+  ResourceRollup --> MarkingRollup
+  ResourceRollup --> Metadata["Document-only metadata"]
+```
+
+Marking Rollup is a pure whole-batch derivation. A future Resource capability owns tree
+traversal, contribution selection, and document-only fields, then delegates its explicit
+contributor set to the Marking kernel. This direction avoids making a lossy many-to-one
+operation part of the strict single-Marking codec and avoids inventing a Resource model
+inside an algorithm.
+
+The first target profile is USA-owned output. Unanimous contributor ownership can be
+preserved; mixed ownership requires an explicit Rollup Target Ownership. Unsupported
+authority gaps fail instead of silently dropping security facts. See the
+[Rollup capability design](./docs/rollup.md) and
+[ADR 0008](./docs/adr/0008-marking-rollup-is-a-separate-package-and-resource-rollup-remains-separate.md).
+
 ## Authority and generation
 
 The runtime contains integration logic, not hand-transcribed controlled vocabularies.
@@ -275,6 +306,8 @@ The current design is held together by a few constraints:
 6. Validation rule families remain distinct behind one public orchestration seam.
 7. Deliberate information loss and unsupported authority scope are counted and tested,
    never silently skipped.
+8. Marking Rollup remains outside the codec, consumes canonical Markings as a whole
+   batch, and does not absorb Resource traversal or document-only metadata.
 
 Changes that intentionally alter one of these constraints should update this document
 and normally add or amend an ADR.
