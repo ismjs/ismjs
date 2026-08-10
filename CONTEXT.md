@@ -79,12 +79,32 @@ Part of the ISM attribute set but _not_ part of any Marking, because no marking
 string can express it.
 _Avoid_: security banner attributes, declass block, authority attributes
 
+**Classification High-Water**:
+The highest Classification represented by a set of Markings. It is a value-level fact,
+not the derivation of an overall Marking.
+_Avoid_: Rollup, aggregation, highest marking
+
 **Rollup**:
-Deriving a document's overall Marking from the Markings of its constituent parts.
-Rollup operates on a document tree and may deliberately destroy information, so it is
-separate from the single-Marking codec. `SAR-MULTIPLE PROGRAMS` is not a Rollup result:
-it is a lossy DoD Banner rendering of program facts that remain present in the Marking.
+The umbrella concept of deriving overall security-marking facts from constituent
+Markings. Rollup may deliberately destroy information and is separate from the
+single-Marking codec.
 _Avoid_: aggregation, overall marking computation, summarisation
+
+**Marking Rollup**:
+Deriving one overall Marking from an explicit set of contributing Markings. It combines
+each field according to its own Rollup rules rather than selecting one input Marking.
+_Avoid_: highest classification, winning marking, marking merge
+
+**Resource Rollup**:
+Deriving an overall Marking and Resource-level metadata from the contributing parts of a
+Resource tree. It owns contribution selection and document-only Rollup rules.
+_Avoid_: Marking Rollup, document traversal, XML rollup
+
+**Rollup Target Ownership**:
+The Owner-Producer and jointness of the derivative output of Marking Rollup. It is
+inferred only when every contributor has identical ownership; otherwise the caller must
+state it because contributor origin does not uniquely determine derivative ownership.
+_Avoid_: rolled-up ownership, owner union, source ownership
 
 **Special Access Program (SAP)**:
 A defense or intelligence program whose information requires access controls beyond
