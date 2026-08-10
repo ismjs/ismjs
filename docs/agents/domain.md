@@ -18,7 +18,7 @@ This repo is multi-context, signalled by `CONTEXT-MAP.md` at the root. Contexts 
 /
 ├── CONTEXT-MAP.md                      ← entry point
 ├── CONTEXT.md                          ← shared context: the ISM codec domain
-├── docs/adr/                           ← system-wide decisions (0001–0006)
+├── docs/adr/                           ← system-wide decisions (0001–0007)
 └── packages/
     └── core/
         ├── CONTEXT.md                  ← per-package context (create as needed)

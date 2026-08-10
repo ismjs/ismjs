@@ -169,6 +169,41 @@ foreign-owned Marking leads with its owners (`//GBR SECRET`) where a US-owned on
 does not.
 _Avoid_: owner, producer, originator, source country
 
+**NATO-Owned Marking**:
+A Marking whose sole Owner-Producer is `NATO` or one NATO Special Word. That ownership
+regime selects NATO classification syntax; merely naming NATO in releasability, FGI, or
+a non-US control does not make a Marking NATO-owned.
+_Avoid_: NATO Marking, NATO-related Marking, Marking containing NATO
+
+**NATO Classification**:
+The `TS`, `S`, `C`, `R`, or `U` classification of a NATO-Owned Marking, whose NATO
+wording is selected by ownership. It is not a `NATO-TS` through `NATO-U`
+`highWaterNATO` value; those values summarize the highest NATO classification represented
+for rollup and access-control purposes rather than selecting the Marking's primary
+classification wording.
+_Avoid_: high-water NATO, NATO classification prefix, NATO-TS
+
+**NATO High-Water Value**:
+A `NATO-U`, `NATO-R`, `NATO-C`, `NATO-S`, or `NATO-TS` resource value summarizing the
+highest NATO classification represented among relevant portions for rollup and
+access-control purposes. It is not a Marking's primary classification and is prohibited
+when the sole Owner-Producer is `NATO`.
+_Avoid_: NATO Classification, NATO ownership classification, classification prefix
+
+**NATO Special Word**:
+An authority-defined `NATO:<text>` Owner-Producer or entity expression, such as
+`NATO:ISAF` or `NATO:ABC`; the pattern does not imply that the text names an
+organisation. Every Special Word renders fully in a Banner Line, but a Portion Mark can
+preserve only the four values with authority-defined abbreviations.
+_Avoid_: NATO sub-organisation, NAC, NATO command, NATO organisation
+
+**Ambiguous Marking String**:
+A valid Banner Line or Portion Mark with more than one authority-valid Marking
+interpretation because the rendered syntax erased a boundary, such as a NATO Special
+Word colliding with multiple Owner-Producers. It is not malformed, but no parser can
+recover one source Marking without guessing.
+_Avoid_: malformed marking, unknown marking, information-loss summary
+
 **Joint Marking**:
 A Marking owned by more than one country and explicitly declared joint, rendered
 with its owners named after the classification — `//JOINT SECRET DEU USA`.
