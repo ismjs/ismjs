@@ -36,6 +36,28 @@ The two verification levels are:
 Run `check` while working and `check:full` before handing off a change. CI runs the full
 gate for pull requests and pushes to `main`.
 
+## Commit messages
+
+Every commit in a pull request must follow Conventional Commits. The type determines the
+release impact when a commit lands on `main`: `fix:` triggers a patch, `feat:` triggers a
+minor, and `!` marks a breaking change. Types such as `docs:`, `test:`, `refactor:`, and
+`chore:` do not trigger a package release.
+
+```text
+docs: clarify NATO ownership
+feat(core): add NATO classification
+fix(parser)!: reject ambiguous ownership
+```
+
+Check the latest local commit before pushing:
+
+```sh
+bun run commitlint --last --verbose
+```
+
+The pull-request workflow checks every commit introduced by the branch and reports each
+nonconforming subject.
+
 ## Repository layout
 
 ```text
