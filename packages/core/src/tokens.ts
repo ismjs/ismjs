@@ -29,7 +29,7 @@ export const NATO = 'NATO'
 NATO satisfies OwnerProducer
 
 /** A NATO sub-organisation is written `NATO:` and then a free name. */
-export const NATO_PREFIX: string = `${NATO}:`
+export const NATO_PREFIX: `${typeof NATO}:` = `${NATO}:`
 
 /** Dissemination controls whose rendering is not a simple token lookup. */
 export const REL = 'REL'

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { OwnerProducer } from '../src/generated/ismcat.ts'
 import { createMarking } from '../src/index.ts'
-import type { Marking } from '../src/marking.ts'
+import type { FgiOpenExpression, Marking, RelToExpression } from '../src/marking.ts'
 import { canonicalize } from '../src/normalize.ts'
 
 /**
@@ -59,6 +59,21 @@ describe('pattern terms the registers admit', () => {
       FGIsourceProtected: ['NATO:ISAF'],
     })
     expect(marking.releasableTo).toContain('NATO:ABC')
+  })
+
+  // `NATO:${string}` admits only values that start with `NATO:`. When the
+  // prefix was typed as `string`, the pattern was `${string}${string}`, and
+  // every entity expression accepted any string.
+  it('refuses an entity that is neither registered nor a NATO sub-organisation', () => {
+    // @ts-expect-error XYZ is not a registered entity and does not start with NATO:
+    const entity: RelToExpression = 'XYZ'
+    expect(entity).toBe('XYZ')
+  })
+
+  it('refuses USA as an open FGI source', () => {
+    // @ts-expect-error FGI is foreign by definition; the register excludes USA
+    const source: FgiOpenExpression = 'USA'
+    expect(source).toBe('USA')
   })
 
   // NATO ownership is deferred in docs/roadmap.md, and the corpus agrees: every

@@ -51,13 +51,8 @@ export type SciExpression = SciControl | `${SciControl}-${string}`
  */
 export type NatoSubOrganisation = `${typeof NATO_PREFIX}${string}`
 
-// The rule reads `NATO:${string}` as plain `string` and reports the registered
-// entities as absorbed by it. They are not: `USA` does not start with `NATO:`.
-// oxlint-disable-next-line typescript/no-redundant-type-constituents -- template literal, not string
 export type RelToExpression = RelToEntity | NatoSubOrganisation
-// oxlint-disable-next-line typescript/no-redundant-type-constituents -- template literal, not string
 export type FgiOpenExpression = FgiOpenEntity | NatoSubOrganisation
-// oxlint-disable-next-line typescript/no-redundant-type-constituents -- template literal, not string
 export type FgiProtectedExpression = FgiProtectedEntity | NatoSubOrganisation
 
 /**
