@@ -1,10 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import type { Vector } from '../scripts/corpus.ts'
 import { IssueCode, Severity } from '../src/issue.ts'
 import type { Issue } from '../src/issue.ts'
 import { validate } from '../src/validate.ts'
-import vectors from './fixtures/vectors.json' with { type: 'json' }
-import { toMarking } from './vector.ts'
+import { corpus, toMarking } from './vector.ts'
 
 /**
  * What the corpus says when the rules are applied to it.
@@ -15,7 +13,7 @@ import { toMarking } from './vector.ts'
  * violation cannot appear unseen.
  */
 describe('the corpus', () => {
-  const active = (vectors as readonly Vector[]).filter((v) => v.skip === undefined)
+  const active = corpus.filter((v) => v.skip === undefined)
 
   it('breaks exactly the rules we expect it to', () => {
     const found = new Map<string, Set<string>>()
@@ -32,7 +30,9 @@ describe('the corpus', () => {
     }
 
     const summary = Object.fromEntries(
-      [...found].map(([id, labels]) => [id, labels.size]).toSorted(),
+      [...found]
+        .map(([id, labels]) => [id, labels.size] as const)
+        .toSorted(([a], [b]) => a.localeCompare(b)),
     )
 
     // A rendering vector is minimal by design. `(TS//RD)` is the smallest input

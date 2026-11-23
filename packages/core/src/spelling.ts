@@ -47,7 +47,7 @@ export const unspell = (text: string): string => FROM_BANNER[text] ?? text
 
 /** A Banner Line spells `SG` as `SIGMA` and expands DCNI/UCNI. */
 export const unbannerAtomic = (segment: string): string => {
-  let text = segment.replaceAll(`${BANNER_SIGMA}`, SIGMA_QUALIFIER)
+  let text = segment.replaceAll(BANNER_SIGMA, SIGMA_QUALIFIER)
   for (const [token, spelling] of Object.entries(BANNER_ATOMIC_ENERGY)) {
     text = text.replaceAll(spelling, token)
   }

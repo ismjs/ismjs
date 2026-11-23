@@ -128,7 +128,13 @@ const emitSharedLabels = (
   trigraphTokens: readonly string[],
   tetragraphTokens: readonly string[],
 ): string[] => {
-  const term = (t: string): Term => merged.get(t) as Term
+  const term = (t: string): Term => {
+    const found = merged.get(t)
+    if (found === undefined) {
+      throw new Error(`no ISMCAT term for ${t}`)
+    }
+    return found
+  }
   return [
     describedBy(
       'TRIGRAPH_DESCRIPTIONS',

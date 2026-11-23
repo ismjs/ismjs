@@ -24,19 +24,12 @@ import { readdirSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join, relative, sep } from 'node:path'
 import { type Vector, SkipReason, type SkipReason as SkipReasonValue } from './corpus.ts'
 import { ROLLUP } from './cve.ts'
-import { type XmlNode, attribute, readXml } from './xml.ts'
+import { type XmlNode, asNodes, attribute, childOf, readXml } from './xml.ts'
 
 const XSPEC = join(ROLLUP, 'XSPEC')
 const OUT = join(import.meta.dirname, '..', 'test', 'fixtures')
 
 // ---------------------------------------------------------------------------
-
-const asArray = (node: unknown): XmlNode[] => {
-  if (node === undefined || node === null) {
-    return []
-  }
-  return (Array.isArray(node) ? node : [node]) as XmlNode[]
-}
 
 /**
  * The element inside an `x:context` that carries the ISM attributes. Its tag
@@ -44,7 +37,7 @@ const asArray = (node: unknown): XmlNode[] => {
  */
 const sampleAttributes = (context: XmlNode): Readonly<Record<string, string>> | undefined => {
   for (const value of Object.values(context)) {
-    for (const child of asArray(value)) {
+    for (const child of asNodes(value)) {
       if (attribute(child, 'classification') === undefined) {
         continue
       }
@@ -73,15 +66,15 @@ const expectedString = (test: string | undefined): string | undefined => {
 const expectations = (scenario: XmlNode): Vector['expected'] => {
   const expected: { portion?: string; banner?: string } = {}
 
-  for (const child of asArray(scenario['scenario'])) {
-    const mode = asArray(child['context'])
+  for (const child of asNodes(scenario['scenario'])) {
+    const mode = asNodes(child['context'])
       .map((c) => attribute(c, 'mode'))
       .find((m) => m !== undefined)
     if (mode === undefined) {
       continue
     }
 
-    for (const expectation of asArray(child['expect'])) {
+    for (const expectation of asNodes(child['expect'])) {
       const value = expectedString(attribute(expectation, 'test'))
       if (value === undefined) {
         continue
@@ -112,8 +105,8 @@ const skipReason = (attributes: Readonly<Record<string, string>>): SkipReasonVal
 }
 
 const collect = (node: unknown, source: string, into: Vector[]): void => {
-  for (const scenario of asArray((node as XmlNode)['scenario'])) {
-    const attributes = asArray(scenario['context'])
+  for (const scenario of asNodes(childOf(node, 'scenario'))) {
+    const attributes = asNodes(scenario['context'])
       .map((c) => sampleAttributes(c))
       .find((a) => a !== undefined)
 
@@ -122,7 +115,7 @@ const collect = (node: unknown, source: string, into: Vector[]): void => {
       if (expected.portion !== undefined || expected.banner !== undefined) {
         const reason = skipReason(attributes)
         into.push({
-          label: String(scenario['@label'] ?? ''),
+          label: attribute(scenario, 'label') ?? '',
           source,
           attributes,
           expected,

@@ -5,7 +5,7 @@ import { mkdirSync, writeFileSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import type { Term } from './emit.ts'
 import { CVES_WITHOUT_XSD, type CveGroup } from './manifest.ts'
-import { attribute, findAll, readXml } from './xml.ts'
+import { asNodes, attribute, childOf, findAll, isXmlNode, readXml } from './xml.ts'
 
 const PACKAGE = join(import.meta.dirname, '..')
 /** The vendored packages sit at the repo root. They are not this package's data. */
@@ -22,22 +22,25 @@ const OUT = join(PACKAGE, 'src/generated')
 export const FGI_MARKER = 'FGI'
 
 /** CVE JSON wraps every leaf as `{ text, ism:* }`; some are bare strings. */
-const text = (node: unknown): string =>
-  typeof node === 'string' ? node : String((node as { text?: unknown })?.text ?? '')
+const text = (node: unknown): string => {
+  const leaf = isXmlNode(node) ? node['text'] : node
+  if (leaf === undefined || leaf === null) {
+    return ''
+  }
+  if (typeof leaf !== 'string') {
+    throw new TypeError(`expected a CVE text leaf, found ${JSON.stringify(leaf)}`)
+  }
+  return leaf
+}
 
 export const cve = (group: CveGroup, name: string): Term[] => {
   const file = join(ISM, 'CVE', group, `${name}.json`)
-  const doc = JSON.parse(readFileSync(file, 'utf8')) as {
-    CVE?: { Enumeration?: { Term?: unknown } }
-  }
-  const raw = doc.CVE?.Enumeration?.Term
-  const terms = (
-    Array.isArray(raw) ? raw : raw === undefined || raw === null ? [] : [raw]
-  ) as Array<Record<string, unknown>>
+  const doc: unknown = JSON.parse(readFileSync(file, 'utf8'))
+  const terms = asNodes(childOf(childOf(childOf(doc, 'CVE'), 'Enumeration'), 'Term'))
 
   return terms.map((t) => {
-    const term: Term = { value: text(t.Value), description: text(t.Description) }
-    const deprecated = t.deprecated
+    const term: Term = { value: text(t['Value']), description: text(t['Description']) }
+    const deprecated = t['deprecated']
     if (deprecated !== undefined && deprecated !== null) {
       term.deprecated = text(deprecated)
     }

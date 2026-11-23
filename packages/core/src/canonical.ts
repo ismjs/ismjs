@@ -40,9 +40,12 @@ export type CanonicalNonEmpty<T extends string> = Canonical<T> & NonEmpty<T>
  * `readonly T[]`, so this narrows a value the checker already accepts. It does
  * not bypass the checker. `as unknown as` would claim more than is true.
  */
-const asCanonical = <T extends string>(values: readonly T[]): Canonical<T> => values as Canonical<T>
+const asCanonical = <T extends string>(values: readonly T[]): Canonical<T> =>
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion -- minting the brand; see above
+  values as Canonical<T>
 
 const asCanonicalNonEmpty = <T extends string>(values: readonly T[]): CanonicalNonEmpty<T> =>
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion -- minting the brand; see above
   values as CanonicalNonEmpty<T>
 
 /**

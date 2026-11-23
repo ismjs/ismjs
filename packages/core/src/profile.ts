@@ -24,6 +24,7 @@ import type { UsClassification } from './generated/vocab.ts'
 import { type Issue, IssueCode, Severity, issue } from './issue.ts'
 import type { Marking } from './marking.ts'
 import { valuesOf } from './marking.ts'
+import { entriesOf } from './entries.ts'
 import { matchesRuleTrigger } from './rule-match.ts'
 
 /** Any field drawn from a register, which is every field worth restricting. */
@@ -102,7 +103,7 @@ export const profileFor = (ceiling: UsClassification): Profile => {
       ...(restriction.patterns.size > 0 && { denyPatterns: [...restriction.patterns] }),
     }
   }
-  return profile as Profile
+  return profile
 }
 
 const permitsValue = (restriction: Restriction, value: string): boolean =>
@@ -112,11 +113,11 @@ const permitsValue = (restriction: Restriction, value: string): boolean =>
 
 /** Values this deployment may not issue, as issues. */
 export const checkProfile = (marking: Marking, profile: Profile, issues: Issue[]): void => {
-  for (const [field, restriction] of Object.entries(profile)) {
+  for (const [field, restriction] of entriesOf(profile)) {
     if (restriction === undefined) {
       continue
     }
-    for (const value of valuesOf(marking, field as keyof Marking)) {
+    for (const value of valuesOf(marking, field)) {
       if (permitsValue(restriction, value)) {
         continue
       }
