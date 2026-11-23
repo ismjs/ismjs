@@ -1,6 +1,6 @@
-import { defineConfig } from 'tsdown'
+import { type UserConfig, defineConfig } from 'tsdown'
 
-export default defineConfig([
+const config: UserConfig[] = defineConfig([
   // The npm artifact: ESM + CJS + types.
   {
     entry: ['src/index.ts', 'src/descriptions.ts'],
@@ -31,3 +31,5 @@ export default defineConfig([
     outputOptions: { entryFileNames: 'ismjs.global.js' },
   },
 ])
+
+export default config

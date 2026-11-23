@@ -27,7 +27,7 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { ISM, write } from './cve.ts'
-import { key, quote } from './emit.ts'
+import { checkedConst, key, quote } from './emit.ts'
 import { type Rule, fieldOf, readRules, tokenList } from './schematron.ts'
 import { harvestCrossField } from './cross-field.ts'
 import { emitForbids, emitPresence, emitRequires } from './cross-field-tables.ts'
@@ -61,15 +61,19 @@ const emitExclusive = (rules: readonly Rule[]): string => {
   return (
     `// MutuallyExclusiveAttributeValues — ${exclusive.length} rules in the projection\n` +
     '/** Tokens that may not appear together. At most one of each list may be present. */\n' +
-    'export const MUTUALLY_EXCLUSIVE = [\n' +
-    exclusive
-      .map(
-        (r) =>
-          `  { id: ${quote(r.id)}, field: ${quote(r.field)}, ` +
-          `tokens: [${r.tokens.map((t) => quote(t)).join(', ')}] },`,
-      )
-      .join('\n') +
-    '\n] as const satisfies readonly (FieldRule & { readonly tokens: readonly string[] })[]\n'
+    checkedConst(
+      'MUTUALLY_EXCLUSIVE',
+      '[\n' +
+        exclusive
+          .map(
+            (r) =>
+              `  { id: ${quote(r.id)}, field: ${quote(r.field)}, ` +
+              `tokens: [${r.tokens.map((t) => quote(t)).join(', ')}] },`,
+          )
+          .join('\n') +
+        '\n]',
+      'readonly (FieldRule & { readonly tokens: readonly string[] })[]',
+    )
   )
 }
 
@@ -90,9 +94,11 @@ const emitMembership = (rules: readonly Rule[]): string => {
   return (
     `// Membership templates — ${membership.length} rules, one per field in the projection\n` +
     '/** Every token in the field must be a value its register admits. */\n' +
-    'export const MEMBERSHIP = {\n' +
-    membership.map((r) => `  ${key(r.field)}: ${quote(r.id)},`).join('\n') +
-    '\n} as const satisfies Partial<Record<keyof Marking, string>>\n'
+    checkedConst(
+      'MEMBERSHIP',
+      `{\n${membership.map((r) => `  ${key(r.field)}: ${quote(r.id)},`).join('\n')}\n}`,
+      'Partial<Record<keyof Marking, string>>',
+    )
   )
 }
 
@@ -120,16 +126,19 @@ const emitDeprecation = (rules: readonly Rule[]): string => {
     ' * reports an error once that date is *after* the deprecation and a warning\n' +
     ' * while it is on or before. Absent a date it reports neither.\n' +
     ' */\n' +
-    'export const DEPRECATION = {\n' +
-    [...deprecation]
-      .toSorted((a, b) => (a[0] < b[0] ? -1 : 1))
-      .map(
-        ([field, ids]) =>
-          `  ${key(field)}: { error: ${quote(ids.error ?? '')}, warning: ${quote(ids.warning ?? '')} },`,
-      )
-      .join('\n') +
-    '\n} as const satisfies Partial<\n' +
-    '  Record<keyof Marking, { readonly error: string; readonly warning: string }>\n>\n'
+    checkedConst(
+      'DEPRECATION',
+      '{\n' +
+        [...deprecation]
+          .toSorted((a, b) => (a[0] < b[0] ? -1 : 1))
+          .map(
+            ([field, ids]) =>
+              `  ${key(field)}: { error: ${quote(ids.error ?? '')}, warning: ${quote(ids.warning ?? '')} },`,
+          )
+          .join('\n') +
+        '\n}',
+      'Partial<\n  Record<keyof Marking, { readonly error: string; readonly warning: string }>\n>',
+    )
   )
 }
 

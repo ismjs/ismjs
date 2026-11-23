@@ -11,8 +11,8 @@ const PACKAGE = join(import.meta.dirname, '..')
 /** The vendored packages sit at the repo root. They are not this package's data. */
 const ROOT = join(PACKAGE, '..', '..')
 
-export const ISM = join(ROOT, 'references/ISM-Public-Convenience-2022-DEC-Public-Light/ISM')
-export const ROLLUP = join(
+export const ISM: string = join(ROOT, 'references/ISM-Public-Convenience-2022-DEC-Public-Light/ISM')
+export const ROLLUP: string = join(
   ROOT,
   'references/ISM-Rollup-Public-Convenience-2022-DEC-Public-Light/ISM-Rollup',
 )

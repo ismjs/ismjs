@@ -183,4 +183,5 @@ export const CUI_VOCABULARIES = [
     cve: 'CVEnumISMCUISpecified',
     note: 'categories whose authority prescribes specific handling',
   },
-] as const satisfies readonly { type: string; const: string; cve: string; note: string }[]
+] as const
+CUI_VOCABULARIES satisfies readonly { type: string; const: string; cve: string; note: string }[]

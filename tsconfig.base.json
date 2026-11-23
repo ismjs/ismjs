@@ -30,6 +30,11 @@
     "noUnusedParameters": true,
 
     "declaration": true,
+    // Every export states its type, so each file's declarations can be written
+    // without the type checker. tsdown sees this and emits the .d.ts files with
+    // oxc. A `satisfies` check on an export goes in its own statement, because
+    // the type cannot be read through `as const satisfies`.
+    "isolatedDeclarations": true,
     "noEmit": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,

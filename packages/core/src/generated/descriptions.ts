@@ -21,7 +21,8 @@ export const US_CLASSIFICATION_DESCRIPTIONS = {
   S: 'SECRET',
   C: 'CONFIDENTIAL',
   U: 'UNCLASSIFIED',
-} as const satisfies Readonly<Record<UsClassification, string>>
+} as const
+US_CLASSIFICATION_DESCRIPTIONS satisfies Readonly<Record<UsClassification, string>>
 
 export const ANY_CLASSIFICATION_DESCRIPTIONS = {
   R: 'RESTRICTED',
@@ -29,7 +30,8 @@ export const ANY_CLASSIFICATION_DESCRIPTIONS = {
   S: 'SECRET',
   TS: 'TOP SECRET',
   U: 'UNCLASSIFIED',
-} as const satisfies Readonly<Record<AnyClassification, string>>
+} as const
+ANY_CLASSIFICATION_DESCRIPTIONS satisfies Readonly<Record<AnyClassification, string>>
 
 export const SCI_CONTROL_DESCRIPTIONS = {
   BUR: 'BUR',
@@ -52,7 +54,8 @@ export const SCI_CONTROL_DESCRIPTIONS = {
   'TK-BLFH': 'BLUEFISH',
   'TK-IDIT': 'IDITAROD',
   'TK-KAND': 'KANDIK',
-} as const satisfies Readonly<Record<SciControl, string>>
+} as const
+SCI_CONTROL_DESCRIPTIONS satisfies Readonly<Record<SciControl, string>>
 
 export const ATOMIC_ENERGY_MARKING_DESCRIPTIONS = {
   RD: 'RESTRICTED DATA',
@@ -69,7 +72,8 @@ export const ATOMIC_ENERGY_MARKING_DESCRIPTIONS = {
   DCNI: 'DoD CONTROLLED NUCLEAR INFORMATION',
   UCNI: 'DoE CONTROLLED NUCLEAR INFORMATION',
   TFNI: 'TRANSCLASSIFIED FOREIGN NUCLEAR INFORMATION',
-} as const satisfies Readonly<Record<AtomicEnergyMarking, string>>
+} as const
+ATOMIC_ENERGY_MARKING_DESCRIPTIONS satisfies Readonly<Record<AtomicEnergyMarking, string>>
 
 export const DISSEM_CONTROL_DESCRIPTIONS = {
   RS: 'RISK SENSITIVE',
@@ -94,7 +98,8 @@ export const DISSEM_CONTROL_DESCRIPTIONS = {
   FED_ONLY: 'FED ONLY',
   FEDCON: 'FEDCON',
   NOCON: 'NOCON',
-} as const satisfies Readonly<Record<DissemControl, string>>
+} as const
+DISSEM_CONTROL_DESCRIPTIONS satisfies Readonly<Record<DissemControl, string>>
 
 export const NON_IC_MARKING_DESCRIPTIONS = {
   DS: 'LIMITED DISTRIBUTION',
@@ -106,13 +111,15 @@ export const NON_IC_MARKING_DESCRIPTIONS = {
   'LES-NF': 'LAW ENFORCEMENT SENSITIVE NOFORN',
   SSI: 'SENSITIVE SECURITY INFORMATION',
   NNPI: 'NAVAL NUCLEAR PROPULSION INFORMATION',
-} as const satisfies Readonly<Record<NonIcMarking, string>>
+} as const
+NON_IC_MARKING_DESCRIPTIONS satisfies Readonly<Record<NonIcMarking, string>>
 
 export const NON_US_CONTROL_DESCRIPTIONS = {
   'NATO-ATOMAL': 'NATO Atomal mark',
   'NATO-BOHEMIA': 'NATO Bohemia mark',
   'NATO-BALK': 'NATO Balk mark',
-} as const satisfies Readonly<Record<NonUsControl, string>>
+} as const
+NON_US_CONTROL_DESCRIPTIONS satisfies Readonly<Record<NonUsControl, string>>
 
 export const SECOND_BANNER_LINE_DESCRIPTIONS = {
   ACPI: 'ATTORNEY-CLIENT PRIVILEGED INFO',
@@ -121,7 +128,8 @@ export const SECOND_BANNER_LINE_DESCRIPTIONS = {
   DPPD: 'DELIBERATIVE PROCESS PRIVILEGED DOCUMENT',
   HVCO: 'HANDLE VIA CHANNELS ONLY',
   SSS: 'SOURCE SELECTION SENSITIVE',
-} as const satisfies Readonly<Record<SecondBannerLine, string>>
+} as const
+SECOND_BANNER_LINE_DESCRIPTIONS satisfies Readonly<Record<SecondBannerLine, string>>
 
 export const TRIGRAPH_DESCRIPTIONS = {
   ABW: 'Aruba',
@@ -404,7 +412,8 @@ export const TRIGRAPH_DESCRIPTIONS = {
   ZAF: 'Republic of South Africa',
   ZMB: 'Republic of Zambia',
   ZWE: 'Republic of Zimbabwe',
-} as const satisfies Readonly<Record<Trigraph, string>>
+} as const
+TRIGRAPH_DESCRIPTIONS satisfies Readonly<Record<Trigraph, string>>
 
 export const TETRAGRAPH_DESCRIPTIONS = {
   ACGU: 'FOUR EYES',
@@ -468,13 +477,17 @@ export const TETRAGRAPH_DESCRIPTIONS = {
   TEYE: 'THREE EYES',
   TFTC: 'Terrorist Financing Targeting Center',
   UNCK: 'United Nations Command, Korea',
-} as const satisfies Readonly<Record<Tetragraph, string>>
+} as const
+TETRAGRAPH_DESCRIPTIONS satisfies Readonly<Record<Tetragraph, string>>
 
-export const ISMCAT_DESCRIPTIONS = {
+export const ISMCAT_DESCRIPTIONS: { readonly FGI: 'Foreign Government Information' }
+  & typeof TRIGRAPH_DESCRIPTIONS
+  & typeof TETRAGRAPH_DESCRIPTIONS = {
   FGI: 'Foreign Government Information',
   ...TRIGRAPH_DESCRIPTIONS,
   ...TETRAGRAPH_DESCRIPTIONS,
-} as const satisfies Readonly<Record<IsmcatEntity, string>>
+}
+ISMCAT_DESCRIPTIONS satisfies Readonly<Record<IsmcatEntity, string>>
 
 // One table for both designations: 123 categories, each described once.
 export const CUI_DESCRIPTIONS = {
@@ -601,4 +614,5 @@ export const CUI_DESCRIPTIONS = {
   TSCA: 'Toxic Substances. Health, safety, and exposure information related to chemical substances, chemical mixtures, and articles as defined under the Toxic Substances Control Act (TSCA).',
   CENS: 'US Census. Related to information gathered by the Bureau of the Census during the process of collecting, compiling, evaluating, analyzing of demographic, economic, and social data pertaining at a specified time to any or all persons in the United States and dissemination is limited to those with special sworn status, who may only use the data for statistical purposes and only for those statistical purposes for which the data was supplied.',
   WDT: 'Written Determinations. Rulings, determination letters, technical advice memoranda or Chief Counsel Advice, as those terms are defined in Treasury Regulation 301.6110-2, which are made available for public inspection subject to the withholding of certain types of data as enumerated in Treasury Regulation 301-6110.',
-} as const satisfies Readonly<Record<CuiCategory, string>>
+} as const
+CUI_DESCRIPTIONS satisfies Readonly<Record<CuiCategory, string>>

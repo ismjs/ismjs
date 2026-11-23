@@ -24,6 +24,19 @@ const IDENTIFIER = /^[A-Za-z_$][\w$]*$/u
 /** Object keys stay bare when they are valid identifiers, quoted otherwise. */
 export const key = (s: string): string => (IDENTIFIER.test(s) ? s : quote(s))
 
+/**
+ * A literal constant and the contract it must meet, as two statements:
+ *
+ *     export const NAME = <literal> as const
+ *     NAME satisfies <contract>
+ *
+ * `isolatedDeclarations` reads the type of `<literal> as const` directly, but
+ * not through `as const satisfies <contract>`. The check on the next line keeps
+ * the compile error and does not change the declared type.
+ */
+export const checkedConst = (name: string, literal: string, contract: string): string =>
+  `export const ${name} = ${literal} as const\n${name} satisfies ${contract}\n`
+
 /** The vocabulary itself: an ordered array, the one place its tokens appear. */
 export const tokenArray = (name: string, values: readonly string[]): string =>
   values.length === 0
@@ -39,13 +52,19 @@ export const derivedType = (type: string, constName: string): string =>
  * key, or one for a token that does not exist, is a compile error.
  */
 export const describedBy = (name: string, type: string, terms: readonly Term[]): string =>
-  `export const ${name} = {\n${terms
-    .map((t) => `  ${key(t.value)}: ${quote(t.description)},`)
-    .join('\n')}\n} as const satisfies Readonly<Record<${type}, string>>\n`
+  checkedConst(
+    name,
+    `{\n${terms.map((t) => `  ${key(t.value)}: ${quote(t.description)},`).join('\n')}\n}`,
+    `Readonly<Record<${type}, string>>`,
+  )
 
 /**
  * An object built by spreading other tables, with literal entries first. A
  * superset table is composed from its parts, not written out again.
+ *
+ * `isolatedDeclarations` cannot infer the type of a spread, so the declared type
+ * is the intersection of the parts. The parts have disjoint keys, so this is the
+ * type the spread produces.
  */
 export const composedObject = (
   name: string,
@@ -55,9 +74,11 @@ export const composedObject = (
 ): string => {
   const literal = entries.map((t) => `  ${key(t.value)}: ${quote(t.description)},`)
   const spread = spreads.map((s) => `  ...${s},`)
+  const literalType = `{ ${entries.map((t) => `readonly ${key(t.value)}: ${quote(t.description)}`).join('; ')} }`
+  const declared = [literalType, ...spreads.map((s) => `typeof ${s}`)].join('\n  & ')
   return (
-    `export const ${name} = {\n${[...literal, ...spread].join('\n')}\n` +
-    `} as const satisfies Readonly<Record<${type}, string>>\n`
+    `export const ${name}: ${declared} = {\n${[...literal, ...spread].join('\n')}\n}\n` +
+    `${name} satisfies Readonly<Record<${type}, string>>\n`
   )
 }
 
@@ -70,11 +91,11 @@ export const satisfiesArray = (
   elementType: string,
   values: readonly string[],
 ): string =>
-  values.length === 0
-    ? `export const ${name} = [] as const satisfies readonly ${elementType}[]\n`
-    : `export const ${name} = [\n${values
-        .map((v) => `  ${quote(v)},`)
-        .join('\n')}\n] as const satisfies readonly ${elementType}[]\n`
+  checkedConst(
+    name,
+    values.length === 0 ? '[]' : `[\n${values.map((v) => `  ${quote(v)},`).join('\n')}\n]`,
+    `readonly ${elementType}[]`,
+  )
 
 /** Partial: only deprecated tokens appear, so a lookup may legitimately miss. */
 export const deprecations = (name: string, type: string, terms: readonly Term[]): string => {
@@ -82,10 +103,9 @@ export const deprecations = (name: string, type: string, terms: readonly Term[])
   const deprecated = terms.filter(
     (t): t is Term & { readonly deprecated: string } => t.deprecated !== undefined,
   )
-  if (deprecated.length === 0) {
-    return `export const ${name} = {} as const satisfies ${contract}\n`
-  }
-  return `export const ${name} = {\n${deprecated
-    .map((t) => `  ${key(t.value)}: ${quote(t.deprecated)},`)
-    .join('\n')}\n} as const satisfies ${contract}\n`
+  const literal =
+    deprecated.length === 0
+      ? '{}'
+      : `{\n${deprecated.map((t) => `  ${key(t.value)}: ${quote(t.deprecated)},`).join('\n')}\n}`
+  return checkedConst(name, literal, contract)
 }

@@ -31,4 +31,5 @@ export const TETRAGRAPH_MEMBERSHIP = {
   TFTC: ['BHR', 'KWT', 'OMN', 'QAT', 'SAU', 'ARE', 'USA'],
   UNCK: ['USA', 'AUS', 'BEL', 'CAN', 'COL', 'DNK', 'FRA', 'GRC', 'ITA', 'NLD', 'NOR', 'NZL', 'PHL', 'ZAF', 'KOR', 'THA', 'TUR', 'GBR'],
   BHTF: ['USA', 'MNTF'],
-} as const satisfies Readonly<Partial<Record<Tetragraph, readonly string[]>>>
+} as const
+TETRAGRAPH_MEMBERSHIP satisfies Readonly<Partial<Record<Tetragraph, readonly string[]>>>

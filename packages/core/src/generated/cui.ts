@@ -168,4 +168,5 @@ export type CuiSpecified = (typeof CUI_SPECIFIED_TOKENS)[number]
 // Every CUI category: 123 across both designations, 30 of them Specified-only.
 export type CuiCategory = CuiBasic | CuiSpecified
 
-export const CUI_DEPRECATED = {} as const satisfies Readonly<Partial<Record<CuiCategory, string>>>
+export const CUI_DEPRECATED = {} as const
+CUI_DEPRECATED satisfies Readonly<Partial<Record<CuiCategory, string>>>
