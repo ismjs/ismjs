@@ -11,7 +11,8 @@ export const US_CLASSIFICATION_TOKENS = [
 
 export type UsClassification = (typeof US_CLASSIFICATION_TOKENS)[number]
 
-export const US_CLASSIFICATION_DEPRECATED = {} as const satisfies Readonly<Partial<Record<UsClassification, string>>>
+export const US_CLASSIFICATION_DEPRECATED = {} as const
+US_CLASSIFICATION_DEPRECATED satisfies Readonly<Partial<Record<UsClassification, string>>>
 
 // CVEnumISMClassificationAll — 5 literal terms
 export const ANY_CLASSIFICATION_TOKENS = [
@@ -24,7 +25,8 @@ export const ANY_CLASSIFICATION_TOKENS = [
 
 export type AnyClassification = (typeof ANY_CLASSIFICATION_TOKENS)[number]
 
-export const ANY_CLASSIFICATION_DEPRECATED = {} as const satisfies Readonly<Partial<Record<AnyClassification, string>>>
+export const ANY_CLASSIFICATION_DEPRECATED = {} as const
+ANY_CLASSIFICATION_DEPRECATED satisfies Readonly<Partial<Record<AnyClassification, string>>>
 
 // CVEnumISMSCIControls — 20 literal terms
 export const SCI_CONTROL_TOKENS = [
@@ -52,7 +54,8 @@ export const SCI_CONTROL_TOKENS = [
 
 export type SciControl = (typeof SCI_CONTROL_TOKENS)[number]
 
-export const SCI_CONTROL_DEPRECATED = {} as const satisfies Readonly<Partial<Record<SciControl, string>>>
+export const SCI_CONTROL_DEPRECATED = {} as const
+SCI_CONTROL_DEPRECATED satisfies Readonly<Partial<Record<SciControl, string>>>
 
 // CVEnumISMAtomicEnergyMarkings — 14 literal terms
 export const ATOMIC_ENERGY_MARKING_TOKENS = [
@@ -74,7 +77,8 @@ export const ATOMIC_ENERGY_MARKING_TOKENS = [
 
 export type AtomicEnergyMarking = (typeof ATOMIC_ENERGY_MARKING_TOKENS)[number]
 
-export const ATOMIC_ENERGY_MARKING_DEPRECATED = {} as const satisfies Readonly<Partial<Record<AtomicEnergyMarking, string>>>
+export const ATOMIC_ENERGY_MARKING_DEPRECATED = {} as const
+ATOMIC_ENERGY_MARKING_DEPRECATED satisfies Readonly<Partial<Record<AtomicEnergyMarking, string>>>
 
 // CVEnumISMDissem — 22 literal terms
 export const DISSEM_CONTROL_TOKENS = [
@@ -104,7 +108,8 @@ export const DISSEM_CONTROL_TOKENS = [
 
 export type DissemControl = (typeof DISSEM_CONTROL_TOKENS)[number]
 
-export const DISSEM_CONTROL_DEPRECATED = {} as const satisfies Readonly<Partial<Record<DissemControl, string>>>
+export const DISSEM_CONTROL_DEPRECATED = {} as const
+DISSEM_CONTROL_DEPRECATED satisfies Readonly<Partial<Record<DissemControl, string>>>
 
 // CVEnumISMNonIC — 9 literal terms
 export const NON_IC_MARKING_TOKENS = [
@@ -121,7 +126,8 @@ export const NON_IC_MARKING_TOKENS = [
 
 export type NonIcMarking = (typeof NON_IC_MARKING_TOKENS)[number]
 
-export const NON_IC_MARKING_DEPRECATED = {} as const satisfies Readonly<Partial<Record<NonIcMarking, string>>>
+export const NON_IC_MARKING_DEPRECATED = {} as const
+NON_IC_MARKING_DEPRECATED satisfies Readonly<Partial<Record<NonIcMarking, string>>>
 
 // CVEnumISMNonUSControls — 3 literal terms
 export const NON_US_CONTROL_TOKENS = [
@@ -132,7 +138,8 @@ export const NON_US_CONTROL_TOKENS = [
 
 export type NonUsControl = (typeof NON_US_CONTROL_TOKENS)[number]
 
-export const NON_US_CONTROL_DEPRECATED = {} as const satisfies Readonly<Partial<Record<NonUsControl, string>>>
+export const NON_US_CONTROL_DEPRECATED = {} as const
+NON_US_CONTROL_DEPRECATED satisfies Readonly<Partial<Record<NonUsControl, string>>>
 
 // CVEnumISMSecondBannerLine — 6 literal terms
 export const SECOND_BANNER_LINE_TOKENS = [
@@ -146,7 +153,8 @@ export const SECOND_BANNER_LINE_TOKENS = [
 
 export type SecondBannerLine = (typeof SECOND_BANNER_LINE_TOKENS)[number]
 
-export const SECOND_BANNER_LINE_DEPRECATED = {} as const satisfies Readonly<Partial<Record<SecondBannerLine, string>>>
+export const SECOND_BANNER_LINE_DEPRECATED = {} as const
+SECOND_BANNER_LINE_DEPRECATED satisfies Readonly<Partial<Record<SecondBannerLine, string>>>
 
 export const SECOND_BANNER_LINE_DESCRIPTIONS = {
   ACPI: 'ATTORNEY-CLIENT PRIVILEGED INFO',
@@ -155,4 +163,5 @@ export const SECOND_BANNER_LINE_DESCRIPTIONS = {
   DPPD: 'DELIBERATIVE PROCESS PRIVILEGED DOCUMENT',
   HVCO: 'HANDLE VIA CHANNELS ONLY',
   SSS: 'SOURCE SELECTION SENSITIVE',
-} as const satisfies Readonly<Record<SecondBannerLine, string>>
+} as const
+SECOND_BANNER_LINE_DESCRIPTIONS satisfies Readonly<Record<SecondBannerLine, string>>

@@ -1,6 +1,6 @@
-import { defineConfig } from 'vitest/config'
+import { type ViteUserConfig, defineConfig } from 'vitest/config'
 
-export default defineConfig({
+const config: ViteUserConfig = defineConfig({
   test: {
     include: ['packages/*/test/**/*.spec.ts'],
     coverage: {
@@ -13,3 +13,5 @@ export default defineConfig({
     },
   },
 })
+
+export default config

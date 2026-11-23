@@ -13,7 +13,7 @@
  */
 import { join } from 'node:path'
 import { ISM, write } from './cve.ts'
-import { key, quote } from './emit.ts'
+import { checkedConst, key, quote } from './emit.ts'
 import { attribute, findAll, readXml, textOf } from './xml.ts'
 
 const TAXONOMY = 'Taxonomy/ISMCAT/TetragraphTaxonomy.xml'
@@ -56,10 +56,17 @@ export const buildTetragraph = (): void => {
     "import type { Tetragraph } from './ismcat.ts'\n",
     `// TetragraphTaxonomy.xml — ${rows.length} of ${records.length} tetragraphs decompose,\n` +
       `// ${total} memberships in total. A token absent here stands only for itself.\n` +
-      'export const TETRAGRAPH_MEMBERSHIP = {\n' +
-      rows
-        .map(([token, members]) => `  ${key(token)}: [${members.map((m) => quote(m)).join(', ')}],`)
-        .join('\n') +
-      '\n} as const satisfies Readonly<Partial<Record<Tetragraph, readonly string[]>>>\n',
+      checkedConst(
+        'TETRAGRAPH_MEMBERSHIP',
+        '{\n' +
+          rows
+            .map(
+              ([token, members]) =>
+                `  ${key(token)}: [${members.map((m) => quote(m)).join(', ')}],`,
+            )
+            .join('\n') +
+          '\n}',
+        'Readonly<Partial<Record<Tetragraph, readonly string[]>>>',
+      ),
   ])
 }

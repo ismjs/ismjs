@@ -382,7 +382,8 @@ export const ISMCAT_DEPRECATED = {
   RSMA: '2021-11-03',
   SFOR: '2016-03-17',
   SPAA: '2021-11-03',
-} as const satisfies Readonly<Partial<Record<IsmcatEntity, string>>>
+} as const
+ISMCAT_DEPRECATED satisfies Readonly<Partial<Record<IsmcatEntity, string>>>
 
 // CVEnumISMCATOwnerProducer — 341 terms
 // FGI, then GENC trigraphs except AX1, then coalition tetragraphs
@@ -396,7 +397,8 @@ export const OWNER_PRODUCER_TOKENS: readonly OwnerProducer[] = [
 
 export const OWNER_PRODUCER_PATTERNS = [
   'NATO:[a-zA-Z\\-_]{1,256}',
-] as const satisfies readonly string[]
+] as const
+OWNER_PRODUCER_PATTERNS satisfies readonly string[]
 
 // CVEnumISMCATRelTo — 340 terms
 // USA first, then the remaining GENC trigraphs except AX1, then tetragraphs
@@ -410,7 +412,8 @@ export const REL_TO_ENTITY_TOKENS: readonly RelToEntity[] = [
 
 export const REL_TO_ENTITY_PATTERNS = [
   'NATO:[a-zA-Z\\-_]{1,256}',
-] as const satisfies readonly string[]
+] as const
+REL_TO_ENTITY_PATTERNS satisfies readonly string[]
 
 // CVEnumISMCATFGIOpen — 340 terms
 // GENC trigraphs except USA — AX1 is permitted here — then tetragraphs
@@ -423,7 +426,8 @@ export const FGI_OPEN_ENTITY_TOKENS: readonly FgiOpenEntity[] = [
 
 export const FGI_OPEN_ENTITY_PATTERNS = [
   'NATO:[a-zA-Z\\-_]{1,256}',
-] as const satisfies readonly string[]
+] as const
+FGI_OPEN_ENTITY_PATTERNS satisfies readonly string[]
 
 // CVEnumISMCATFGIProtected — 340 terms
 // FGI, then GENC trigraphs except USA and AX1, then tetragraphs
@@ -437,4 +441,5 @@ export const FGI_PROTECTED_ENTITY_TOKENS: readonly FgiProtectedEntity[] = [
 
 export const FGI_PROTECTED_ENTITY_PATTERNS = [
   'NATO:[a-zA-Z\\-_]{1,256}',
-] as const satisfies readonly string[]
+] as const
+FGI_PROTECTED_ENTITY_PATTERNS satisfies readonly string[]

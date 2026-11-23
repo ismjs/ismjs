@@ -25,7 +25,8 @@ export const DISSEM_ORDER_IC = [
   'DISPLAYONLY',
   'EXEMPT_FROM_ICD501_DISCOVERY',
   'WAIVED',
-] as const satisfies readonly DissemControl[]
+] as const
+DISSEM_ORDER_IC satisfies readonly DissemControl[]
 
 // CVEnumISMDissemCui — pure CUI Markings
 export const DISSEM_ORDER_CUI = [
@@ -40,7 +41,8 @@ export const DISSEM_ORDER_CUI = [
   'NOCON',
   'REL',
   'RELIDO',
-] as const satisfies readonly DissemControl[]
+] as const
+DISSEM_ORDER_CUI satisfies readonly DissemControl[]
 
 // CVEnumISMDissemCommingled — Commingled Markings — FOUO excluded, see DoDM 5200.01-V2 Encl 4 §10.b.(3)
 export const DISSEM_ORDER_COMMINGLED = [
@@ -65,4 +67,5 @@ export const DISSEM_ORDER_COMMINGLED = [
   'FED_ONLY',
   'FEDCON',
   'NOCON',
-] as const satisfies readonly DissemControl[]
+] as const
+DISSEM_ORDER_COMMINGLED satisfies readonly DissemControl[]

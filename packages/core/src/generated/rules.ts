@@ -18,7 +18,8 @@ export const MUTUALLY_EXCLUSIVE = [
   { id: 'ISM-ID-00169', field: 'disseminationControls', tokens: ['DISPLAYONLY', 'RELIDO', 'NF'] },
   { id: 'ISM-ID-00321', field: 'atomicEnergyMarkings', tokens: ['RD', 'FRD', 'TFNI'] },
   { id: 'ISM-ID-00325', field: 'disseminationControls', tokens: ['OC', 'RELIDO'] },
-] as const satisfies readonly (FieldRule & { readonly tokens: readonly string[] })[]
+] as const
+MUTUALLY_EXCLUSIVE satisfies readonly (FieldRule & { readonly tokens: readonly string[] })[]
 
 // Membership templates — 14 rules, one per field in the projection
 /** Every token in the field must be a value its register admits. */
@@ -37,7 +38,8 @@ export const MEMBERSHIP = {
   ownerProducer: 'ISM-ID-00263',
   releasableTo: 'ISM-ID-00265',
   secondBannerLine: 'ISM-ID-00517',
-} as const satisfies Partial<Record<keyof Marking, string>>
+} as const
+MEMBERSHIP satisfies Partial<Record<keyof Marking, string>>
 
 // AttributeValueDeprecated{Error,Warning} — 14 fields in the projection
 /**
@@ -61,7 +63,8 @@ export const DEPRECATION = {
   ownerProducer: { error: 'ISM-ID-00197', warning: 'ISM-ID-00196' },
   releasableTo: { error: 'ISM-ID-00199', warning: 'ISM-ID-00198' },
   secondBannerLine: { error: 'ISM-ID-00515', warning: 'ISM-ID-00514' },
-} as const satisfies Partial<
+} as const
+DEPRECATION satisfies Partial<
   Record<keyof Marking, { readonly error: string; readonly warning: string }>
 >
 
@@ -118,7 +121,8 @@ export const REQUIRES = [
   { id: 'ISM-ID-00472', field: 'SCIcontrols', tokens: ['MVL'], patterns: [], requires: 'classification', allowed: ['TS'] },
   { id: 'ISM-ID-00473', field: 'disseminationControls', tokens: ['PR'], patterns: [], requires: 'disseminationControls', allowed: ['REL', 'RELIDO', 'NF', 'DISPLAYONLY', 'EYES'] },
   { id: 'ISM-ID-00474', field: 'SCIcontrols', tokens: ['HCS'], patterns: [], requires: 'SCIcontrols', allowed: ['HCS-O', 'HCS-P', 'HCS-X'] },
-] as const satisfies readonly (FieldRule & {
+] as const
+REQUIRES satisfies readonly (FieldRule & {
   readonly tokens: readonly string[]
   readonly patterns: readonly string[]
   readonly requires: keyof Marking
@@ -138,7 +142,8 @@ export const FIELD_PRESENCE = [
   { id: 'ISM-ID-00032', field: 'disseminationControls', tokens: ['REL', 'EYES'], whenPresent: false, requires: 'releasableTo', mustExist: false },
   { id: 'ISM-ID-00168', field: 'disseminationControls', tokens: ['DISPLAYONLY'], whenPresent: false, requires: 'displayOnlyTo', mustExist: false },
   { id: 'ISM-ID-00213', field: 'disseminationControls', tokens: ['DISPLAYONLY'], whenPresent: true, requires: 'displayOnlyTo', mustExist: true },
-] as const satisfies readonly (FieldRule & {
+] as const
+FIELD_PRESENCE satisfies readonly (FieldRule & {
   readonly tokens: readonly string[]
   readonly whenPresent: boolean
   readonly requires: keyof Marking
@@ -153,7 +158,8 @@ export const FIELD_PRESENCE = [
 export const FORBIDS = [
   { id: 'ISM-ID-00372', field: 'nonICmarkings', tokens: ['LES-NF', 'SBU-NF'], patterns: [], forbids: 'disseminationControls', forbidden: ['NF', 'REL', 'EYES', 'RELIDO', 'DISPLAYONLY'] },
   { id: 'ISM-ID-00470', field: 'SCIcontrols', tokens: [], patterns: ['^KLM-R-[A-Z]{3}$'], forbids: 'disseminationControls', forbidden: ['OC-USGOV'] },
-] as const satisfies readonly (FieldRule & {
+] as const
+FORBIDS satisfies readonly (FieldRule & {
   readonly tokens: readonly string[]
   readonly patterns: readonly string[]
   readonly forbids: keyof Marking

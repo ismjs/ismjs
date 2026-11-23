@@ -9,8 +9,8 @@ import { ATOMAL, BALK, BOHEMIA } from './tokens.ts'
  */
 
 /** Non-US controls travel in the order of the host segments that render them. */
-export const NON_US_SCI_RENDER_ORDER = [BOHEMIA, BALK] as const
-export const NON_US_ATOMIC_RENDER_ORDER = [ATOMAL] as const
+export const NON_US_SCI_RENDER_ORDER: readonly [typeof BOHEMIA, typeof BALK] = [BOHEMIA, BALK]
+export const NON_US_ATOMIC_RENDER_ORDER: readonly [typeof ATOMAL] = [ATOMAL]
 
 export const orderNonUsForRendering = (controls: readonly string[]): readonly string[] =>
   [...NON_US_SCI_RENDER_ORDER, ...NON_US_ATOMIC_RENDER_ORDER].filter((control) =>
