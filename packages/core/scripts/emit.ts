@@ -79,11 +79,13 @@ export const satisfiesArray = (
 /** Partial: only deprecated tokens appear, so a lookup may legitimately miss. */
 export const deprecations = (name: string, type: string, terms: readonly Term[]): string => {
   const contract = `Readonly<Partial<Record<${type}, string>>>`
-  const deprecated = terms.filter((t) => t.deprecated !== undefined)
+  const deprecated = terms.filter(
+    (t): t is Term & { readonly deprecated: string } => t.deprecated !== undefined,
+  )
   if (deprecated.length === 0) {
     return `export const ${name} = {} as const satisfies ${contract}\n`
   }
   return `export const ${name} = {\n${deprecated
-    .map((t) => `  ${key(t.value)}: ${quote(t.deprecated as string)},`)
+    .map((t) => `  ${key(t.value)}: ${quote(t.deprecated)},`)
     .join('\n')}\n} as const satisfies ${contract}\n`
 }

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { OwnerProducer } from '../src/generated/ismcat.ts'
 import { createMarking } from '../src/index.ts'
-import { type Marking } from '../src/marking.ts'
+import type { Marking } from '../src/marking.ts'
 import { canonicalize } from '../src/normalize.ts'
 
 /**

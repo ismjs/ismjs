@@ -1,9 +1,22 @@
-import type { Vector } from '../scripts/corpus.ts'
+import { SkipReason, type Vector } from '../scripts/corpus.ts'
 import type { Draft } from '../src/draft.ts'
 import type { Issue } from '../src/issue.ts'
 import type { Marking } from '../src/marking.ts'
 import { canonicalize } from '../src/normalize.ts'
 import { checkDraft } from '../src/check.ts'
+import vectors from './fixtures/vectors.json' with { type: 'json' }
+
+type Harvested = (typeof vectors)[number]
+
+/** A JSON import types `skip` as `string`. It is the one field that is a union. */
+const isVector = (vector: Harvested): vector is Harvested & Vector =>
+  vector.skip === undefined || Object.values(SkipReason).some((r) => r === vector.skip)
+
+/** The harvested corpus, as `Vector`s: checked, not asserted. */
+export const corpus: readonly Vector[] = vectors.filter((vector) => isVector(vector))
+if (corpus.length !== vectors.length) {
+  throw new Error('fixtures/vectors.json holds a skip reason that SkipReason does not list')
+}
 
 /** ISM attributes are whitespace-separated token lists. */
 const tokens = (value: string | undefined): readonly string[] =>

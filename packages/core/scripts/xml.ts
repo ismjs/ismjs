@@ -7,9 +7,36 @@
  * `cve:Term` as `Term`.
  */
 import { readFileSync } from 'node:fs'
-import { XMLParser, XMLValidator } from 'fast-xml-parser'
+import { XMLParser } from 'fast-xml-parser'
+import { SyntaxValidator } from 'fast-xml-validator'
 
 export type XmlNode = Record<string, unknown>
+
+/** A parsed element or attribute bag, as opposed to a bare text value. */
+export const isXmlNode = (value: unknown): value is XmlNode =>
+  value !== null && typeof value === 'object' && !Array.isArray(value)
+
+/** A value that may be one node or several, as a list of nodes. */
+export const asNodes = (value: unknown): XmlNode[] =>
+  (Array.isArray(value) ? value : [value]).filter((item) => isXmlNode(item))
+
+/** A named child of a node, or undefined when the value is not a node. */
+export const childOf = (value: unknown, key: string): unknown =>
+  isXmlNode(value) ? value[key] : undefined
+
+/**
+ * A leaf value as a string. The parser is configured to leave every value a
+ * string, so anything else means the input is not shaped as expected.
+ */
+const scalar = (value: unknown, what: string): string => {
+  if (typeof value === 'string') {
+    return value
+  }
+  if (typeof value === 'number' || typeof value === 'boolean') {
+    return String(value)
+  }
+  throw new TypeError(`${what}: expected text, found ${JSON.stringify(value)}`)
+}
 
 const parser = new XMLParser({
   ignoreAttributes: false,
@@ -30,15 +57,36 @@ const parser = new XMLParser({
     value.replaceAll('\t', ' ').replaceAll('\r\n', ' ').replaceAll('\r', ' ').replaceAll('\n', ' '),
 })
 
+/**
+ * The validator's error, recognised by shape. Its type declarations export
+ * `ValidationError`, but the package does not export the class at runtime, so
+ * `instanceof` cannot be used.
+ */
+const isValidationError = (error: unknown): error is Error & { line: number; col: number } =>
+  error instanceof Error &&
+  'line' in error &&
+  typeof error.line === 'number' &&
+  'col' in error &&
+  typeof error.col === 'number'
+
 export const readXml = (file: string): XmlNode => {
   const source = readFileSync(file, 'utf8')
-  const valid = XMLValidator.validate(source)
-  if (valid !== true) {
-    throw new Error(
-      `${file}: malformed XML at line ${valid.err.line}, column ${valid.err.col}: ${valid.err.msg}`,
-    )
+  try {
+    SyntaxValidator.validate(source)
+  } catch (error) {
+    if (isValidationError(error)) {
+      throw new Error(
+        `${file}: malformed XML at line ${error.line}, column ${error.col}: ${error.message}`,
+        { cause: error },
+      )
+    }
+    throw error
   }
-  return parser.parse(source) as XmlNode
+  const doc: unknown = parser.parse(source)
+  if (!isXmlNode(doc)) {
+    throw new Error(`${file}: expected an XML document`)
+  }
+  return doc
 }
 
 /** Every node in the tree carrying the given tag name, at any depth. */
@@ -59,8 +107,8 @@ export const findAll = (root: unknown, tag: string): XmlNode[] => {
     for (const [key, value] of Object.entries(node)) {
       if (key === tag) {
         for (const match of Array.isArray(value) ? value : [value]) {
-          if (match !== null && typeof match === 'object') {
-            found.push(match as XmlNode)
+          if (isXmlNode(match)) {
+            found.push(match)
           } else {
             found.push({ '#text': match })
           }
@@ -77,8 +125,8 @@ export const findAll = (root: unknown, tag: string): XmlNode[] => {
 /** An attribute off a parsed node, as a string. */
 export const attribute = (node: XmlNode, name: string): string | undefined => {
   const value = node[`@${name}`]
-  return value === undefined || value === null ? undefined : String(value)
+  return value === undefined || value === null ? undefined : scalar(value, `@${name}`)
 }
 
 /** The text content of a parsed node, with surrounding whitespace removed. */
-export const textOf = (node: XmlNode): string => String(node['#text'] ?? '').trim()
+export const textOf = (node: XmlNode): string => scalar(node['#text'] ?? '', '#text').trim()

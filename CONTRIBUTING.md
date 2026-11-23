@@ -30,7 +30,7 @@ The two verification levels are:
 
 | Command              | Purpose                                                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------- |
-| `bun run check`      | Fast loop: formatting, lint, types, and tests against the current workspace                 |
+| `bun run check`      | Fast loop: formatting, lint (code and package manifests), types, and tests                  |
 | `bun run check:full` | Release gate: build, coverage, generated-source drift, corpus drift, and package validation |
 
 Run `check` while working and `check:full` before handing off a change. CI runs the full

@@ -20,11 +20,17 @@ import {
 import { ATOMAL, BALK, BOHEMIA, OC_USGOV, SIGMA_QUALIFIER } from './tokens.ts'
 
 /** Banner spellings, inverted, so `NOFORN` reads back as `NF`. */
-const FROM_BANNER: Readonly<Record<string, string>> = Object.fromEntries([
-  ...Object.entries(BANNER_SPELLING).map(([token, spelling]) => [spelling, token]),
+const FROM_BANNER: Readonly<Record<string, string>> = Object.fromEntries<string>([
+  ...Object.entries(BANNER_SPELLING).map(([token, spelling]): [string, string] => [
+    spelling,
+    token,
+  ]),
   // The spellings the reference stylesheets patch in rather than registering.
   [BANNER_ORCON_USGOV, OC_USGOV],
-  ...Object.entries(BANNER_ATOMIC_ENERGY).map(([token, spelling]) => [spelling, token]),
+  ...Object.entries(BANNER_ATOMIC_ENERGY).map(([token, spelling]): [string, string] => [
+    spelling,
+    token,
+  ]),
 ])
 
 /** Second banner lines spell out from their CVE descriptions, not BannerMapping. */
@@ -47,7 +53,7 @@ export const unspell = (text: string): string => FROM_BANNER[text] ?? text
 
 /** A Banner Line spells `SG` as `SIGMA` and expands DCNI/UCNI. */
 export const unbannerAtomic = (segment: string): string => {
-  let text = segment.replaceAll(`${BANNER_SIGMA}`, SIGMA_QUALIFIER)
+  let text = segment.replaceAll(BANNER_SIGMA, SIGMA_QUALIFIER)
   for (const [token, spelling] of Object.entries(BANNER_ATOMIC_ENERGY)) {
     text = text.replaceAll(spelling, token)
   }

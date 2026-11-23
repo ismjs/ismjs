@@ -57,6 +57,7 @@ import { parse } from './parse.ts'
 import { checkCrossField } from './cross-field.ts'
 import { type Profile, checkProfile } from './profile.ts'
 import { valuesOf } from './marking.ts'
+import { entriesOf } from './entries.ts'
 
 export type ValidateOptions = {
   /**
@@ -150,18 +151,17 @@ const REGISTERED: Readonly<Partial<Record<Field, ReadonlySet<string>>>> = {
  * check the public data supports.
  */
 const checkMembership = (marking: Marking, issues: Issue[]): void => {
-  for (const [field, ruleId] of Object.entries(MEMBERSHIP)) {
-    const key = field as Field
-    const admits = FIELD_ADMITS[key]
-    const patterns = FIELD_PATTERNS[key]
+  for (const [field, ruleId] of entriesOf(MEMBERSHIP)) {
+    const admits = FIELD_ADMITS[field]
+    const patterns = FIELD_PATTERNS[field]
 
-    for (const value of valuesOf(marking, field as keyof Marking)) {
+    for (const value of valuesOf(marking, field)) {
       const admitted = admits(value) !== undefined
       const matches = patterns?.some((p) => p.test(value)) ?? false
       // A field with pattern terms must satisfy the pattern. Nothing else may.
       if (
         !admitted ||
-        (patterns !== undefined && REGISTERED[key]?.has(value) !== true && !matches)
+        (patterns !== undefined && REGISTERED[field]?.has(value) !== true && !matches)
       ) {
         issues.push(
           issue({
@@ -211,8 +211,8 @@ const checkMutualExclusion = (marking: Marking, issues: Issue[]): void => {
 const checkDeprecation = (marking: Marking, createdOn: string, issues: Issue[]): void => {
   const retired: Readonly<Record<string, string>> = ISMCAT_DEPRECATED
 
-  for (const [field, ids] of Object.entries(DEPRECATION)) {
-    for (const value of valuesOf(marking, field as keyof Marking)) {
+  for (const [field, ids] of entriesOf(DEPRECATION)) {
+    for (const value of valuesOf(marking, field)) {
       const on = retired[value]
       if (on === undefined) {
         continue

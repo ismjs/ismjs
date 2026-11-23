@@ -2,8 +2,9 @@ import { describe, expect, it } from 'vitest'
 import { REQUIRES } from '../src/generated/rules.ts'
 import { US_CLASSIFICATION_TOKENS } from '../src/generated/vocab.ts'
 import { IssueCode } from '../src/issue.ts'
+import type { SciExpression } from '../src/marking.ts'
 import { canonicalize } from '../src/normalize.ts'
-import { type Profile, atOrBelow, profileFor } from '../src/profile.ts'
+import { type Profile, type Restriction, atOrBelow, profileFor } from '../src/profile.ts'
 import { validate } from '../src/validate.ts'
 
 const usa = ['USA'] as const
@@ -47,14 +48,14 @@ describe('profileFor', () => {
     expect(secret.classification).toEqual({ allow: ['S', 'C', 'U'] })
   })
 
-  it.each(['SI-G', 'HCS-P-ALPHA', 'KLM-R-ABC'])(
+  it.each<SciExpression>(['SI-G', 'HCS-P-ALPHA', 'KLM-R-ABC'])(
     'denies pattern-triggered SCI expression %s below its required ceiling',
     (SCIcontrol) => {
       const issues = check(
         {
           classification: 'S',
           ownerProducer: usa,
-          SCIcontrols: [SCIcontrol as 'SI-G'],
+          SCIcontrols: [SCIcontrol],
         },
         profileFor('S'),
       )
@@ -105,12 +106,17 @@ describe('profileFor rule coverage', () => {
           continue
         }
         const patterns = expected.get(rule.field) ?? new Set<string>()
-        rule.patterns.forEach((pattern) => patterns.add(pattern))
+        for (const pattern of rule.patterns) {
+          patterns.add(pattern)
+        }
         expected.set(rule.field, patterns)
       }
 
+      // Looked up by any field name: a field the profile does not restrict reads
+      // as undefined, which the assertion below reports.
+      const profile: Readonly<Record<string, Restriction | undefined>> = profileFor(ceiling)
       for (const [field, patterns] of expected) {
-        const restriction = profileFor(ceiling)[field as keyof Profile]
+        const restriction = profile[field]
         expect(
           restriction !== undefined && 'deny' in restriction
             ? (restriction.denyPatterns ?? [])

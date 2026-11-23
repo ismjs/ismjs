@@ -4,6 +4,7 @@ import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { runInNewContext } from 'node:vm'
 import { describe, expect, it } from 'vitest'
+import { CUI_DESCRIPTIONS } from '../src/generated/descriptions.ts'
 
 /**
  * The published artifacts, loaded the way a consumer loads them.
@@ -36,6 +37,15 @@ type Codec = {
   VERSION: string
   tokens: Record<string, string>
 }
+
+/**
+ * A loaded artifact, as the codec it is meant to be. A module loaded at runtime
+ * has no static type. Its shape is what `exercise` goes on to check, so the
+ * claim made here is tested, not trusted.
+ */
+const asCodec = (loaded: unknown): Codec =>
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion -- checked by `exercise`; see above
+  loaded as Codec
 
 /** The round trip, run against whichever artifact was handed in. */
 const exercise = (ism: Codec): void => {
@@ -70,13 +80,14 @@ describe.skipIf(!built && !inCi)('the published artifacts', () => {
   })
 
   it('loads as ESM', async () => {
-    const ism = await import(pathToFileURL(join(DIST, 'index.mjs')).href)
-    exercise(ism as Codec)
+    const ism: unknown = await import(pathToFileURL(join(DIST, 'index.mjs')).href)
+    exercise(asCodec(ism))
   })
 
   it('loads as CommonJS', () => {
     const require = createRequire(import.meta.url)
-    exercise(require(join(DIST, 'index.cjs')) as Codec)
+    const ism: unknown = require(join(DIST, 'index.cjs'))
+    exercise(asCodec(ism))
   })
 
   /**
@@ -90,16 +101,20 @@ describe.skipIf(!built && !inCi)('the published artifacts', () => {
     const sandbox: { ism?: Codec } = {}
     runInNewContext(source, sandbox)
 
-    expect(sandbox.ism).toBeDefined()
-    exercise(sandbox.ism as Codec)
+    const { ism } = sandbox
+    if (ism === undefined) {
+      throw new Error('the bundle did not define the `ism` global')
+    }
+    exercise(ism)
   })
 
   // The label subpath is a separate entry point. It keeps 63 kB of display text
   // out of the codec, and out of the vendorable bundle.
   it('serves labels from the descriptions subpath', async () => {
-    const labels = await import(pathToFileURL(join(DIST, 'descriptions.mjs')).href)
-    expect(labels['TRIGRAPH_DESCRIPTIONS']['USA']).toBe('United States of America')
-    expect(Object.keys(labels['CUI_DESCRIPTIONS'])).toHaveLength(123)
+    const labels: unknown = await import(pathToFileURL(join(DIST, 'descriptions.mjs')).href)
+    expect(labels).toHaveProperty(['TRIGRAPH_DESCRIPTIONS', 'USA'], 'United States of America')
+    expect(labels).toHaveProperty('CUI_DESCRIPTIONS', CUI_DESCRIPTIONS)
+    expect(Object.keys(CUI_DESCRIPTIONS)).toHaveLength(123)
   })
 
   it('keeps display text out of the vendorable bundle', () => {

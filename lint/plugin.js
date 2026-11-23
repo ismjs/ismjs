@@ -6,6 +6,7 @@
  * the first rule is the direct equivalent of the selector
  * `TSAsExpression[typeAnnotation.type='TSNeverKeyword']`.
  */
+import { definePlugin, defineRule } from '@oxlint/plugins'
 
 /**
  * `as never` is not a narrowing — it is the type checker being told to stop
@@ -15,7 +16,7 @@
  * pushing unchecked strings into typed fields; the fix was to make the
  * intermediate type honest and check the values, not to keep asserting.
  */
-const noAsNever = {
+const noAsNever = defineRule({
   meta: {
     type: 'problem',
     docs: { description: 'disallow asserting a value to `never`' },
@@ -33,7 +34,7 @@ const noAsNever = {
       },
     }
   },
-}
+})
 
 /**
  * `x as unknown as T` is the escape hatch that defeats every other check here.
@@ -42,7 +43,7 @@ const noAsNever = {
  * unchecked object once became a `MarkingInput`. Where a claim genuinely cannot
  * be derived — the phantom brand in `canonical.ts` — a plain downcast is enough.
  */
-const noDoubleAssertion = {
+const noDoubleAssertion = defineRule({
   meta: {
     type: 'problem',
     docs: { description: 'disallow asserting through `unknown`' },
@@ -63,9 +64,9 @@ const noDoubleAssertion = {
       },
     }
   },
-}
+})
 
-export default {
+export default definePlugin({
   meta: { name: 'ism' },
   rules: { 'no-as-never': noAsNever, 'no-double-assertion': noDoubleAssertion },
-}
+})

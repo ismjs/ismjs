@@ -1,8 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { SkipReason, type Vector } from '../scripts/corpus.ts'
-import vectors from './fixtures/vectors.json' with { type: 'json' }
-
-const corpus = vectors as readonly Vector[]
+import { SkipReason } from '../scripts/corpus.ts'
+import { corpus } from './vector.ts'
 
 const active = corpus.filter((v) => v.skip === undefined)
 const skipped = corpus.filter((v) => v.skip !== undefined)
