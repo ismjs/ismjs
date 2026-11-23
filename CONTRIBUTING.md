@@ -40,8 +40,9 @@ gate for pull requests and pushes to `main`.
 
 Every commit in a pull request must follow Conventional Commits. The type determines the
 release impact when a commit lands on `main`: `fix:` triggers a patch, `feat:` triggers a
-minor, and `!` marks a breaking change. Types such as `docs:`, `test:`, `refactor:`, and
-`chore:` do not trigger a package release.
+minor, and `!` marks a breaking change. A breaking change triggers a major from 1.0.0 and a
+minor before it. Types such as `docs:`, `test:`, `refactor:`, and `chore:` do not trigger a
+package release.
 
 ```text
 docs: clarify NATO ownership
@@ -57,6 +58,14 @@ bun run commitlint --last --verbose
 
 The pull-request workflow checks every commit introduced by the branch and reports each
 nonconforming subject.
+
+## Releases
+
+release-please reads the commits on `main` and keeps a release pull request open with the
+next version and changelog. Merge that pull request to release. The merge tags the
+release (`core-v0.1.0`), creates the GitHub release, and publishes `@ismjs/core` to npm
+with provenance from `.github/workflows/release.yml`. Do not edit versions or
+`CHANGELOG.md` by hand.
 
 ## Repository layout
 
