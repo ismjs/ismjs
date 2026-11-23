@@ -68,7 +68,7 @@ export const buildCui = (): readonly string[] => {
   // type costs nothing at runtime. An array of every category did.
   blocks.push(
     `// Every CUI category: ${merged.size} across both designations, ` +
-      `${categories.length - (perVocabulary.get(CUI_VOCABULARIES[0]?.cve ?? '')?.length ?? 0)} ` +
+      `${categories.length - (perVocabulary.get(CUI_VOCABULARIES[0].cve)?.length ?? 0)} ` +
       'of them Specified-only.\n' +
       `export type CuiCategory = ${CUI_VOCABULARIES.map((v) => v.type).join(' | ')}\n`,
     deprecations('CUI_DEPRECATED', 'CuiCategory', categories),
