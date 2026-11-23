@@ -7,7 +7,8 @@ Instructions for coding agents working in this repository.
 Use Conventional Commit messages shaped for release-please. The commit that lands
 on `main` determines the release: `fix:` triggers a patch, `feat:` triggers a
 minor, and an exclamation mark such as `feat!:` or `fix!:` triggers a major.
-Use other Conventional Commit types such as `docs:`, `test:`, `refactor:`, or
+Before 1.0.0, a breaking change triggers a minor instead
+(`bump-minor-pre-major` in `release-please-config.json`). Use other Conventional Commit types such as `docs:`, `test:`, `refactor:`, or
 `chore:` for changes that should not trigger a Node package release. Scopes are
 optional. Prefer squash-merging pull requests so the squash commit clearly states
 the release impact.
