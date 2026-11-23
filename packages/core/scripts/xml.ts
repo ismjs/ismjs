@@ -7,7 +7,8 @@
  * `cve:Term` as `Term`.
  */
 import { readFileSync } from 'node:fs'
-import { XMLParser, XMLValidator } from 'fast-xml-parser'
+import { XMLParser } from 'fast-xml-parser'
+import { SyntaxValidator } from 'fast-xml-validator'
 
 export type XmlNode = Record<string, unknown>
 
@@ -56,13 +57,30 @@ const parser = new XMLParser({
     value.replaceAll('\t', ' ').replaceAll('\r\n', ' ').replaceAll('\r', ' ').replaceAll('\n', ' '),
 })
 
+/**
+ * The validator's error, recognised by shape. Its type declarations export
+ * `ValidationError`, but the package does not export the class at runtime, so
+ * `instanceof` cannot be used.
+ */
+const isValidationError = (error: unknown): error is Error & { line: number; col: number } =>
+  error instanceof Error &&
+  'line' in error &&
+  typeof error.line === 'number' &&
+  'col' in error &&
+  typeof error.col === 'number'
+
 export const readXml = (file: string): XmlNode => {
   const source = readFileSync(file, 'utf8')
-  const valid = XMLValidator.validate(source)
-  if (valid !== true) {
-    throw new Error(
-      `${file}: malformed XML at line ${valid.err.line}, column ${valid.err.col}: ${valid.err.msg}`,
-    )
+  try {
+    SyntaxValidator.validate(source)
+  } catch (error) {
+    if (isValidationError(error)) {
+      throw new Error(
+        `${file}: malformed XML at line ${error.line}, column ${error.col}: ${error.message}`,
+        { cause: error },
+      )
+    }
+    throw error
   }
   const doc: unknown = parser.parse(source)
   if (!isXmlNode(doc)) {

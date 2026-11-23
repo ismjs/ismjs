@@ -4,6 +4,7 @@ import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { runInNewContext } from 'node:vm'
 import { describe, expect, it } from 'vitest'
+import { CUI_DESCRIPTIONS } from '../src/generated/descriptions.ts'
 
 /**
  * The published artifacts, loaded the way a consumer loads them.
@@ -79,13 +80,14 @@ describe.skipIf(!built && !inCi)('the published artifacts', () => {
   })
 
   it('loads as ESM', async () => {
-    const ism = await import(pathToFileURL(join(DIST, 'index.mjs')).href)
+    const ism: unknown = await import(pathToFileURL(join(DIST, 'index.mjs')).href)
     exercise(asCodec(ism))
   })
 
   it('loads as CommonJS', () => {
     const require = createRequire(import.meta.url)
-    exercise(asCodec(require(join(DIST, 'index.cjs'))))
+    const ism: unknown = require(join(DIST, 'index.cjs'))
+    exercise(asCodec(ism))
   })
 
   /**
@@ -109,9 +111,10 @@ describe.skipIf(!built && !inCi)('the published artifacts', () => {
   // The label subpath is a separate entry point. It keeps 63 kB of display text
   // out of the codec, and out of the vendorable bundle.
   it('serves labels from the descriptions subpath', async () => {
-    const labels = await import(pathToFileURL(join(DIST, 'descriptions.mjs')).href)
-    expect(labels['TRIGRAPH_DESCRIPTIONS']['USA']).toBe('United States of America')
-    expect(Object.keys(labels['CUI_DESCRIPTIONS'])).toHaveLength(123)
+    const labels: unknown = await import(pathToFileURL(join(DIST, 'descriptions.mjs')).href)
+    expect(labels).toHaveProperty(['TRIGRAPH_DESCRIPTIONS', 'USA'], 'United States of America')
+    expect(labels).toHaveProperty('CUI_DESCRIPTIONS', CUI_DESCRIPTIONS)
+    expect(Object.keys(CUI_DESCRIPTIONS)).toHaveLength(123)
   })
 
   it('keeps display text out of the vendorable bundle', () => {

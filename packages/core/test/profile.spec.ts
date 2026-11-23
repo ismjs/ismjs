@@ -106,7 +106,9 @@ describe('profileFor rule coverage', () => {
           continue
         }
         const patterns = expected.get(rule.field) ?? new Set<string>()
-        rule.patterns.forEach((pattern) => patterns.add(pattern))
+        for (const pattern of rule.patterns) {
+          patterns.add(pattern)
+        }
         expected.set(rule.field, patterns)
       }
 

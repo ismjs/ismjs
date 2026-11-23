@@ -13,6 +13,7 @@
   "jsPlugins": ["./lint/plugin.js"],
   "rules": {
     "curly": ["error", "all"],
+    "eslint/no-redeclare": "off",
     "ism/no-as-never": "error",
     "ism/no-double-assertion": "error",
     "max-lines": ["warn", 500],
