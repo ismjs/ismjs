@@ -8,5 +8,12 @@
   "bracketSpacing": true,
   "trailingComma": "all",
   "arrowParens": "always",
-  "ignorePatterns": ["references/**", "dist/**", "coverage/**", "**/src/generated/**"]
+  "ignorePatterns": [
+    "references/**",
+    "dist/**",
+    "coverage/**",
+    "**/src/generated/**",
+    ".release-please-manifest.json",
+    "**/CHANGELOG.md"
+  ]
 }
